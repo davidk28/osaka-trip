@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2027 大阪雪國冒險 6 天 5 夜自由行手冊</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .fade-content { animation: fadeIn 0.25s ease-in-out; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 pb-24">
+
+  <!-- 頂部 Header -->
+  <header class="bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-500 text-white p-5 sticky top-0 z-30 shadow-md">
+    <div class="max-w-md mx-auto">
+      <div class="flex items-center justify-between">
+        <div>
+          <span class="text-xs uppercase tracking-wider bg-white/20 px-2 py-0.5 rounded-full font-semibold">4人同行 · 6D5N</span>
+          <h1 class="text-xl font-bold mt-1">2027 關西大阪 · 雪國之旅 ❄️</h1>
+        </div>
+        <div class="text-right">
+          <span class="text-xs text-blue-100">出發日期</span>
+          <div class="text-sm font-semibold">2027/01/06 - 01/11</div>
+        </div>
+      </div>
+
+      <!-- 出發倒數計時器卡片 -->
+      <div class="mt-3 bg-black/25 backdrop-blur-md p-2.5 rounded-xl border border-white/20 flex items-center justify-between">
+        <div class="flex items-center text-xs font-medium text-sky-100">
+          <i class="fa-solid fa-hourglass-half text-amber-300 mr-2 animate-pulse"></i>距離啟程還剩：
+        </div>
+        <div class="flex items-baseline space-x-1 font-mono font-bold text-amber-300">
+          <span id="countdownDays" class="text-base text-white font-extrabold">--</span><span class="text-[10px] text-sky-200 mr-1">天</span>
+          <span id="countdownHours" class="text-sm">--</span><span class="text-[10px] text-sky-200">時</span>
+          <span id="countdownMins" class="text-sm">--</span><span class="text-[10px] text-sky-200">分</span>
+        </div>
+      </div>
+
+      <!-- 航班與住宿快速資訊 -->
+      <div class="mt-2.5 bg-white/10 backdrop-blur-sm p-3 rounded-xl border border-white/15 text-xs space-y-1.5">
+        <div class="flex justify-between items-center">
+          <span><i class="fa-solid fa-plane-up mr-1.5"></i>去程 CI176 (15:25 KHH ➔ 19:10 KIX)</span>
+          <span class="text-sky-200">華航直飛</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <span><i class="fa-solid fa-plane-down mr-1.5"></i>回程 CI177 (20:10 KIX ➔ 22:45 KHH)</span>
+          <span class="text-sky-200">晚班返台</span>
+        </div>
+        <div class="flex justify-between items-center pt-1 border-t border-white/10">
+          <span><i class="fa-solid fa-hotel mr-1.5"></i>大阪心齋橋舒適酒店 (含免費早餐)</span>
+          <span class="font-mono text-emerald-300 font-medium">易遊網已預訂</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 天數 Tab 切換列（附平滑左右滾動） -->
+  <nav class="bg-white border-b border-slate-200 sticky top-[182px] z-20 shadow-sm">
+    <div class="max-w-md mx-auto relative flex items-center px-1 py-2">
+      <button onclick="scrollTabs(-100)" class="w-7 h-7 flex items-center justify-center text-slate-400 hover:text-slate-700 bg-white/90 rounded-full shrink-0 z-10 shadow-sm border border-slate-100">
+        <i class="fa-solid fa-chevron-left text-xs"></i>
+      </button>
+
+      <div id="tabContainer" class="flex overflow-x-auto hide-scrollbar space-x-2 px-2 scroll-smooth w-full">
+        <button onclick="switchDay(1)" id="tab-1" class="day-tab px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-blue-600 text-white shadow-sm transition shrink-0">Day 1 抵達</button>
+        <button onclick="switchDay(2)" id="tab-2" class="day-tab px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 2 環球影城</button>
+        <button onclick="switchDay(3)" id="tab-3" class="day-tab px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 3 琵琶湖滑雪</button>
+        <button onclick="switchDay(4)" id="tab-4" class="day-tab px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 4 京都漫遊</button>
+        <button onclick="switchDay(5)" id="tab-5" class="day-tab px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 5 大阪名勝</button>
+        <button onclick="switchDay(6)" id="tab-6" class="day-tab px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 6 採購返台</button>
+      </div>
+
+      <button onclick="scrollTabs(100)" class="w-7 h-7 flex items-center justify-center text-slate-400 hover:text-slate-700 bg-white/90 rounded-full shrink-0 z-10 shadow-sm border border-slate-100">
+        <i class="fa-solid fa-chevron-right text-xs"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- 主內容容器 -->
+  <main class="max-w-md mx-auto p-4 space-y-4">
+
+    <!-- ==================== Day 1 ==================== -->
+    <div id="day-1" class="day-content space-y-3 fade-content">
+      <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 p-3 rounded-xl text-xs">
+        <div class="font-bold text-blue-900 mb-2 flex items-center"><i class="fa-solid fa-route mr-1.5 text-blue-600"></i>今日移動路線</div>
+        <div class="flex flex-wrap items-center gap-1.5 text-slate-700">
+          <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">關西機場</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-blue-400"></i>
+          <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded font-medium">南海特急 (38分)</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-blue-400"></i>
+          <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">難波站</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-blue-400"></i>
+          <span class="bg-amber-100 text-amber-800 px-2 py-1 rounded font-medium">計程車 (5分)</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-blue-400"></i>
+          <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">心齋橋飯店</span>
+        </div>
+      </div>
+
+      <!-- Card: 機場 -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+        <div class="relative cursor-pointer group" onclick="showModal('kansai_airport')">
+          <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf" alt="關西國際機場" class="w-full h-40 object-cover group-hover:opacity-90 transition">
+          <span class="absolute bottom-2 right-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-full backdrop-blur-xs"><i class="fa-solid fa-circle-info mr-1"></i>點擊查看介紹</span>
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between items-start mb-1">
+            <span class="text-xs font-semibold text-blue-600"><i class="fa-regular fa-clock mr-1"></i>19:10 - 20:15</span>
+            <a href="https://maps.google.com/?q=Kansai+International+Airport" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+              <i class="fa-solid fa-location-dot mr-1 text-red-500"></i>導航
+            </a>
+          </div>
+          <h3 class="text-base font-bold text-slate-800">關西國際機場 ➔ 南海電鐵特急 Rapi:t</h3>
+          <p class="text-xs text-slate-600 mt-1">入境後上 2 樓鐵道站搭乘特急 Rapi:t 直達難波站，對號座寬敞舒適，免受提行李之苦。</p>
+        </div>
+      </div>
+
+      <!-- Card: 飯店資訊 -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+        <div class="relative cursor-pointer group" onclick="showModal('hotel_comfort')">
+          <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427" alt="大阪心齋橋舒適酒店" class="w-full h-40 object-cover group-hover:opacity-90 transition">
+          <span class="absolute bottom-2 right-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-full backdrop-blur-xs"><i class="fa-solid fa-circle-info mr-1"></i>點擊查看住宿詳情</span>
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between items-start mb-1">
+            <span class="text-xs font-semibold text-emerald-600 font-mono"><i class="fa-regular fa-clock mr-1"></i>21:00 入住 Check-in</span>
+            <a href="https://maps.google.com/?q=Comfort+Hotel+Osaka+Shinsaibashi" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+              <i class="fa-solid fa-location-dot mr-1 text-red-500"></i>導航
+            </a>
+          </div>
+          <h3 class="text-base font-bold text-slate-800">大阪心齋橋舒適酒店 (Comfort Hotel)</h3>
+          <div class="mt-2 bg-slate-50 p-2.5 rounded-lg border border-slate-100 text-xs space-y-1 text-slate-600">
+            <div class="flex justify-between"><span>預訂房型：</span><span class="font-semibold text-slate-800">經濟雙床房 2 間（4 張獨立床）</span></div>
+            <div class="flex justify-between"><span>早餐資訊：</span><span class="text-emerald-700 font-semibold">06:30 - 09:30 免費自助吧</span></div>
+            <div class="flex justify-between"><span>迎賓服務：</span><span>14:00-24:00 免費現磨咖啡與特調檸檬水</span></div>
+            <div class="flex justify-between border-t border-slate-200 pt-1 text-[11px]"><span>易遊網訂單：</span><span class="font-mono text-blue-600">ORD0033051853</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: 道頓堀 -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+        <div class="relative cursor-pointer group" onclick="showModal('dotonbori')">
+          <img src="https://images.unsplash.com/photo-1590559899731-a382839e5549" alt="道頓堀" class="w-full h-40 object-cover group-hover:opacity-90 transition">
+          <span class="absolute bottom-2 right-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-full backdrop-blur-xs"><i class="fa-solid fa-circle-info mr-1"></i>點擊查看介紹</span>
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between items-start mb-1">
+            <span class="text-xs font-semibold text-blue-600"><i class="fa-regular fa-clock mr-1"></i>21:30 - 22:30</span>
+            <a href="https://maps.google.com/?q=Dotonbori" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+              <i class="fa-solid fa-location-dot mr-1 text-red-500"></i>導航
+            </a>
+          </div>
+          <h3 class="text-base font-bold text-slate-800">道頓堀散策 & 熱食宵夜</h3>
+          <p class="text-xs text-slate-600 mt-1">飯店步行 5 分鐘即達道頓堀！品嚐熱騰騰拉麵或章魚燒，在超商採買飲品後回房早睡儲備體力。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== Day 2 ==================== -->
+    <div id="day-2" class="day-content space-y-3 fade-content hidden">
+      <div class="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-100 p-3 rounded-xl text-xs">
+        <div class="font-bold text-amber-900 mb-2 flex items-center"><i class="fa-solid fa-route mr-1.5 text-amber-600"></i>今日移動路線</div>
+        <div class="flex flex-wrap items-center gap-1.5 text-slate-700">
+          <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">心齋橋站</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-amber-400"></i>
+          <span class="bg-amber-100 text-amber-800 px-2 py-1 rounded font-medium">長堀鶴見線 ➔ 大正</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-amber-400"></i>
+          <span class="bg-amber-100 text-amber-800 px-2 py-1 rounded font-medium">JR環狀線 ➔ 西九條</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-amber-400"></i>
+          <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">環球城站 (全程約35分)</span>
+        </div>
+      </div>
+
+      <!-- Card: USJ 任天堂世界實景 -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+        <div class="relative cursor-pointer group" onclick="showModal('usj')">
+          <img src="https://images.unsplash.com/photo-1624601612090-1e5b85a1ef4c" alt="日本環球影城超級任天堂世界" class="w-full h-44 object-cover group-hover:opacity-90 transition">
+          <span class="absolute bottom-2 right-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-full backdrop-blur-xs"><i class="fa-solid fa-circle-info mr-1"></i>點擊查看 USJ 攻略</span>
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between items-start mb-1">
+            <span class="text-xs font-semibold text-blue-600"><i class="fa-regular fa-clock mr-1"></i>08:00 - 19:30</span>
+            <a href="https://maps.google.com/?q=Universal+Studios+Japan" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+              <i class="fa-solid fa-location-dot mr-1 text-red-500"></i>導航
+            </a>
+          </div>
+          <h3 class="text-base font-bold text-slate-800">日本環球影城 (USJ) 全日衝刺</h3>
+          
+          <div class="mt-3 bg-amber-50/70 p-3 rounded-xl border border-amber-200/80">
+            <div class="text-xs font-bold text-amber-900 mb-1.5 flex items-center">
+              <i class="fa-solid fa-compass text-amber-600 mr-1.5"></i>USJ 最佳遊玩建議順序：
+            </div>
+            <ol class="text-[11px] text-slate-700 space-y-1.5 list-decimal list-inside leading-relaxed">
+              <li><strong class="text-amber-800">07:00 出發抵達：</strong> 入園第一時間直奔【超級任天堂世界】免整理券暢玩。</li>
+              <li><strong class="text-amber-800">官方 APP 抽下午場：</strong> 進園立刻抽任天堂第二場入場整理券備用。</li>
+              <li><strong class="text-amber-800">中段攻略哈利波特：</strong> 10:30-13:00 前往【哈利波特禁忌之旅】與三根掃帚午餐。</li>
+              <li><strong class="text-amber-800">下午暢玩人氣設施：</strong> 玩【侏儸紀飛天翼龍】、【小小兵瘋狂乘車遊】。</li>
+              <li><strong class="text-amber-800">傍晚至夜間：</strong> 欣賞霍格華茲城堡夜間燈光秀，拍夜景後滿載而歸。</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== Day 3 ==================== -->
+    <div id="day-3" class="day-content space-y-3 fade-content hidden">
+      <div class="bg-gradient-to-r from-sky-50 to-blue-50 border border-sky-100 p-3 rounded-xl text-xs">
+        <div class="font-bold text-sky-900 mb-2 flex items-center"><i class="fa-solid fa-route mr-1.5 text-sky-600"></i>今日移動路線</div>
+        <div class="flex flex-wrap items-center gap-1.5 text-slate-700">
+          <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">心齋橋飯店</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-sky-400"></i>
+          <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded font-medium">步行8分鐘(550m)</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-sky-400"></i>
+          <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">宗右衛門町集合點</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-sky-400"></i>
+          <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded font-medium">專車直達 (1.5小時)</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-sky-400"></i>
+          <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">琵琶湖雪場</span>
+        </div>
+      </div>
+
+      <!-- Card: 集合地點 -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
+        <div class="flex justify-between items-start mb-2">
+          <span class="text-xs font-semibold text-sky-600 font-mono"><i class="fa-regular fa-clock mr-1"></i>07:45 - 08:00 集合</span>
+          <a href="https://maps.google.com/?q=Tsurutontan+Soemoncho" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+            <i class="fa-solid fa-location-dot mr-1 text-red-500"></i>步行導航
+          </a>
+        </div>
+        <h3 class="text-base font-bold text-slate-800">集合地點：鶴橋烏龍麵本鋪宗右衛門町店</h3>
+        
+        <div class="mt-2.5 bg-slate-50 p-2.5 rounded-lg border border-slate-200/70 text-xs">
+          <div class="font-semibold text-slate-700 mb-1 flex items-center"><i class="fa-solid fa-person-walking text-blue-600 mr-1.5"></i>飯店出門步行指引（約 550 公尺 · 8 分鐘）：</div>
+          <div class="text-[11px] text-slate-600 space-y-1">
+            <div class="flex items-start">
+              <span class="bg-blue-600 text-white rounded-full w-4 h-4 flex items-center justify-center text-[10px] mr-1.5 shrink-0 mt-0.5">1</span>
+              <span>飯店出門向右轉，沿「周防町筋（歐洲村通道）」向東直行約 300 公尺。</span>
+            </div>
+            <div class="flex items-start">
+              <span class="bg-blue-600 text-white rounded-full w-4 h-4 flex items-center justify-center text-[10px] mr-1.5 shrink-0 mt-0.5">2</span>
+              <span>遇「堺筋」大馬路右轉向南步行約 150 公尺，走過「日本橋」橋樑。</span>
+            </div>
+            <div class="flex items-start">
+              <span class="bg-blue-600 text-white rounded-full w-4 h-4 flex items-center justify-center text-[10px] mr-1.5 shrink-0 mt-0.5">3</span>
+              <span>過橋即達宗右衛門町路口，見到「鶴橋饂飩本舗」門口尋找「TOURSTORY」旗幟導遊報到。</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: 琵琶湖山谷雪山實景 -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+        <div class="relative cursor-pointer group" onclick="showModal('biwako_valley')">
+          <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09" alt="琵琶湖山谷滑雪場雪山與纜車" class="w-full h-44 object-cover group-hover:opacity-90 transition">
+          <span class="absolute bottom-2 right-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-full backdrop-blur-xs"><i class="fa-solid fa-circle-info mr-1"></i>點擊查看雪場介紹</span>
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between items-start mb-1">
+            <span class="text-xs font-semibold text-blue-600"><i class="fa-regular fa-clock mr-1"></i>10:00 - 15:30</span>
+            <a href="https://maps.google.com/?q=Biwako+Valley" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+              <i class="fa-solid fa-location-dot mr-1 text-red-500"></i>導航
+            </a>
+          </div>
+          <h3 class="text-base font-bold text-slate-800">琵琶湖山谷滑雪場（方案 E 雪橇）</h3>
+          <p class="text-xs text-slate-600 mt-1">搭全景大纜車直上 1,174m 觀景台眺望蔚藍湖面雪景；方案 E 免費借雪盆在雪樂園狂飆打雪仗！</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== Day 4 ==================== -->
+    <div id="day-4" class="day-content space-y-3 fade-content hidden">
+      <div class="bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-100 p-3 rounded-xl text-xs">
+        <div class="font-bold text-emerald-900 mb-2 flex items-center"><i class="fa-solid fa-route mr-1.5 text-emerald-600"></i>今日移動路線</div>
+        <div class="flex flex-wrap items-center gap-1.5 text-slate-700">
+          <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">心齋橋</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-emerald-400"></i>
+          <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">京阪特急 ➔ 伏見稻荷</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-emerald-400"></i>
+          <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">京阪電車 ➔ 祇園四條</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-emerald-400"></i>
+          <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">錦市場/清水寺</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-emerald-400"></i>
+          <span class="bg-teal-100 text-teal-800 px-2 py-1 rounded font-medium">阪急特急 ➔ 梅田</span>
+        </div>
+      </div>
+
+      <!-- Card: 伏見稻荷大社 -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+        <div class="relative cursor-pointer group" onclick="showModal('fushimi_inari')">
+          <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e" alt="伏見稻荷大社千本鳥居" class="w-full h-40 object-cover group-hover:opacity-90 transition">
+          <span class="absolute bottom-2 right-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-full backdrop-blur-xs"><i class="fa-solid fa-circle-info mr-1"></i>點擊查看介紹</span>
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between items-start mb-1">
+            <span class="text-xs font-semibold text-blue-600"><i class="fa-regular fa-clock mr-1"></i>08:45 - 10:15</span>
+            <a href="https://maps.google.com/?q=Fushimi+Inari+Taisha" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+              <i class="fa-solid fa-location-dot mr-1 text-red-500"></i>導航
+            </a>
+          </div>
+          <h3 class="text-base font-bold text-slate-800">伏見稻荷大社（千本鳥居）</h3>
+          <p class="text-xs text-slate-600 mt-1">晨間錯峰避開人潮，穿梭千本鳥居拍出震撼大片，寫狐狸祈福繪馬。</p>
+        </div>
+      </div>
+
+      <!-- Card: 錦市場 -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+        <div class="relative cursor-pointer group" onclick="showModal('nishiki_market')">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5" alt="京都錦市場" class="w-full h-40 object-cover group-hover:opacity-90 transition">
+          <span class="absolute bottom-2 right-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-full backdrop-blur-xs"><i class="fa-solid fa-circle-info mr-1"></i>點擊查看介紹</span>
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between items-start mb-1">
+            <span class="text-xs font-semibold text-blue-600"><i class="fa-regular fa-clock mr-1"></i>11:00 - 12:30</span>
+            <a href="https://maps.google.com/?q=Nishiki+Market" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+              <i class="fa-solid fa-location-dot mr-1 text-red-500"></i>導航
+            </a>
+          </div>
+          <h3 class="text-base font-bold text-slate-800">鴨川散策 ➔ 錦市場美食小吃</h3>
+          <p class="text-xs text-slate-600 mt-1">欣賞冬季鴨川風光，走進「京都的廚房」品嚐現烤和牛串、厚蛋燒與豆乳甜甜圈。</p>
+        </div>
+      </div>
+
+      <!-- Card: 清水寺 -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+        <div class="relative cursor-pointer group" onclick="showModal('kiyomizu_dera')">
+          <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26" alt="京都清水寺" class="w-full h-40 object-cover group-hover:opacity-90 transition">
+          <span class="absolute bottom-2 right-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-full backdrop-blur-xs"><i class="fa-solid fa-circle-info mr-1"></i>點擊查看介紹</span>
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between items-start mb-1">
+            <span class="text-xs font-semibold text-blue-600"><i class="fa-regular fa-clock mr-1"></i>13:00 - 16:30</span>
+            <a href="https://maps.google.com/?q=Kiyomizu-dera" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+              <i class="fa-solid fa-location-dot mr-1 text-red-500"></i>導航
+            </a>
+          </div>
+          <h3 class="text-base font-bold text-slate-800">二三年坂 ➔ 清水寺夕陽</h3>
+          <p class="text-xs text-slate-600 mt-1">漫步京都古風石板路，下午 3 點登上宏偉清水舞台，捕捉夕陽斜射金黃光芒。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== Day 5 ==================== -->
+    <div id="day-5" class="day-content space-y-3 fade-content hidden">
+      <div class="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-100 p-3 rounded-xl text-xs">
+        <div class="font-bold text-purple-900 mb-2 flex items-center"><i class="fa-solid fa-route mr-1.5 text-purple-600"></i>今日移動路線</div>
+        <div class="flex flex-wrap items-center gap-1.5 text-slate-700">
+          <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">心齋橋</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-purple-400"></i>
+          <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded font-medium">地鐵中央線 ➔ 森之宮(大阪城)</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-purple-400"></i>
+          <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded font-medium">地鐵堺筋線 ➔ 惠美須町(通天閣)</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-purple-400"></i>
+          <span class="bg-pink-100 text-pink-800 px-2 py-1 rounded font-medium">地鐵御堂筋 ➔ 天王寺(阿倍野)</span>
+        </div>
+      </div>
+
+      <!-- Card: 大阪城公園 & 金箔御座船 -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+        <div class="relative cursor-pointer group" onclick="showModal('osaka_castle')">
+          <img src="https://images.unsplash.com/photo-1590253230534-f86419813955" alt="大阪城天守閣與金箔御座船" class="w-full h-44 object-cover group-hover:opacity-90 transition">
+          <span class="absolute bottom-2 right-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-full backdrop-blur-xs"><i class="fa-solid fa-circle-info mr-1"></i>點擊查看大阪城介紹</span>
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between items-start mb-1">
+            <span class="text-xs font-semibold text-blue-600"><i class="fa-regular fa-clock mr-1"></i>09:30 - 11:30</span>
+            <a href="https://maps.google.com/?q=Osaka+Castle" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+              <i class="fa-solid fa-location-dot mr-1 text-red-500"></i>導航
+            </a>
+          </div>
+          <h3 class="text-base font-bold text-slate-800">大阪城公園 & 金箔御座船</h3>
+          <p class="text-xs text-slate-600 mt-1">憑樂享券免費兌換搭乘金碧輝煌的「大阪城御座船」（價值 1,500 日圓/人），坐著環護城河欣賞宏偉城牆。</p>
+        </div>
+      </div>
+
+      <!-- Card: 阿倍野展望台 -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+        <div class="relative cursor-pointer group" onclick="showModal('abeno_harukas')">
+          <img src="https://images.unsplash.com/photo-1533050487297-09b450131914" alt="阿倍野 HARUKAS 300 展望台百萬夜景" class="w-full h-44 object-cover group-hover:opacity-90 transition">
+          <span class="absolute bottom-2 right-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-full backdrop-blur-xs"><i class="fa-solid fa-circle-info mr-1"></i>點擊查看介紹</span>
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between items-start mb-1">
+            <span class="text-xs font-semibold text-blue-600"><i class="fa-regular fa-clock mr-1"></i>16:30 - 18:30</span>
+            <a href="https://maps.google.com/?q=Abeno+Harukas" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+              <i class="fa-solid fa-location-dot mr-1 text-red-500"></i>導航
+            </a>
+          </div>
+          <h3 class="text-base font-bold text-slate-800">阿倍野 HARUKAS 300 展望台</h3>
+          <p class="text-xs text-slate-600 mt-1">憑樂享券兌換登頂 60 樓 300 公尺高空！360 度俯瞰大阪市區百萬級黃昏與夜景。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== Day 6 ==================== -->
+    <div id="day-6" class="day-content space-y-3 fade-content hidden">
+      <div class="bg-gradient-to-r from-rose-50 to-orange-50 border border-rose-100 p-3 rounded-xl text-xs">
+        <div class="font-bold text-rose-900 mb-2 flex items-center"><i class="fa-solid fa-route mr-1.5 text-rose-600"></i>今日移動路線</div>
+        <div class="flex flex-wrap items-center gap-1.5 text-slate-700">
+          <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">心齋橋</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-rose-400"></i>
+          <span class="bg-rose-100 text-rose-800 px-2 py-1 rounded font-medium">地鐵御堂筋 ➔ 中崎町</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-rose-400"></i>
+          <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">心齋橋大丸百貨</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-rose-400"></i>
+          <span class="bg-amber-100 text-amber-800 px-2 py-1 rounded font-medium">南海難波 ➔ 機場特急</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-rose-400"></i>
+          <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">關西機場 ✈️ 小港</span>
+        </div>
+      </div>
+
+      <!-- Card: 中崎町老屋文青聚落 -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+        <div class="relative cursor-pointer group" onclick="showModal('nakazakicho')">
+          <img src="https://images.unsplash.com/photo-1528164344705-475426879c0d" alt="中崎町復古老屋街景" class="w-full h-44 object-cover group-hover:opacity-90 transition">
+          <span class="absolute bottom-2 right-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-full backdrop-blur-xs"><i class="fa-solid fa-circle-info mr-1"></i>點擊查看介紹</span>
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between items-start mb-1">
+            <span class="text-xs font-semibold text-blue-600"><i class="fa-regular fa-clock mr-1"></i>10:00 - 12:30</span>
+            <a href="https://maps.google.com/?q=Nakazakicho+Station" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+              <i class="fa-solid fa-location-dot mr-1 text-red-500"></i>導航
+            </a>
+          </div>
+          <h3 class="text-base font-bold text-slate-800">中崎町老屋文青散策</h3>
+          <p class="text-xs text-slate-600 mt-1">行李寄放飯店。走訪躲過二戰戰火的昭和長屋聚落，探索隱身巷弄的手作咖啡店與古著店。</p>
+        </div>
+      </div>
+
+      <!-- Card: 心齋橋採買 -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+        <div class="relative cursor-pointer group" onclick="showModal('shinsaibashi_shopping')">
+          <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477" alt="大丸心齋橋百貨商圈採買" class="w-full h-44 object-cover group-hover:opacity-90 transition">
+          <span class="absolute bottom-2 right-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-full backdrop-blur-xs"><i class="fa-solid fa-circle-info mr-1"></i>點擊查看採買攻略</span>
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between items-start mb-1">
+            <span class="text-xs font-semibold text-blue-600"><i class="fa-regular fa-clock mr-1"></i>13:00 - 15:30</span>
+            <a href="https://maps.google.com/?q=Daimaru+Shinsaibashi" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+              <i class="fa-solid fa-location-dot mr-1 text-red-500"></i>導航
+            </a>
+          </div>
+          <h3 class="text-base font-bold text-slate-800">大丸心齋橋百貨 & 伴手禮採購</h3>
+          <p class="text-xs text-slate-600 mt-1">走訪大丸心齋橋店 9 樓寶可夢中心、JUMP SHOP，並於唐吉訶德免稅採買藥妝與伴手禮。</p>
+        </div>
+      </div>
+
+      <!-- Card: 機場返台 -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
+        <div class="flex justify-between items-start mb-1">
+          <span class="text-xs font-semibold text-blue-600"><i class="fa-regular fa-clock mr-1"></i>16:00 - 20:10</span>
+          <a href="https://maps.google.com/?q=Kansai+International+Airport" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+            <i class="fa-solid fa-location-dot mr-1 text-red-500"></i>導航
+          </a>
+        </div>
+        <h3 class="text-base font-bold text-slate-800">提行李 ➔ 關西機場 CI177 返台</h3>
+        <p class="text-xs text-slate-600 mt-1">回飯店提行李，至南海難波搭 16:30 特急直達機場（17:15 抵達），報到退稅後搭乘 20:10 班機平穩返抵高雄。</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- 景點介紹彈出視窗 (Modal) -->
+  <div id="infoModal" class="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-2xl max-w-sm w-full overflow-hidden shadow-2xl relative">
+      <div class="relative">
+        <img id="modalImg" src="" alt="" class="w-full h-48 object-cover">
+        <button onclick="closeModal()" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-black/70 transition">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+      <div class="p-5 space-y-3">
+        <div>
+          <span id="modalTag" class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 uppercase">景點精華</span>
+          <h3 id="modalTitle" class="text-lg font-bold text-slate-800 mt-1">景點名稱</h3>
+        </div>
+        <p id="modalDesc" class="text-xs text-slate-600 leading-relaxed">介紹說明文字...</p>
+        <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 space-y-1 text-xs">
+          <div class="text-slate-700 font-semibold flex items-center"><i class="fa-solid fa-star text-amber-500 mr-1.5"></i>必看推薦亮點：</div>
+          <div id="modalHighlights" class="text-slate-500 text-[11px] leading-relaxed">特色重點...</div>
+        </div>
+        <button onclick="closeModal()" class="w-full bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold py-2.5 rounded-xl transition">關閉返回手冊</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 底部固定資訊卡 -->
+  <footer class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-slate-200 p-3 shadow-lg z-30">
+    <div class="max-w-md mx-auto flex justify-between items-center text-xs">
+      <div>
+        <div class="text-[10px] text-slate-400">總預算預估（4人含機酒樂園滑雪）</div>
+        <div class="text-sm font-bold text-blue-600">約 NT$ 35,640 <span class="text-xs font-normal text-slate-500">/ 人</span></div>
+      </div>
+      <div>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-lg font-medium transition">
+          <i class="fa-solid fa-arrow-up mr-1"></i>頂部
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 腳本邏輯 -->
+  <script>
+    // 倒數計時計算邏輯 (目標：2027/01/06 00:00:00)
+    function updateCountdown() {
+      const targetDate = new Date('2027-01-06T00:00:00+08:00').getTime();
+      const now = new Date().getTime();
+      const diff = targetDate - now;
+
+      if (diff > 0) {
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+        document.getElementById('countdownDays').innerText = days;
+        document.getElementById('countdownHours').innerText = String(hours).padStart(2, '0');
+        document.getElementById('countdownMins').innerText = String(mins).padStart(2, '0');
+      } else {
+        document.getElementById('countdownDays').innerText = "0";
+        document.getElementById('countdownHours').innerText = "00";
+        document.getElementById('countdownMins').innerText = "00";
+      }
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 60000);
+
+    // 景點詳細資料庫（精準直連圖源）
+    const spotData = {
+      kansai_airport: {
+        title: "關西國際機場 & 南海電鐵 Rapi:t",
+        tag: "交通樞紐",
+        img: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf",
+        desc: "日本第一座完全建在人工島上的國際機場。機場 2 樓鐵道月台直結南海電鐵，復古鐵面人造型的『特急 Rapi:t』僅需 38 分鐘即可直抵大阪核心南側門戶『南海難波站』。",
+        highlights: "• 對號座寬敞無擠車壓力<br>• 設有專屬大行李固定架<br>• 機場 2 樓即可直通入閘機口"
+      },
+      hotel_comfort: {
+        title: "大阪心齋橋舒適酒店 (Comfort Hotel)",
+        tag: "已確認住宿",
+        img: "https://images.unsplash.com/photo-1590490360182-c33d57733427",
+        desc: "坐落於東心齋橋商圈核心，步行 5 分鐘即達心齋橋筋與道頓堀。房間乾淨現代，全館提供極速 Wi-Fi。大廳每日 14:00 至 24:00 提供免費現磨咖啡、特調檸檬水迎賓吧。",
+        highlights: "• 06:30 - 09:30 全員享用免費西式自助早餐<br>• 預訂 2 間獨立雙床房（4 張單人床，睡眠不干擾）<br>• 樓下有便利商店，買完戰利品可隨時送回房間"
+      },
+      dotonbori: {
+        title: "道頓堀商圈 & 固力果跑跑人",
+        tag: "美食核心",
+        img: "https://images.unsplash.com/photo-1590559899731-a382839e5549",
+        desc: "大阪最有代表性的美食與霓虹街區。運河兩旁林立著巨大的立體招牌，包括巨型章魚、螃蟹與最知名的固力果跑跑人發光看板。",
+        highlights: "• 與戎橋上的固力果先生合影<br>• 深夜熱騰騰的道地章魚燒與拉麵<br>• 距離飯店步行僅約 5 分鐘"
+      },
+      usj: {
+        title: "日本環球影城 (USJ)",
+        tag: "主題樂園",
+        img: "https://images.unsplash.com/photo-1624601612090-1e5b85a1ef4c",
+        desc: "全球最受歡迎的主題樂園之一！其中以高度還原遊戲場景的『超級任天堂世界』與『哈利波特魔法世界』最為震撼，平日造訪能大幅縮短排隊時間。",
+        highlights: "• 瑪利歐賽車～庫巴的挑戰書～（敲磚塊互動）<br>• 哈利波特禁忌之旅沉浸感十足<br>• 園區限定奇諾比奧咖啡廳與無酒精奶油啤酒"
+      },
+      biwako_valley: {
+        title: "滋賀 琵琶湖山谷滑雪場",
+        tag: "雪國冒險",
+        img: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09",
+        desc: "座落於標高 1,174 公尺的高山，搭乘秒速 12 公尺的日本最快全景纜車直升山頂。一邊俯瞰浩瀚壯闊的琵琶湖，一邊徜徉在純淨的白雪世界中。",
+        highlights: "• The Biwako Terrace 天空階梯甲板賞雪<br>• 方案 E 內含雪橇，在 Snow Land 飆速戲雪<br>• 專車直達免去轉乘巴士的受凍疲憊"
+      },
+      fushimi_inari: {
+        title: "京都 伏見稻荷大社",
+        tag: "古都名勝",
+        img: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e",
+        desc: "全日本三萬間稻荷神社的總本社，以綿延數公里的朱紅色『千本鳥居』聞名全球。清晨前來能避開大批旅行團，在晨光下拍出空靈絕美的神聖氛圍。",
+        highlights: "• 穿梭千本鳥居捕捉光影穿透感<br>• 購買並繪製獨特的狐狸造型祈福繪馬<br>• 奧社奉拜所輕重石許願體驗"
+      },
+      nishiki_market: {
+        title: "京都 錦市場",
+        tag: "美食街區",
+        img: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5",
+        desc: "擁有 400 年歷史、被譽為『京都的廚房』。400 公尺長的狹長商街匯集了超過百家在地漬物店、海鮮攤、熟食串燒店與日式甜品屋。",
+        highlights: "• 三木雞卵現烤高湯玉子燒<br>• 現烤頂級和牛串與章魚鵪鶉蛋串<br>• 熱騰騰的豆乳甜甜圈與抹茶霜淇淋"
+      },
+      kiyomizu_dera: {
+        title: "京都 音羽山 清水寺",
+        tag: "世界文化遺產",
+        img: "https://images.unsplash.com/photo-1503899036084-c55cdd92da26",
+        desc: "京都最古老的寺院之一。棟樑未用一釘、全由 139 根巨大櫸木架構而成的『清水舞台』氣勢磅礡。冬季午後三至四點的斜射金黃夕陽照耀木造大殿，景致最為動人。",
+        highlights: "• 清水舞台俯瞰京都市區與山谷風光<br>• 於音羽瀑布飲用學業、健康、姻緣之泉<br>• 沿著三年坂與二年坂品嚐抹茶甜點"
+      },
+      osaka_castle: {
+        title: "大阪城公園 & 金箔御座船",
+        tag: "名勝古蹟",
+        img: "https://images.unsplash.com/photo-1590253230534-f86419813955",
+        desc: "豐臣秀吉一統天下之象徵。搭乘全船覆蓋純金金箔的『大阪城御座船』，悠然漫遊於內護城河上，從水面仰望日本第一高、極為壯觀的巨石城牆與天守閣。",
+        highlights: "• 憑樂享券免費兌換價值 1,500 日圓船票<br>• 船上近距離尋找城牆刻印印記巨石<br>• 園區開闊平坦，散步輕鬆不費體力"
+      },
+      abeno_harukas: {
+        title: "阿倍野 HARUKAS 300 展望台",
+        tag: "百萬夜景",
+        img: "https://images.unsplash.com/photo-1533050487297-09b450131914",
+        desc: "高達 300 公尺的日本超高層摩天大樓。搭乘星空流星光影高速電梯直達 60 樓空中走廊，擁有 360 度全落地玻璃窗，視野能一路延伸至淡路島與六甲山。",
+        highlights: "• 傍晚前來同時捕捉夕陽暮色與璀璨夜景<br>• 憑樂享券免費兌換價值 2,000 日圓門票<br>• 58 樓空中中庭廣場可坐著喝咖啡看星空"
+      },
+      nakazakicho: {
+        title: "大阪 中崎町老屋文青聚落",
+        tag: "文青慢活",
+        img: "https://images.unsplash.com/photo-1528164344705-475426879c0d",
+        desc: "距離梅田僅一站之隔，卻完整保留了二戰未被轟炸的昭和時代木造長屋。幽靜狹窄的巷弄內進駐了各式手沖咖啡館、古著雜貨店與手作工坊。",
+        highlights: "• 昭和木造長屋散策與街拍<br>• 隱密庭院手沖咖啡館下午茶<br>• 遠離鬧區喧囂，返台前的慢步調收心"
+      },
+      shinsaibashi_shopping: {
+        title: "大丸心齋橋百貨 & 採買伴手禮",
+        tag: "採購精選",
+        img: "https://images.unsplash.com/photo-1578632767115-351597cf2477",
+        desc: "心齋橋商圈是大阪購物精華地段。大丸百貨本館設計氣派，9 樓聚集了 Pokémon Center 與各大動漫 IP 旗艦店，周邊藥妝店林立，是返國前補齊戰利品的最佳據點。",
+        highlights: "• 大丸心齋橋 9 樓官方寶可夢中心<br>• 心齋橋筋商店街免稅藥妝店巡禮<br>• 採買完步行 5 分鐘直接送回飯店放行李"
+      }
+    };
+
+    function showModal(spotKey) {
+      const data = spotData[spotKey];
+      if (!data) return;
+      document.getElementById('modalTitle').innerText = data.title;
+      document.getElementById('modalTag').innerText = data.tag;
+      document.getElementById('modalImg').src = data.img;
+      document.getElementById('modalDesc').innerText = data.desc;
+      document.getElementById('modalHighlights').innerHTML = data.highlights;
+      document.getElementById('infoModal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('infoModal').classList.add('hidden');
+    }
+
+    document.getElementById('infoModal').addEventListener('click', (e) => {
+      if (e.target.id === 'infoModal') closeModal();
+    });
+
+    function scrollTabs(offset) {
+      const container = document.getElementById('tabContainer');
+      container.scrollBy({ left: offset, behavior: 'smooth' });
+    }
+
+    const tabBox = document.getElementById('tabContainer');
+    tabBox.addEventListener('wheel', (evt) => {
+      if (evt.deltaY !== 0) {
+        evt.preventDefault();
+        tabBox.scrollLeft += evt.deltaY;
+      }
+    });
+
+    function switchDay(dayNum) {
+      document.querySelectorAll('.day-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.day-tab').forEach(el => {
+        el.classList.remove('bg-blue-600', 'text-white', 'shadow-sm');
+        el.classList.add('bg-slate-100', 'text-slate-600');
+      });
+
+      const currentDay = document.getElementById(`day-${dayNum}`);
+      if (currentDay) currentDay.classList.remove('hidden');
+
+      const currentTab = document.getElementById(`tab-${dayNum}`);
+      if (currentTab) {
+        currentTab.classList.remove('bg-slate-100', 'text-slate-600');
+        currentTab.classList.add('bg-blue-600', 'text-white', 'shadow-sm');
+        currentTab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+    }
+  </script>
+</body>
+</html>
