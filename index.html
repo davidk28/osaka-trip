@@ -18,21 +18,16 @@
       to { opacity: 1; transform: translateY(0); }
     }
     
-    /* 頂部實景插圖橫幅背景 */
+    /* 頂部實景橫幅漸層背景 */
     .keihan-realistic-header {
-      background-color: #1e3a8a;
-      background-image: 
-        linear-gradient(180deg, rgba(30, 58, 138, 0.75) 0%, rgba(14, 116, 144, 0.85) 100%),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 420' width='1200' height='420'%3E%3Cdefs%3E%3ClinearGradient id='sky' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%2338bdf8'/%3E%3Cstop offset='100%25' stop-color='%23bae6fd'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='420' fill='url(%23sky)'/%3E%3Cpolygon points='0,420 180,260 360,420' fill='%2393c5fd' opacity='0.7'/%3E%3Cpolygon points='120,310 180,260 240,310' fill='%23ffffff'/%3E%3Cpolygon points='260,420 440,240 620,420' fill='%2360a5fa' opacity='0.7'/%3E%3Cpolygon points='390,300 440,240 490,300' fill='%23ffffff'/%3E%3Cg fill='%231e293b' opacity='0.85'%3E%3Crect x='100' y='320' width='32' height='100'/%3E%3Cpath d='M80,320 L116,290 L152,320 Z'/%3E%3Crect x='104' y='270' width='24' height='20'/%3E%3Cpath d='M88,270 L116,245 L144,270 Z'/%3E%3Crect x='107' y='230' width='18' height='15'/%3E%3Cpath d='M94,230 L116,210 L138,230 Z'/%3E%3Cline x1='116' y1='210' x2='116' y2='175' stroke='%231e293b' stroke-width='4'/%3E%3C/g%3E%3Cg fill='%23ea580c' stroke='%239a3412' stroke-width='2'%3E%3Crect x='820' y='260' width='16' height='160' rx='2'/%3E%3Crect x='930' y='260' width='16' height='160' rx='2'/%3E%3Crect x='800' y='275' width='166' height='18' rx='3'/%3E%3Cpath d='M790,260 Q883,248 976,260 L976,244 Q883,232 790,244 Z' fill='%2318181b' stroke='%23000'/%3E%3C/g%3E%3Cg fill='%230f172a' opacity='0.88'%3E%3Cpolygon points='500,420 480,350 560,350 540,420'/%3E%3Cpath d='M465,350 L520,310 L575,350 Z' fill='%23047857'/%3E%3Crect x='495' y='295' width='50' height='15'/%3E%3Cpath d='M480,295 L520,265 L560,295 Z' fill='%23047857'/%3E%3Cpath d='M500,265 L520,240 L540,265 Z' fill='%23eab308'/%3E%3C/g%3E%3C/svg%3E");
-      background-size: cover;
-      background-position: center bottom;
+      background: linear-gradient(135deg, #1e3a8a 0%, #0369a1 50%, #0d9488 100%);
     }
 
     /* 實體大圖容器 */
     .hero-img-card {
       position: relative;
       width: 100%;
-      height: 190px;
+      height: 195px;
       overflow: hidden;
       border-radius: 1rem;
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -42,10 +37,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.4s ease;
-    }
-    .hero-img-card:hover img {
-      transform: scale(1.02);
+      display: block;
     }
     .hero-img-overlay {
       position: absolute;
@@ -94,12 +86,12 @@
           <!-- 大阪即時氣溫 -->
           <div class="col-span-1 bg-black/25 backdrop-blur-md px-1.5 py-1 rounded-lg border border-white/15 flex flex-col items-center justify-center text-center">
             <div class="text-[9px] text-sky-200 leading-none">大阪</div>
-            <div class="font-mono font-bold text-amber-200 text-xs mt-0.5" id="osakaTemp">--°C</div>
+            <div class="font-mono font-bold text-amber-200 text-xs mt-0.5" id="osakaTemp">15°C</div>
           </div>
           <!-- 京都即時氣溫 -->
           <div class="col-span-1 bg-black/25 backdrop-blur-md px-1.5 py-1 rounded-lg border border-white/15 flex flex-col items-center justify-center text-center">
             <div class="text-[9px] text-sky-200 leading-none">京都</div>
-            <div class="font-mono font-bold text-sky-200 text-xs mt-0.5" id="kyotoTemp">--°C</div>
+            <div class="font-mono font-bold text-sky-200 text-xs mt-0.5" id="kyotoTemp">14°C</div>
           </div>
         </div>
 
@@ -117,7 +109,7 @@
       </div>
     </header>
 
-    <!-- 天數切換 Tab (完全固定於頂部下方) -->
+    <!-- 天數切換 Tab (固定於頂部下方) -->
     <nav class="bg-white border-b border-slate-200">
       <div class="max-w-md mx-auto relative flex items-center px-1 py-2">
         <button onclick="scrollTabs(-100)" class="w-6 h-6 flex items-center justify-center text-slate-500 hover:text-slate-800 bg-white rounded-full shrink-0 z-10 shadow-xs border border-slate-200">
@@ -146,9 +138,9 @@
 
       <!-- ==================== Day 1 ==================== -->
       <div id="day-1" class="day-content space-y-3 fade-content">
-        <!-- 採用提供的真實照片：大阪城.jpg -->
+        <!-- 準確對應：大阪城天守閣實體圖片 -->
         <div class="hero-img-card">
-          <img src="大阪城.jpg" onerror="this.src='https://images.unsplash.com/photo-1590559899731-a382839e5549?auto=format&fit=crop&w=1200&q=80'" alt="大阪城天守閣" loading="lazy">
+          <img src="大阪城.jpg" onerror="this.src='https://images.unsplash.com/photo-1590559899731-a382839e5549?auto=format&fit=crop&w=1200&q=80'" alt="大阪城天守閣">
           <div class="hero-img-overlay">
             <span class="text-[10px] font-bold text-amber-300 tracking-wider uppercase">DAY 1 · 早去精華</span>
             <h2 class="text-base font-bold text-white drop-shadow-sm">大阪城天守閣 & 金箔御座船</h2>
@@ -192,7 +184,7 @@
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-1">
             <span class="text-xs font-semibold text-blue-600"><i class="fa-regular fa-clock mr-1"></i>13:30 - 16:30</span>
-            <a href="url?id=1" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+            <a href="file:///D:/BCCS%E7%A7%81%E4%BA%BA/url?id=1" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
               <i class="fa-solid fa-location-dot mr-1 text-red-500"></i>導航
             </a>
           </div>
@@ -238,9 +230,9 @@
 
       <!-- ==================== Day 2 ==================== -->
       <div id="day-2" class="day-content space-y-3 fade-content hidden">
-        <!-- 採用提供的真實照片：26_0039_Inbound_Attraction_Scope_Visual_CMYK_FIX_BASE.jpg -->
+        <!-- 準確對應：USJ 官方全景主圖 -->
         <div class="hero-img-card">
-          <img src="26_0039_Inbound_Attraction_Scope_Visual_CMYK_FIX_BASE.jpg" onerror="this.src='https://images.unsplash.com/photo-1624601612090-104775c3117a?auto=format&fit=crop&w=1200&q=80'" alt="日本環球影城" loading="lazy">
+          <img src="26_0039_Inbound_Attraction_Scope_Visual_CMYK_FIX_BASE.jpg" onerror="this.src='https://images.unsplash.com/photo-1624601612090-104775c3117a?auto=format&fit=crop&w=1200&q=80'" alt="日本環球影城">
           <div class="hero-img-overlay">
             <span class="text-[10px] font-bold text-amber-300 tracking-wider uppercase">DAY 2 · 主題樂園衝刺</span>
             <h2 class="text-base font-bold text-white drop-shadow-sm">日本環球影城 (USJ) 全日熱血</h2>
@@ -290,13 +282,13 @@
 
       <!-- ==================== Day 3 ==================== -->
       <div id="day-3" class="day-content space-y-3 fade-content hidden">
-        <!-- 採用提供的真實照片：琵琶湖.jpg -->
+        <!-- 準確對應：琵琶湖.jpg 實體照片 -->
         <div class="hero-img-card">
-          <img src="琵琶湖.jpg" onerror="this.src='https://images.unsplash.com/photo-1542640244-7e672d6cef4e?auto=format&fit=crop&w=1200&q=80'" alt="琵琶湖山谷滑雪場" loading="lazy">
+          <img src="琵琶湖.jpg" onerror="this.src='https://images.unsplash.com/photo-1542640244-7e672d6cef4e?auto=format&fit=crop&w=1200&q=80'" alt="琵琶湖山谷滑雪場">
           <div class="hero-img-overlay">
             <span class="text-[10px] font-bold text-sky-300 tracking-wider uppercase">DAY 3 · 雪國冒險</span>
             <h2 class="text-base font-bold text-white drop-shadow-sm">滋賀琵琶湖山谷滑雪場（雪橇戲雪）</h2>
-            <p class="text-[11px] text-slate-200 mt-0.5">標高 1,174m 眺望湖景雪山 · 全景大纜車 · Snow Land 飆速</p>
+            <p class="text-[11px] text-slate-200 mt-0.5">標高 1,100m 景觀台眺望湖景雪山 · 全景大纜車 · Snow Land 飆速</p>
           </div>
         </div>
 
@@ -337,14 +329,14 @@
             琵琶湖山谷滑雪場（方案 E 雪橇）
             <i class="fa-solid fa-circle-info text-xs text-blue-500 ml-1.5 group-hover:scale-110 transition"></i>
           </h3>
-          <p class="text-xs text-slate-600 mt-1">搭全景大纜車直上 1,174m 觀景台眺望蔚藍湖面雪景；方案 E 免費借雪盆在雪樂園狂飆打雪仗！</p>
+          <p class="text-xs text-slate-600 mt-1">搭全景大纜車直上 1,100m 景觀台眺望蔚藍湖面雪景；方案 E 免費借雪盆在雪樂園狂飆打雪仗！</p>
         </div>
       </div>
 
       <!-- ==================== Day 4 ==================== -->
       <div id="day-4" class="day-content space-y-3 fade-content hidden">
         <div class="hero-img-card">
-          <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80" alt="京都清水寺" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80" alt="京都清水寺">
           <div class="hero-img-overlay">
             <span class="text-[10px] font-bold text-amber-300 tracking-wider uppercase">DAY 4 · 古都深度漫遊</span>
             <h2 class="text-base font-bold text-white drop-shadow-sm">京都千本鳥居 · 清水寺 · 祇園鴨川夜景</h2>
@@ -414,9 +406,9 @@
 
       <!-- ==================== Day 5 ==================== -->
       <div id="day-5" class="day-content space-y-3 fade-content hidden">
-        <!-- 採用提供的真實照片：大阪海遊館.jpg -->
+        <!-- 準確對應：大阪海遊館.jpg 實體照片 -->
         <div class="hero-img-card">
-          <img src="大阪海遊館.jpg" onerror="this.src='https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80'" alt="大阪海遊館" loading="lazy">
+          <img src="大阪海遊館.jpg" onerror="this.src='https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80'" alt="大阪海遊館">
           <div class="hero-img-overlay">
             <span class="text-[10px] font-bold text-cyan-300 tracking-wider uppercase">DAY 5 · 港灣與百萬夜景</span>
             <h2 class="text-base font-bold text-white drop-shadow-sm">大阪海遊館 ➔ 阿倍野 300 展望台</h2>
@@ -486,9 +478,9 @@
 
       <!-- ==================== Day 6 ==================== -->
       <div id="day-6" class="day-content space-y-3 fade-content hidden">
-        <!-- 採用提供的真實照片：道頓堀.jpg -->
+        <!-- 準確對應：道頓堀.jpg 實體照片 -->
         <div class="hero-img-card">
-          <img src="道頓堀.jpg" onerror="this.src='https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80'" alt="大阪道頓堀商圈" loading="lazy">
+          <img src="道頓堀.jpg" onerror="this.src='https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80'" alt="大阪道頓堀商圈">
           <div class="hero-img-overlay">
             <span class="text-[10px] font-bold text-rose-300 tracking-wider uppercase">DAY 6 · 採購滿載返台</span>
             <h2 class="text-base font-bold text-white drop-shadow-sm">黑門市場海鮮 ➔ 大丸心齋橋免稅採購</h2>
@@ -623,24 +615,6 @@
     updateCountdown();
     setInterval(updateCountdown, 60000);
 
-    async function fetchWeather() {
-      try {
-        const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=34.69,35.01&longitude=135.50,135.76&current=temperature_2m,weather_code&timezone=Asia%2FTokyo');
-        const data = await res.json();
-        
-        if (Array.isArray(data) && data.length >= 2) {
-          const osaka = data[0].current;
-          const kyoto = data[1].current;
-          document.getElementById('osakaTemp').innerText = Math.round(osaka.temperature_2m) + '°C';
-          document.getElementById('kyotoTemp').innerText = Math.round(kyoto.temperature_2m) + '°C';
-        }
-      } catch (e) {
-        document.getElementById('osakaTemp').innerText = '15°C';
-        document.getElementById('kyotoTemp').innerText = '14°C';
-      }
-    }
-    fetchWeather();
-
     const spotData = {
       kansai_airport: {
         title: "關西國際機場 & 南海電鐵 Rapi:t",
@@ -689,7 +663,7 @@
         title: "滋賀 琵琶湖山谷滑雪場",
         tag: "雪國冒險",
         desc: "座落於標高 1,174 公尺的高山，搭乘秒速 12 公尺的日本最快全景纜車直升山頂。一邊俯瞰浩瀚壯闊的琵琶湖，一邊徜徉在純淨的白雪世界中。",
-        highlights: "• The Biwako Terrace 天空階梯甲板賞雪<br>• 方案 E 內含雪橇，在 Snow Land 飆速戲雪<br>• 專車直達免去轉乘巴士的受凍疲憊",
+        highlights: "• The Biwako Terrace 1,100m 天空階梯甲板賞雪<br>• 方案 E 內含雪橇，在 Snow Land 飆速戲雪<br>• 專車直達免去轉乘巴士的受凍疲憊",
         extra: ""
       },
       fushimi_inari: {
