@@ -134,7 +134,7 @@
         </div>
       </div>
 
-      <!-- 行程卡 1：機場抵達與特急直達 -->
+      <!-- 行程卡 1：機場抵達 -->
       <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
         <div class="flex justify-between items-start mb-1">
           <span class="text-xs font-semibold text-blue-600"><i class="fa-regular fa-clock mr-1"></i>10:45 - 12:30</span>
@@ -146,10 +146,10 @@
           抵達關西機場 ➔ 搭特急 Rapi:t 往心齋橋
           <i class="fa-solid fa-circle-info text-xs text-blue-500 ml-1.5 group-hover:scale-110 transition"></i>
         </h3>
-        <p class="text-xs text-slate-600 mt-1">10:45 降落入境，搭乘 11:35 南海特急 Rapi:t 直達難波（38 分鐘），轉搭計程車約 5 分鐘抵達心齋橋舒適酒店先寄放行李。</p>
+        <p class="text-xs text-slate-600 mt-1">10:45 降落入境，搭乘 11:35 南海特急 Rapi:t 直達難波（38 分鐘），轉計程車約 5 分鐘抵達心齋橋舒適酒店先寄放行李。</p>
       </div>
 
-      <!-- 行程卡 2：大阪城公園 & 詳細交通指引 -->
+      <!-- 行程卡 2：大阪城公園（保持簡潔，詳細交通步驟收納至標題彈窗） -->
       <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
         <div class="flex justify-between items-start mb-1">
           <span class="text-xs font-semibold text-blue-600"><i class="fa-regular fa-clock mr-1"></i>13:30 - 16:30</span>
@@ -161,24 +161,7 @@
           大阪城公園 & 金箔御座船（早去精華）
           <i class="fa-solid fa-circle-info text-xs text-blue-500 ml-1.5 group-hover:scale-110 transition"></i>
         </h3>
-        <p class="text-xs text-slate-600 mt-1">憑樂享券免費兌換搭乘「金箔御座船」（價值 1,500 日圓/人），坐船環繞護城河仰望壯麗天守閣。</p>
-
-        <!-- 交通詳細說明區塊 -->
-        <div class="mt-3 bg-slate-50 p-3 rounded-xl border border-slate-200/80 text-xs space-y-2">
-          <div class="font-bold text-blue-900 flex items-center">
-            <i class="fa-solid fa-train-subway text-blue-600 mr-1.5"></i>大阪城公園往返交通方式：
-          </div>
-          <div class="text-[11px] text-slate-700 space-y-1.5 leading-relaxed">
-            <div class="flex items-start">
-              <span class="bg-blue-600 text-white rounded px-1.5 py-0.5 text-[10px] font-bold mr-1.5 shrink-0">去程</span>
-              <span>飯店步行 3 分鐘至<strong>「長堀橋站」</strong>搭乘地下鐵【長堀鶴見綠地線】➔ 4 站直達<strong>「森之宮站」</strong>（約 6 分鐘，180 日圓）。出 3-B 號出口即是大阪城公園噴水池，漫步 8 分鐘抵達御座船售票處。</span>
-            </div>
-            <div class="flex items-start">
-              <span class="bg-emerald-600 text-white rounded px-1.5 py-0.5 text-[10px] font-bold mr-1.5 shrink-0">回程</span>
-              <span>遊船參觀完後，從西側<strong>「谷町四丁目站」</strong>搭乘【中央線】1 站至「本町站」，同站轉乘【御堂筋線】1 站直抵<strong>「心齋橋站」</strong>返回飯店 Check-in（車程約 12 分鐘）。</span>
-            </div>
-          </div>
-        </div>
+        <p class="text-xs text-slate-600 mt-1">憑樂享券免費兌換搭乘「金箔御座船」（價值 1,500 日圓/人），坐船環繞護城河仰望壯麗天守閣。（<span class="text-blue-600 font-medium cursor-pointer" onclick="showModal('osaka_castle')">點標題看地鐵往返指引</span>）</p>
       </div>
 
       <!-- 行程卡 3：飯店 Check-in -->
@@ -193,13 +176,10 @@
           大阪心齋橋舒適酒店 (Comfort Hotel)
           <i class="fa-solid fa-circle-info text-xs text-blue-500 ml-1.5 group-hover:scale-110 transition"></i>
         </h3>
-        <div class="mt-2 bg-slate-50 p-2.5 rounded-lg border border-slate-100 text-xs space-y-1.5 text-slate-600">
+        <div class="mt-2 bg-slate-50 p-2.5 rounded-lg border border-slate-100 text-xs space-y-1 text-slate-600">
           <div class="flex justify-between"><span>預訂房型：</span><span class="font-semibold text-slate-800">經濟雙床房 2 間（每間2張單人床 · 共4張單床）</span></div>
           <div class="flex justify-between"><span>早餐資訊：</span><span class="text-emerald-700 font-semibold">06:30 - 09:30 全員免費自助吧</span></div>
-          <div class="border-t border-slate-200 pt-1.5 space-y-1 text-[11px]">
-            <div class="flex justify-between"><span>訂單一 (KUO FANCHUN)：</span><span class="font-mono text-blue-600 font-medium">ORD0033097913 (NT$ 13,990)</span></div>
-            <div class="flex justify-between"><span>訂單二 (KUO CHIAWEI)：</span><span class="font-mono text-blue-600 font-medium">ORD0033097830 (NT$ 14,045)</span></div>
-          </div>
+          <div class="flex justify-between border-t border-slate-200 pt-1 text-[11px]"><span>易遊網訂單：</span><span class="font-mono text-blue-600">ORD0033097913 / ORD0033097830</span></div>
         </div>
       </div>
 
@@ -326,24 +306,7 @@
           </a>
         </div>
         <h3 class="text-base font-bold text-slate-800">集合地點：鶴橋烏龍麵本鋪宗右衛町店</h3>
-        
-        <div class="mt-2.5 bg-slate-50 p-2.5 rounded-lg border border-slate-200/70 text-xs">
-          <div class="font-semibold text-slate-700 mb-1 flex items-center"><i class="fa-solid fa-person-walking text-blue-600 mr-1.5"></i>飯店出門步行指引（約 550 公尺 · 8 分鐘）：</div>
-          <div class="text-[11px] text-slate-600 space-y-1">
-            <div class="flex items-start">
-              <span class="bg-blue-600 text-white rounded-full w-4 h-4 flex items-center justify-center text-[10px] mr-1.5 shrink-0 mt-0.5">1</span>
-              <span>飯店出門向右轉，沿「周防町筋（歐洲村通道）」向東直行約 300 公尺。</span>
-            </div>
-            <div class="flex items-start">
-              <span class="bg-blue-600 text-white rounded-full w-4 h-4 flex items-center justify-center text-[10px] mr-1.5 shrink-0 mt-0.5">2</span>
-              <span>遇「堺筋」大馬路右轉向南步行約 150 公尺，走過「日本橋」橋樑。</span>
-            </div>
-            <div class="flex items-start">
-              <span class="bg-blue-600 text-white rounded-full w-4 h-4 flex items-center justify-center text-[10px] mr-1.5 shrink-0 mt-0.5">3</span>
-              <span>過橋即達宗右衛門町路口，見到「鶴橋饂飩本舗」門口尋找「TOURSTORY」旗幟導遊報到。</span>
-            </div>
-          </div>
-        </div>
+        <p class="text-xs text-slate-600 mt-1">飯店出門向右沿周防町筋直行過日本橋即達，門口認明「TOURSTORY」旗幟導遊報到搭乘專車。</p>
       </div>
 
       <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
@@ -370,7 +333,6 @@
             <linearGradient id="g4" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4c1d95"/><stop offset="50%" stop-color="#c2410c"/><stop offset="100%" stop-color="#1e1b4b"/></linearGradient>
           </defs>
           <rect width="800" height="350" fill="url(#g4)"/>
-          <!-- 清水舞台與千本鳥居 -->
           <polygon points="380,350 380,250 560,250 560,350" fill="#451a03"/>
           <line x1="400" y1="250" x2="400" y2="350" stroke="#78350f" stroke-width="8"/>
           <line x1="440" y1="250" x2="440" y2="350" stroke="#78350f" stroke-width="8"/>
@@ -378,18 +340,17 @@
           <rect x="60" y="180" width="14" height="130" fill="#ea580c"/>
           <rect x="140" y="180" width="14" height="130" fill="#ea580c"/>
           <rect x="45" y="180" width="124" height="16" fill="#ea580c"/>
-          <!-- 天王寺阿倍野摩天大樓與夜景光芒 -->
           <rect x="650" y="70" width="75" height="280" fill="#0f172a"/>
           <line x1="670" y1="70" x2="670" y2="350" stroke="#38bdf8" stroke-width="2" opacity="0.6"/>
           <line x1="700" y1="70" x2="700" y2="350" stroke="#38bdf8" stroke-width="2" opacity="0.6"/>
           <text x="30" y="50" fill="#ffffff" font-size="24" font-weight="bold">DAY 4 京都古都 ➔ 天王寺阿倍野夜景</text>
-          <text x="30" y="80" fill="#fed7aa" font-size="14">伏見鳥居 · 錦市場 · 清水舞台夕陽 · 直奔天王寺新世界晚餐與阿倍野百萬夜景</text>
+          <text x="30" y="80" fill="#fed7aa" font-size="14">伏見鳥居 · 錦市場 · 清水寺夕陽 · 天王寺商圈晚餐與阿倍野百萬夜景</text>
         </svg>
       </div>
 
-      <!-- 今日移動路線（含天王寺與回程交通） -->
+      <!-- 今日移動路線 -->
       <div class="bg-gradient-to-r from-emerald-50 to-purple-50 border border-emerald-100 p-3 rounded-xl text-xs">
-        <div class="font-bold text-emerald-900 mb-2 flex items-center"><i class="fa-solid fa-route mr-1.5 text-emerald-600"></i>今日移動路線（京都 ➔ 天王寺 ➔ 回飯店）</div>
+        <div class="font-bold text-emerald-900 mb-2 flex items-center"><i class="fa-solid fa-route mr-1.5 text-emerald-600"></i>今日移動路線</div>
         <div class="flex flex-wrap items-center gap-1.5 text-slate-700">
           <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">心齋橋</span>
           <i class="fa-solid fa-arrow-right text-[10px] text-emerald-400"></i>
@@ -397,7 +358,7 @@
           <i class="fa-solid fa-arrow-right text-[10px] text-emerald-400"></i>
           <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded font-medium">京阪淀屋橋 ➔ 御堂筋線 (60分)</span>
           <i class="fa-solid fa-arrow-right text-[10px] text-purple-400"></i>
-          <span class="bg-amber-100 text-amber-800 px-2 py-1 rounded font-medium">天王寺/阿倍野/新世界</span>
+          <span class="bg-amber-100 text-amber-800 px-2 py-1 rounded font-medium">天王寺/阿倍野晚餐</span>
           <i class="fa-solid fa-arrow-right text-[10px] text-purple-400"></i>
           <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded font-medium">御堂筋線直達 (6分)</span>
           <i class="fa-solid fa-arrow-right text-[10px] text-purple-400"></i>
@@ -432,13 +393,13 @@
           錦市場美食 ➔ 二三年坂 ➔ 清水寺夕陽
           <i class="fa-solid fa-circle-info text-xs text-blue-500 ml-1.5 group-hover:scale-110 transition"></i>
         </h3>
-        <p class="text-xs text-slate-600 mt-1">中午大啖和牛串與玉子燒，下午 3 點登上宏偉清水舞台捕捉夕陽金光。約 16:30 步行至京阪電車「清水五條站」出發前往天王寺。</p>
+        <p class="text-xs text-slate-600 mt-1">中午大啖和牛串與玉子燒，下午 3 點登上宏偉清水舞台捕捉夕陽金光。約 16:30 由京阪「清水五條站」出發前往天王寺。</p>
       </div>
 
-      <!-- 行程卡 3：天王寺周邊景點、晚餐推薦與回程交通 (全新深度整合) -->
+      <!-- 行程卡 3：天王寺周邊（首頁極簡卡片，詳細周邊、美食與回程收納至標題彈窗） -->
       <div class="bg-white rounded-xl shadow-sm border border-purple-100 p-4">
         <div class="flex justify-between items-start mb-1">
-          <span class="text-xs font-semibold text-purple-600 font-mono"><i class="fa-regular fa-clock mr-1"></i>17:30 - 21:00 京都直達天王寺</span>
+          <span class="text-xs font-semibold text-purple-600 font-mono"><i class="fa-regular fa-clock mr-1"></i>17:30 - 21:00</span>
           <a href="https://maps.google.com/?q=Abeno+Harukas" target="_blank" class="text-xs bg-purple-100 hover:bg-purple-200 text-purple-700 px-2.5 py-1 rounded-md transition flex items-center">
             <i class="fa-solid fa-location-dot mr-1 text-purple-600"></i>導航
           </a>
@@ -447,50 +408,7 @@
           天王寺商圈散策 · 阿倍野 300 百萬夜景
           <i class="fa-solid fa-circle-info text-xs text-purple-500 ml-1.5 group-hover:scale-110 transition"></i>
         </h3>
-        <p class="text-xs text-slate-600 mt-1">憑樂享券免費登頂 60 樓阿倍野 HARUKAS 300 展望台（價值 2,000 日圓/人），360 度俯瞰大阪百萬璀璨夜景！</p>
-
-        <!-- 天王寺附近景點推薦清單 -->
-        <div class="mt-3 bg-purple-50/60 p-3 rounded-xl border border-purple-150 text-xs space-y-1.5">
-          <div class="font-bold text-purple-900 flex items-center">
-            <i class="fa-solid fa-map-location-dot text-purple-600 mr-1.5"></i>天王寺站周邊必逛亮點：
-          </div>
-          <div class="text-[11px] text-slate-700 space-y-1 leading-relaxed">
-            <div>• <strong class="text-purple-800">阿倍野 HARUKAS 300 展望台：</strong> 日本頂級超高層摩天樓，看日落接夜景震撼壯觀。</div>
-            <div>• <strong class="text-purple-800">天王寺公園「天芝 (Tenshiba)」：</strong> 站前大片綠意草皮與歐風咖啡館，散步非常舒適愜意。</div>
-            <div>• <strong class="text-purple-800">新世界本通 & 通天閣夜景：</strong> 步行 10 分鐘即達，巨型立體河豚招牌與比利肯福神，滿滿昭和下町風情。</div>
-          </div>
-        </div>
-
-        <!-- 晚餐推薦清單 -->
-        <div class="mt-2.5 bg-amber-50/70 p-3 rounded-xl border border-amber-200/80 text-xs space-y-1.5">
-          <div class="font-bold text-amber-900 flex items-center">
-            <i class="fa-solid fa-utensils text-amber-600 mr-1.5"></i>天王寺精選晚餐推薦（阿倍野與新世界）：
-          </div>
-          <div class="text-[11px] text-slate-700 space-y-1.5 leading-relaxed">
-            <div class="flex items-start">
-              <span class="bg-amber-600 text-white rounded px-1.5 py-0.5 text-[10px] font-bold mr-1.5 shrink-0 mt-0.5">推薦 1</span>
-              <span><strong>串之坊 (串の坊 天王寺 MIO 店)：</strong> 位於天王寺站共構 MIO 本館 11 樓，日本知名老字號炸串名店，現炸不油膩，用餐環境舒適優雅。</span>
-            </div>
-            <div class="flex items-start">
-              <span class="bg-amber-600 text-white rounded px-1.5 py-0.5 text-[10px] font-bold mr-1.5 shrink-0 mt-0.5">推薦 2</span>
-              <span><strong>鳥貴族 あべの橋店：</strong> 均一價人氣炭火串燒居酒屋，大口吃肉串、喝生啤酒與招牌貴族燒，4 人同樂氣氛極佳且高 CP 值。</span>
-            </div>
-            <div class="flex items-start">
-              <span class="bg-amber-600 text-white rounded px-1.5 py-0.5 text-[10px] font-bold mr-1.5 shrink-0 mt-0.5">推薦 3</span>
-              <span><strong>元祖串炸達摩 (新世界總本店/動物園前店)：</strong> 體驗大阪最具代表性的「禁止沾兩次醬汁」傳統酥脆串炸與牛肉土手燒。</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 回程交通說明 -->
-        <div class="mt-2.5 bg-blue-50 p-2.5 rounded-xl border border-blue-200 text-xs">
-          <div class="font-bold text-blue-900 flex items-center mb-1">
-            <i class="fa-solid fa-arrow-rotate-left text-blue-600 mr-1.5"></i>天王寺 ➔ 返回飯店超簡單交通：
-          </div>
-          <p class="text-[11px] text-slate-700 leading-relaxed">
-            晚餐與夜景結束後，走進<strong>「天王寺站」</strong>搭乘地下鐵【御堂筋線】（往梅田/千里中央方向），<strong>3 站直達「心齋橋站」</strong>（僅需 6 分鐘，車資 240 日圓，完全免轉車！），出站步行 5 分鐘即抵達舒適酒店。
-          </p>
-        </div>
+        <p class="text-xs text-slate-600 mt-1">憑樂享券免費登上 60 樓阿倍野展望台俯瞰大阪百萬夜景，於商圈享用精選晚餐。（<span class="text-purple-600 font-medium cursor-pointer" onclick="showModal('abeno_harukas')">點標題查看周邊景點、晚餐推薦與回程交通</span>）</p>
       </div>
     </div>
 
@@ -509,7 +427,6 @@
           <circle cx="340" cy="195" r="5" fill="#ffffff"/>
           <circle cx="220" cy="190" r="3" fill="#ffffff" opacity="0.7"/>
           <circle cx="240" cy="210" r="3" fill="#ffffff" opacity="0.7"/>
-          <!-- 天保山摩天輪輪廓 -->
           <circle cx="620" cy="180" r="70" fill="none" stroke="#38bdf8" stroke-width="4" opacity="0.8"/>
           <circle cx="620" cy="180" r="10" fill="#38bdf8"/>
           <text x="30" y="50" fill="#ffffff" font-size="24" font-weight="bold">DAY 5 港灣世界與文青老屋慢活</text>
@@ -656,22 +573,30 @@
 
   <!-- 景點介紹彈出視窗 (Modal) -->
   <div id="infoModal" class="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 flex items-center justify-center p-4 hidden">
-    <div class="bg-white rounded-2xl max-w-sm w-full overflow-hidden shadow-2xl relative">
-      <div class="p-5 space-y-3">
-        <div class="flex justify-between items-start">
-          <div>
-            <span id="modalTag" class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 uppercase">景點精華</span>
-            <h3 id="modalTitle" class="text-lg font-bold text-slate-800 mt-1">景點名稱</h3>
-          </div>
-          <button onclick="closeModal()" class="w-8 h-8 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center hover:bg-slate-200 transition">
-            <i class="fa-solid fa-xmark text-sm"></i>
-          </button>
+    <div class="bg-white rounded-2xl max-w-sm w-full overflow-hidden shadow-2xl relative max-h-[88vh] flex flex-col">
+      <div class="p-4 border-b border-slate-100 flex justify-between items-start shrink-0">
+        <div>
+          <span id="modalTag" class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 uppercase">景點精華</span>
+          <h3 id="modalTitle" class="text-base font-bold text-slate-800 mt-1">景點名稱</h3>
         </div>
+        <button onclick="closeModal()" class="w-8 h-8 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center hover:bg-slate-200 transition">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+      
+      <div class="p-4 space-y-3 overflow-y-auto">
         <p id="modalDesc" class="text-xs text-slate-600 leading-relaxed">介紹說明文字...</p>
+        
         <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 space-y-1 text-xs">
           <div class="text-slate-700 font-semibold flex items-center"><i class="fa-solid fa-star text-amber-500 mr-1.5"></i>必看推薦亮點：</div>
           <div id="modalHighlights" class="text-slate-500 text-[11px] leading-relaxed">特色重點...</div>
         </div>
+
+        <!-- 專屬彈窗擴充區（交通、晚餐、周邊） -->
+        <div id="modalExtra" class="space-y-2 text-xs"></div>
+      </div>
+
+      <div class="p-3 border-t border-slate-100 shrink-0">
         <button onclick="closeModal()" class="w-full bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold py-2.5 rounded-xl transition">關閉返回手冊</button>
       </div>
     </div>
@@ -721,85 +646,129 @@
         title: "關西國際機場 & 南海電鐵 Rapi:t",
         tag: "交通樞紐",
         desc: "日本第一座完全建在人工島上的國際機場。機場 2 樓鐵道月台直結南海電鐵，復古鐵面人造型的『特急 Rapi:t』僅需 38 分鐘即可直抵大阪核心南側門戶『南海難波站』。",
-        highlights: "• 對號座寬敞無擠車壓力<br>• 設有專屬大行李固定架<br>• 機場 2 樓即可直通入閘機口"
+        highlights: "• 對號座寬敞無擠車壓力<br>• 設有專屬大行李固定架<br>• 機場 2 樓即可直通入閘機口",
+        extra: ""
       },
       osaka_castle: {
         title: "大阪城公園 & 金箔御座船",
         tag: "名勝古蹟",
         desc: "豐臣秀吉一統天下之象徵。搭乘全船覆蓋純金金箔的『大阪城御座船』，悠然漫遊於內護城河上，從水面仰望日本第一高、極為壯觀的巨石城牆與天守閣。",
-        highlights: "• 憑樂享券免費兌換價值 1,500 日圓船票<br>• 船上近距離尋找城牆刻印印記巨石<br>• 園區開闊平坦，散步輕鬆不費體力"
+        highlights: "• 憑樂享券免費兌換價值 1,500 日圓船票<br>• 船上近距離尋找城牆刻印印記巨石<br>• 園區開闊平坦，散步輕鬆不費體力",
+        extra: `
+          <div class="bg-blue-50 p-2.5 rounded-xl border border-blue-150 space-y-1.5 text-slate-700">
+            <div class="font-bold text-blue-900 flex items-center"><i class="fa-solid fa-train-subway text-blue-600 mr-1.5"></i>地鐵往返詳細交通指引：</div>
+            <div class="text-[11px] leading-relaxed">
+              <strong>去程：</strong> 飯店步行 3 分鐘至「長堀橋站」搭【長堀鶴見綠地線】4 站直達「森之宮站」（約 6 分鐘，180 日圓）。3-B 出口即是公園噴水池，散步 8 分鐘達御座船售票處。<br>
+              <strong>回程：</strong> 遊園完由西側「谷町四丁目站」搭【中央線】1 站至本町站，轉【御堂筋線】1 站回「心齋橋站」辦理入住（約 12 分鐘）。
+            </div>
+          </div>
+        `
       },
       hotel_comfort: {
         title: "大阪心齋橋舒適酒店 (Comfort Hotel)",
         tag: "已確認住宿",
         desc: "坐落於東心齋橋商圈核心，步行 5 分鐘即達心齋橋筋與道頓堀。房間乾淨現代，全館提供極速 Wi-Fi。大廳每日 14:00 至 24:00 提供免費現磨咖啡、特調檸檬水迎賓吧。",
-        highlights: "• 06:30 - 09:30 全員享用免費西式自助早餐<br>• 預訂 2 間獨立雙床房（4 張單人床，睡眠不干擾）<br>• 樓下有便利商店，買完戰利品可隨時送回房間"
+        highlights: "• 06:30 - 09:30 全員享用免費西式自助早餐<br>• 預訂 2 間獨立雙床房（4 張單人床，睡眠不干擾）<br>• 樓下有便利商店，買完戰利品可隨時送回房間",
+        extra: ""
       },
       dotonbori: {
         title: "道頓堀商圈 & 固力果跑跑人",
         tag: "美食核心",
         desc: "大阪最有代表性的美食與霓虹街區。運河兩旁林立著巨大的立體招牌，包括巨型章魚、螃蟹與最知名的固力果跑跑人發光看板。",
-        highlights: "• 與戎橋上的固力果先生合影<br>• 深夜熱騰騰的道地章魚燒與拉麵<br>• 距離飯店步行僅約 5 分鐘"
+        highlights: "• 與戎橋上的固力果先生合影<br>• 深夜熱騰騰的道地章魚燒與拉麵<br>• 距離飯店步行僅約 5 分鐘",
+        extra: ""
       },
       usj: {
         title: "日本環球影城 (USJ)",
         tag: "主題樂園",
         desc: "全球最受歡迎的主題樂園之一！其中以高度還原遊戲場景的『超級任天堂世界』與『哈利波特魔法世界』最為震撼，平日造訪能大幅縮短排隊時間。",
-        highlights: "• 瑪利歐賽車～庫巴的挑戰書～（敲磚塊互動）<br>• 哈利波特禁忌之旅沉浸感十足<br>• 園區限定奇諾比奧咖啡廳與無酒精奶油啤酒"
+        highlights: "• 瑪利歐賽車～庫巴的挑戰書～（敲磚塊互動）<br>• 哈利波特禁忌之旅沉浸感十足<br>• 園區限定奇諾比奧咖啡廳與無酒精奶油啤酒",
+        extra: ""
       },
       biwako_valley: {
         title: "滋賀 琵琶湖山谷滑雪場",
         tag: "雪國冒險",
         desc: "座落於標高 1,174 公尺的高山，搭乘秒速 12 公尺的日本最快全景纜車直升山頂。一邊俯瞰浩瀚壯闊的琵琶湖，一邊徜徉在純淨的白雪世界中。",
-        highlights: "• The Biwako Terrace 天空階梯甲板賞雪<br>• 方案 E 內含雪橇，在 Snow Land 飆速戲雪<br>• 專車直達免去轉乘巴士的受凍疲憊"
+        highlights: "• The Biwako Terrace 天空階梯甲板賞雪<br>• 方案 E 內含雪橇，在 Snow Land 飆速戲雪<br>• 專車直達免去轉乘巴士的受凍疲憊",
+        extra: ""
       },
       fushimi_inari: {
         title: "京都 伏見稻荷大社",
         tag: "古都名勝",
         desc: "全日本三萬間稻荷神社的總本社，以綿延數公里的朱紅色『千本鳥居』聞名全球。清晨前來能避開大批旅行團，在晨光下拍出空靈絕美的神聖氛圍。",
-        highlights: "• 穿梭千本鳥居捕捉光影穿透感<br>• 購買並繪製獨特的狐狸造型祈福繪馬<br>• 奧社奉拜所輕重石許願體驗"
+        highlights: "• 穿梭千本鳥居捕捉光影穿透感<br>• 購買並繪製獨特的狐狸造型祈福繪馬<br>• 奧社奉拜所輕重石許願體驗",
+        extra: ""
       },
       kiyomizu_dera: {
         title: "京都 音羽山 清水寺",
         tag: "世界文化遺產",
         desc: "京都最古老的寺院之一。棟樑未用一釘、全由 139 根巨大櫸木架構而成的『清水舞台』氣勢磅礡。冬季午後三至四點的斜射金黃夕陽照耀木造大殿，景致最為動人。",
-        highlights: "• 清水舞台俯瞰京都市區與山谷風光<br>• 於音羽瀑布飲用學業、健康、姻緣之泉<br>• 沿著三年坂與二年坂品嚐抹茶甜點"
+        highlights: "• 清水舞台俯瞰京都市區與山谷風光<br>• 於音羽瀑布飲用學業、健康、姻緣之泉<br>• 沿著三年坂與二年坂品嚐抹茶甜點",
+        extra: ""
       },
       abeno_harukas: {
-        title: "天王寺 · 阿倍野 HARUKAS 300 展望台",
-        tag: "百萬夜景",
+        title: "天王寺商圈散策 · 阿倍野 HARUKAS 300",
+        tag: "百萬夜景 & 美食",
         desc: "高達 300 公尺的日本超高層摩天大樓。搭乘星空流星光影高速電梯直達 60 樓空中走廊，擁有 360 度全落地玻璃窗，視野能一路延伸至淡路島與六甲山。",
-        highlights: "• 傍晚前來同時捕捉夕陽暮色與璀璨夜景<br>• 憑樂享券免費兌換價值 2,000 日圓門票<br>• 周邊直結近鐵百貨、MIO 與 Q's Mall 美食街"
+        highlights: "• 傍晚前來同時捕捉夕陽暮色與璀璨夜景<br>• 憑樂享券免費兌換價值 2,000 日圓門票<br>• 直結近鐵百貨、MIO 與 Q's Mall 百貨商圈",
+        extra: `
+          <div class="bg-purple-50 p-2.5 rounded-xl border border-purple-150 space-y-1 text-slate-700">
+            <div class="font-bold text-purple-900 flex items-center"><i class="fa-solid fa-map-location-dot text-purple-600 mr-1.5"></i>天王寺周邊必逛景點：</div>
+            <div class="text-[11px] leading-relaxed">
+              • <strong>天王寺公園「天芝 (Tenshiba)」：</strong> 站前大片綠茵草坪與歐風露天咖啡座。<br>
+              • <strong>新世界通天閣：</strong> 散步約 10 分鐘即達，滿滿昭和下町氛圍、巨型河豚與比利肯福神。
+            </div>
+          </div>
+          <div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200 space-y-1 text-slate-700">
+            <div class="font-bold text-amber-900 flex items-center"><i class="fa-solid fa-utensils text-amber-600 mr-1.5"></i>天王寺精選晚餐推薦：</div>
+            <div class="text-[11px] leading-relaxed">
+              • <strong>串之坊 (天王寺 MIO 店 11F)：</strong> 老牌高級炸串名店，酥脆不油膩，用餐環境極佳。<br>
+              • <strong>鳥貴族 あべの橋店：</strong> 人氣炭火串燒居酒屋，均一價高 CP 值大口吃肉。<br>
+              • <strong>元祖串炸達摩 (新世界總本店)：</strong> 經典大阪平民串炸，沾獨門醬汁風味絕佳。
+            </div>
+          </div>
+          <div class="bg-blue-50 p-2.5 rounded-xl border border-blue-200 text-slate-700">
+            <div class="font-bold text-blue-900 flex items-center"><i class="fa-solid fa-arrow-rotate-left text-blue-600 mr-1.5"></i>回程交通：</div>
+            <div class="text-[11px] leading-relaxed">
+              從「天王寺站」搭乘地下鐵【御堂筋線】3 站直達「心齋橋站」（車程僅 6 分鐘，240 日圓，免換車），出站步行 5 分鐘回飯店。
+            </div>
+          </div>
+        `
       },
       kaiyukan: {
         title: "大阪海遊館 (Osaka Aquarium)",
         tag: "海洋奇觀",
         desc: "全球最大規模水族館之一。館內以深達 9 公尺、水量達 5,400 噸的『太平洋』巨型水槽為核心，環繞著螺旋坡道，能多角度觀察悠游水中的龐大鯨鯊與群游魚群。",
-        highlights: "• 近距離觀賞鎮館之寶巨大鯨鯊<br>• 觸摸池體驗觸摸魟魚與小鯊魚<br>• 活潑可愛的跳岩企鵝與環斑海豹餵食秀"
+        highlights: "• 近距離觀賞鎮館之寶巨大鯨鯊<br>• 觸摸池體驗觸摸魟魚與小鯊魚<br>• 活潑可愛的跳岩企鵝與環斑海豹餵食秀",
+        extra: ""
       },
       tempozan: {
         title: "天保山大摩天輪",
         tag: "港灣美景",
         desc: "座落於大阪港邊、高達 112.5 公尺的大型摩天輪。旋轉一圈約 15 分鐘，天氣晴朗時可遠眺明石海峽大橋、神戶六甲山以及整個大阪灣水天一色。",
-        highlights: "• 憑樂享券免費搭乘（價值 900 日圓）<br>• 水晶透明車廂（需排隊，視野全開）<br>• 鄰近天保山港灣村可順道享用午餐"
+        highlights: "• 憑樂享券免費搭乘（價值 900 日圓）<br>• 水晶透明車廂（需排隊，視野全開）<br>• 鄰近天保山港灣村可順道享用午餐",
+        extra: ""
       },
       nakazakicho: {
         title: "大阪 中崎町老屋文青聚落",
         tag: "文青慢活",
         desc: "距離梅田僅一站之隔，卻完整保留了二戰未被轟炸的昭和時代木造長屋。幽靜狹窄的巷弄內進駐了各式手沖咖啡館、古著雜貨店與手作工坊。",
-        highlights: "• 昭和木造長屋散策與街拍<br>• 隱密庭院手沖咖啡館下午茶<br>• 遠離鬧區喧囂，悠閒漫活時光"
+        highlights: "• 昭和木造長屋散策與街拍<br>• 隱密庭院手沖咖啡館下午茶<br>• 遠離鬧區喧囂，悠閒漫活時光",
+        extra: ""
       },
       kuromon_market: {
         title: "大阪 黑門市場",
         tag: "海鮮美食",
         desc: "有著近兩百年歷史的傳統市場，聚集了約 150 家店鋪，被譽為大阪的代表性海鮮天堂。現場現剖、現烤的頂級海鮮與和牛，是回台前最滿足的美食享受。",
-        highlights: "• 現剖巨大生蠔、香烤扇貝與鮮甜海膽<br>• 現切頂級黑鮪魚大腹（大トロ）刺身<br>• 現煎 A5 黑毛和牛串燒與白草莓"
+        highlights: "• 現剖巨大生蠔、香烤扇貝與鮮甜海膽<br>• 現切頂級黑鮪魚大腹（大トロ）刺身<br>• 現煎 A5 黑毛和牛串燒與白草莓",
+        extra: ""
       },
       shinsaibashi_shopping: {
         title: "大丸心齋橋百貨 & 採買伴手禮",
         tag: "採購精選",
         desc: "心齋橋商圈是大阪購物精華地段。大丸百貨本館設計氣派，9 樓聚集了 Pokémon Center 與各大動漫 IP 旗艦店，周邊藥妝店林立，是返國前補齊戰利品的最佳據點。",
-        highlights: "• 大丸心齋橋 9 樓官方寶可夢中心<br>• 心齋橋筋商店街免稅藥妝店巡禮<br>• 採買完步行 5 分鐘直接送回飯店放行李"
+        highlights: "• 大丸心齋橋 9 樓官方寶可夢中心<br>• 心齋橋筋商店街免稅藥妝店巡禮<br>• 採買完步行 5 分鐘直接送回飯店放行李",
+        extra: ""
       }
     };
 
@@ -810,6 +779,7 @@
       document.getElementById('modalTag').innerText = data.tag;
       document.getElementById('modalDesc').innerText = data.desc;
       document.getElementById('modalHighlights').innerHTML = data.highlights;
+      document.getElementById('modalExtra').innerHTML = data.extra || '';
       document.getElementById('infoModal').classList.remove('hidden');
     }
 
