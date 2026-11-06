@@ -47,7 +47,7 @@
         </div>
       </div>
 
-      <!-- 航班與住宿快速資訊（更新為 CI166 早去 / CI177 晚回） -->
+      <!-- 航班與住宿快速資訊 -->
       <div class="mt-2.5 bg-white/10 backdrop-blur-sm p-3 rounded-xl border border-white/15 text-xs space-y-1.5">
         <div class="flex justify-between items-center">
           <span><i class="fa-solid fa-plane-up mr-1.5 text-amber-300"></i>去程 CI166 (07:00 KHH ➔ 10:45 KIX)</span>
@@ -76,8 +76,8 @@
         <button onclick="switchDay(1)" id="tab-1" class="day-tab px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-blue-600 text-white shadow-sm transition shrink-0">Day 1 抵達大阪城</button>
         <button onclick="switchDay(2)" id="tab-2" class="day-tab px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 2 環球影城</button>
         <button onclick="switchDay(3)" id="tab-3" class="day-tab px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 3 琵琶湖滑雪</button>
-        <button onclick="switchDay(4)" id="tab-4" class="day-tab px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 4 京都漫遊</button>
-        <button onclick="switchDay(5)" id="tab-5" class="day-tab px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 5 海遊館夜景</button>
+        <button onclick="switchDay(4)" id="tab-4" class="day-tab px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 4 京都➔天王寺</button>
+        <button onclick="switchDay(5)" id="tab-5" class="day-tab px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 5 海遊館港灣</button>
         <button onclick="switchDay(6)" id="tab-6" class="day-tab px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 6 採購返台</button>
       </div>
 
@@ -92,7 +92,7 @@
 
     <!-- ==================== Day 1 ==================== -->
     <div id="day-1" class="day-content space-y-3 fade-content">
-      <!-- 每日視覺大圖 (SVG 內嵌) -->
+      <!-- 每日視覺大圖 -->
       <div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200">
         <svg class="w-full h-44" viewBox="0 0 800 350" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
           <defs>
@@ -101,12 +101,10 @@
           </defs>
           <rect width="800" height="350" fill="url(#g1)"/>
           <circle cx="700" cy="80" r="45" fill="#fef08a" opacity="0.85"/>
-          <!-- 大阪城天守閣與御座船 -->
           <polygon points="220,260 180,260 190,220 250,220 260,260" fill="#e2e8f0"/>
           <path d="M170,220 L220,180 L270,220 Z" fill="#047857"/>
           <path d="M185,180 L220,150 L255,180 Z" fill="#047857"/>
           <path d="M150,305 L290,305 L270,330 L170,330 Z" fill="url(#gold)"/>
-          <!-- 道頓堀燈飾與固力果 -->
           <rect x="520" y="160" width="40" height="110" fill="#ef4444" opacity="0.8"/>
           <rect x="575" y="140" width="45" height="130" fill="#22c55e" opacity="0.8"/>
           <rect x="635" y="170" width="35" height="100" fill="#38bdf8" opacity="0.8"/>
@@ -126,9 +124,13 @@
           <i class="fa-solid fa-arrow-right text-[10px] text-blue-400"></i>
           <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">飯店放行李</span>
           <i class="fa-solid fa-arrow-right text-[10px] text-blue-400"></i>
+          <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded font-medium">長堀鶴見綠地線 (6分)</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-blue-400"></i>
           <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">大阪城御座船</span>
           <i class="fa-solid fa-arrow-right text-[10px] text-blue-400"></i>
-          <span class="bg-amber-100 text-amber-800 px-2 py-1 rounded font-medium">道頓堀晚餐</span>
+          <span class="bg-amber-100 text-amber-800 px-2 py-1 rounded font-medium">地鐵中央線轉御堂筋</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-blue-400"></i>
+          <span class="bg-rose-100 text-rose-800 px-2 py-1 rounded font-medium">道頓堀晚餐</span>
         </div>
       </div>
 
@@ -144,10 +146,10 @@
           抵達關西機場 ➔ 搭特急 Rapi:t 往心齋橋
           <i class="fa-solid fa-circle-info text-xs text-blue-500 ml-1.5 group-hover:scale-110 transition"></i>
         </h3>
-        <p class="text-xs text-slate-600 mt-1">10:45 準時降落，快速入境後搭 11:35 特急 Rapi:t 直達南海難波，轉計程車 12:30 前直達飯店先寄放行李！</p>
+        <p class="text-xs text-slate-600 mt-1">10:45 降落入境，搭乘 11:35 南海特急 Rapi:t 直達難波（38 分鐘），轉搭計程車約 5 分鐘抵達心齋橋舒適酒店先寄放行李。</p>
       </div>
 
-      <!-- 行程卡 2：大阪城公園 & 金箔御座船（早去多出的精華） -->
+      <!-- 行程卡 2：大阪城公園 & 詳細交通指引 -->
       <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
         <div class="flex justify-between items-start mb-1">
           <span class="text-xs font-semibold text-blue-600"><i class="fa-regular fa-clock mr-1"></i>13:30 - 16:30</span>
@@ -156,10 +158,27 @@
           </a>
         </div>
         <h3 onclick="showModal('osaka_castle')" class="text-base font-bold text-slate-800 hover:text-blue-600 cursor-pointer flex items-center group transition">
-          大阪城公園 & 金箔御座船（早去多出半天行程）
+          大阪城公園 & 金箔御座船（早去精華）
           <i class="fa-solid fa-circle-info text-xs text-blue-500 ml-1.5 group-hover:scale-110 transition"></i>
         </h3>
-        <p class="text-xs text-slate-600 mt-1">憑樂享券免費兌換搭乘「金箔御座船」（價值 1,500 日圓/人），坐著環護城河仰望壯麗天守閣與高聳城牆，輕鬆不費腳力。</p>
+        <p class="text-xs text-slate-600 mt-1">憑樂享券免費兌換搭乘「金箔御座船」（價值 1,500 日圓/人），坐船環繞護城河仰望壯麗天守閣。</p>
+
+        <!-- 交通詳細說明區塊 -->
+        <div class="mt-3 bg-slate-50 p-3 rounded-xl border border-slate-200/80 text-xs space-y-2">
+          <div class="font-bold text-blue-900 flex items-center">
+            <i class="fa-solid fa-train-subway text-blue-600 mr-1.5"></i>大阪城公園往返交通方式：
+          </div>
+          <div class="text-[11px] text-slate-700 space-y-1.5 leading-relaxed">
+            <div class="flex items-start">
+              <span class="bg-blue-600 text-white rounded px-1.5 py-0.5 text-[10px] font-bold mr-1.5 shrink-0">去程</span>
+              <span>飯店步行 3 分鐘至<strong>「長堀橋站」</strong>搭乘地下鐵【長堀鶴見綠地線】➔ 4 站直達<strong>「森之宮站」</strong>（約 6 分鐘，180 日圓）。出 3-B 號出口即是大阪城公園噴水池，漫步 8 分鐘抵達御座船售票處。</span>
+            </div>
+            <div class="flex items-start">
+              <span class="bg-emerald-600 text-white rounded px-1.5 py-0.5 text-[10px] font-bold mr-1.5 shrink-0">回程</span>
+              <span>遊船參觀完後，從西側<strong>「谷町四丁目站」</strong>搭乘【中央線】1 站至「本町站」，同站轉乘【御堂筋線】1 站直抵<strong>「心齋橋站」</strong>返回飯店 Check-in（車程約 12 分鐘）。</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- 行程卡 3：飯店 Check-in -->
@@ -175,23 +194,11 @@
           <i class="fa-solid fa-circle-info text-xs text-blue-500 ml-1.5 group-hover:scale-110 transition"></i>
         </h3>
         <div class="mt-2 bg-slate-50 p-2.5 rounded-lg border border-slate-100 text-xs space-y-1.5 text-slate-600">
-          <div class="flex justify-between">
-            <span>預訂房型：</span>
-            <span class="font-semibold text-slate-800">經濟雙床房 2 間（每間2張單人床 · 共4張單床）</span>
-          </div>
-          <div class="flex justify-between">
-            <span>早餐資訊：</span>
-            <span class="text-emerald-700 font-semibold">06:30 - 09:30 全員免費自助吧</span>
-          </div>
+          <div class="flex justify-between"><span>預訂房型：</span><span class="font-semibold text-slate-800">經濟雙床房 2 間（每間2張單人床 · 共4張單床）</span></div>
+          <div class="flex justify-between"><span>早餐資訊：</span><span class="text-emerald-700 font-semibold">06:30 - 09:30 全員免費自助吧</span></div>
           <div class="border-t border-slate-200 pt-1.5 space-y-1 text-[11px]">
-            <div class="flex justify-between">
-              <span>訂單一 (KUO FANCHUN)：</span>
-              <span class="font-mono text-blue-600 font-medium">ORD0033097913 (NT$ 13,990)</span>
-            </div>
-            <div class="flex justify-between">
-              <span>訂單二 (KUO CHIAWEI)：</span>
-              <span class="font-mono text-blue-600 font-medium">ORD0033097830 (NT$ 14,045)</span>
-            </div>
+            <div class="flex justify-between"><span>訂單一 (KUO FANCHUN)：</span><span class="font-mono text-blue-600 font-medium">ORD0033097913 (NT$ 13,990)</span></div>
+            <div class="flex justify-between"><span>訂單二 (KUO CHIAWEI)：</span><span class="font-mono text-blue-600 font-medium">ORD0033097830 (NT$ 14,045)</span></div>
           </div>
         </div>
       </div>
@@ -356,42 +363,49 @@
 
     <!-- ==================== Day 4 ==================== -->
     <div id="day-4" class="day-content space-y-3 fade-content hidden">
+      <!-- 每日視覺大圖 -->
       <div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200">
         <svg class="w-full h-44" viewBox="0 0 800 350" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <linearGradient id="g4" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7c2d12"/><stop offset="50%" stop-color="#c2410c"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient>
+            <linearGradient id="g4" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4c1d95"/><stop offset="50%" stop-color="#c2410c"/><stop offset="100%" stop-color="#1e1b4b"/></linearGradient>
           </defs>
           <rect width="800" height="350" fill="url(#g4)"/>
-          <polygon points="460,350 460,250 720,250 720,350" fill="#451a03"/>
-          <line x1="480" y1="250" x2="480" y2="350" stroke="#78350f" stroke-width="8"/>
-          <line x1="530" y1="250" x2="530" y2="350" stroke="#78350f" stroke-width="8"/>
-          <line x1="580" y1="250" x2="580" y2="350" stroke="#78350f" stroke-width="8"/>
-          <line x1="630" y1="250" x2="630" y2="350" stroke="#78350f" stroke-width="8"/>
-          <path d="M440,250 L590,190 L740,250 Z" fill="#292524"/>
-          <rect x="80" y="160" width="16" height="150" fill="#ea580c"/>
-          <rect x="180" y="160" width="16" height="150" fill="#ea580c"/>
-          <rect x="60" y="160" width="156" height="20" rx="3" fill="#ea580c"/>
-          <rect x="50" y="145" width="176" height="18" rx="3" fill="#18181b"/>
-          <text x="30" y="50" fill="#ffffff" font-size="24" font-weight="bold">DAY 4 京都古都漫遊</text>
-          <text x="30" y="80" fill="#fed7aa" font-size="14">伏見稻荷千本鳥居 · 錦市場美食小吃 · 清水寺木造大舞台</text>
+          <!-- 清水舞台與千本鳥居 -->
+          <polygon points="380,350 380,250 560,250 560,350" fill="#451a03"/>
+          <line x1="400" y1="250" x2="400" y2="350" stroke="#78350f" stroke-width="8"/>
+          <line x1="440" y1="250" x2="440" y2="350" stroke="#78350f" stroke-width="8"/>
+          <path d="M360,250 L470,190 L580,250 Z" fill="#292524"/>
+          <rect x="60" y="180" width="14" height="130" fill="#ea580c"/>
+          <rect x="140" y="180" width="14" height="130" fill="#ea580c"/>
+          <rect x="45" y="180" width="124" height="16" fill="#ea580c"/>
+          <!-- 天王寺阿倍野摩天大樓與夜景光芒 -->
+          <rect x="650" y="70" width="75" height="280" fill="#0f172a"/>
+          <line x1="670" y1="70" x2="670" y2="350" stroke="#38bdf8" stroke-width="2" opacity="0.6"/>
+          <line x1="700" y1="70" x2="700" y2="350" stroke="#38bdf8" stroke-width="2" opacity="0.6"/>
+          <text x="30" y="50" fill="#ffffff" font-size="24" font-weight="bold">DAY 4 京都古都 ➔ 天王寺阿倍野夜景</text>
+          <text x="30" y="80" fill="#fed7aa" font-size="14">伏見鳥居 · 錦市場 · 清水舞台夕陽 · 直奔天王寺新世界晚餐與阿倍野百萬夜景</text>
         </svg>
       </div>
 
-      <div class="bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-100 p-3 rounded-xl text-xs">
-        <div class="font-bold text-emerald-900 mb-2 flex items-center"><i class="fa-solid fa-route mr-1.5 text-emerald-600"></i>今日移動路線</div>
+      <!-- 今日移動路線（含天王寺與回程交通） -->
+      <div class="bg-gradient-to-r from-emerald-50 to-purple-50 border border-emerald-100 p-3 rounded-xl text-xs">
+        <div class="font-bold text-emerald-900 mb-2 flex items-center"><i class="fa-solid fa-route mr-1.5 text-emerald-600"></i>今日移動路線（京都 ➔ 天王寺 ➔ 回飯店）</div>
         <div class="flex flex-wrap items-center gap-1.5 text-slate-700">
           <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">心齋橋</span>
           <i class="fa-solid fa-arrow-right text-[10px] text-emerald-400"></i>
-          <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">京阪特急 ➔ 伏見稻荷</span>
+          <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">京阪特急 ➔ 伏見/清水寺</span>
           <i class="fa-solid fa-arrow-right text-[10px] text-emerald-400"></i>
-          <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">京阪電車 ➔ 祇園四條</span>
-          <i class="fa-solid fa-arrow-right text-[10px] text-emerald-400"></i>
-          <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">錦市場/清水寺</span>
-          <i class="fa-solid fa-arrow-right text-[10px] text-emerald-400"></i>
-          <span class="bg-teal-100 text-teal-800 px-2 py-1 rounded font-medium">阪急特急 ➔ 梅田</span>
+          <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded font-medium">京阪淀屋橋 ➔ 御堂筋線 (60分)</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-purple-400"></i>
+          <span class="bg-amber-100 text-amber-800 px-2 py-1 rounded font-medium">天王寺/阿倍野/新世界</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-purple-400"></i>
+          <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded font-medium">御堂筋線直達 (6分)</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-purple-400"></i>
+          <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">心齋橋飯店</span>
         </div>
       </div>
 
+      <!-- 行程卡 1：伏見稻荷 -->
       <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
         <div class="flex justify-between items-start mb-1">
           <span class="text-xs font-semibold text-blue-600"><i class="fa-regular fa-clock mr-1"></i>08:45 - 10:15</span>
@@ -406,64 +420,103 @@
         <p class="text-xs text-slate-600 mt-1">晨間錯峰避開人潮，穿梭千本鳥居拍出震撼大片，寫狐狸祈福繪馬。</p>
       </div>
 
+      <!-- 行程卡 2：錦市場 & 清水寺 -->
       <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
         <div class="flex justify-between items-start mb-1">
-          <span class="text-xs font-semibold text-blue-600"><i class="fa-regular fa-clock mr-1"></i>11:00 - 12:30</span>
-          <a href="https://maps.google.com/?q=Nishiki+Market" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
-            <i class="fa-solid fa-location-dot mr-1 text-red-500"></i>導航
-          </a>
-        </div>
-        <h3 onclick="showModal('nishiki_market')" class="text-base font-bold text-slate-800 hover:text-blue-600 cursor-pointer flex items-center group transition">
-          鴨川散策 ➔ 錦市場美食小吃
-          <i class="fa-solid fa-circle-info text-xs text-blue-500 ml-1.5 group-hover:scale-110 transition"></i>
-        </h3>
-        <p class="text-xs text-slate-600 mt-1">欣賞冬季鴨川風光，走進「京都的廚房」品嚐現烤和牛串、厚蛋燒與豆乳甜甜圈。</p>
-      </div>
-
-      <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
-        <div class="flex justify-between items-start mb-1">
-          <span class="text-xs font-semibold text-blue-600"><i class="fa-regular fa-clock mr-1"></i>13:00 - 16:30</span>
+          <span class="text-xs font-semibold text-blue-600"><i class="fa-regular fa-clock mr-1"></i>11:00 - 16:30</span>
           <a href="https://maps.google.com/?q=Kiyomizu-dera" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
             <i class="fa-solid fa-location-dot mr-1 text-red-500"></i>導航
           </a>
         </div>
         <h3 onclick="showModal('kiyomizu_dera')" class="text-base font-bold text-slate-800 hover:text-blue-600 cursor-pointer flex items-center group transition">
-          二三年坂 ➔ 清水寺夕陽
+          錦市場美食 ➔ 二三年坂 ➔ 清水寺夕陽
           <i class="fa-solid fa-circle-info text-xs text-blue-500 ml-1.5 group-hover:scale-110 transition"></i>
         </h3>
-        <p class="text-xs text-slate-600 mt-1">漫步京都古風石板路，下午 3 點登上宏偉清水舞台，捕捉夕陽斜射金黃光芒。</p>
+        <p class="text-xs text-slate-600 mt-1">中午大啖和牛串與玉子燒，下午 3 點登上宏偉清水舞台捕捉夕陽金光。約 16:30 步行至京阪電車「清水五條站」出發前往天王寺。</p>
+      </div>
+
+      <!-- 行程卡 3：天王寺周邊景點、晚餐推薦與回程交通 (全新深度整合) -->
+      <div class="bg-white rounded-xl shadow-sm border border-purple-100 p-4">
+        <div class="flex justify-between items-start mb-1">
+          <span class="text-xs font-semibold text-purple-600 font-mono"><i class="fa-regular fa-clock mr-1"></i>17:30 - 21:00 京都直達天王寺</span>
+          <a href="https://maps.google.com/?q=Abeno+Harukas" target="_blank" class="text-xs bg-purple-100 hover:bg-purple-200 text-purple-700 px-2.5 py-1 rounded-md transition flex items-center">
+            <i class="fa-solid fa-location-dot mr-1 text-purple-600"></i>導航
+          </a>
+        </div>
+        <h3 onclick="showModal('abeno_harukas')" class="text-base font-bold text-slate-800 hover:text-purple-600 cursor-pointer flex items-center group transition">
+          天王寺商圈散策 · 阿倍野 300 百萬夜景
+          <i class="fa-solid fa-circle-info text-xs text-purple-500 ml-1.5 group-hover:scale-110 transition"></i>
+        </h3>
+        <p class="text-xs text-slate-600 mt-1">憑樂享券免費登頂 60 樓阿倍野 HARUKAS 300 展望台（價值 2,000 日圓/人），360 度俯瞰大阪百萬璀璨夜景！</p>
+
+        <!-- 天王寺附近景點推薦清單 -->
+        <div class="mt-3 bg-purple-50/60 p-3 rounded-xl border border-purple-150 text-xs space-y-1.5">
+          <div class="font-bold text-purple-900 flex items-center">
+            <i class="fa-solid fa-map-location-dot text-purple-600 mr-1.5"></i>天王寺站周邊必逛亮點：
+          </div>
+          <div class="text-[11px] text-slate-700 space-y-1 leading-relaxed">
+            <div>• <strong class="text-purple-800">阿倍野 HARUKAS 300 展望台：</strong> 日本頂級超高層摩天樓，看日落接夜景震撼壯觀。</div>
+            <div>• <strong class="text-purple-800">天王寺公園「天芝 (Tenshiba)」：</strong> 站前大片綠意草皮與歐風咖啡館，散步非常舒適愜意。</div>
+            <div>• <strong class="text-purple-800">新世界本通 & 通天閣夜景：</strong> 步行 10 分鐘即達，巨型立體河豚招牌與比利肯福神，滿滿昭和下町風情。</div>
+          </div>
+        </div>
+
+        <!-- 晚餐推薦清單 -->
+        <div class="mt-2.5 bg-amber-50/70 p-3 rounded-xl border border-amber-200/80 text-xs space-y-1.5">
+          <div class="font-bold text-amber-900 flex items-center">
+            <i class="fa-solid fa-utensils text-amber-600 mr-1.5"></i>天王寺精選晚餐推薦（阿倍野與新世界）：
+          </div>
+          <div class="text-[11px] text-slate-700 space-y-1.5 leading-relaxed">
+            <div class="flex items-start">
+              <span class="bg-amber-600 text-white rounded px-1.5 py-0.5 text-[10px] font-bold mr-1.5 shrink-0 mt-0.5">推薦 1</span>
+              <span><strong>串之坊 (串の坊 天王寺 MIO 店)：</strong> 位於天王寺站共構 MIO 本館 11 樓，日本知名老字號炸串名店，現炸不油膩，用餐環境舒適優雅。</span>
+            </div>
+            <div class="flex items-start">
+              <span class="bg-amber-600 text-white rounded px-1.5 py-0.5 text-[10px] font-bold mr-1.5 shrink-0 mt-0.5">推薦 2</span>
+              <span><strong>鳥貴族 あべの橋店：</strong> 均一價人氣炭火串燒居酒屋，大口吃肉串、喝生啤酒與招牌貴族燒，4 人同樂氣氛極佳且高 CP 值。</span>
+            </div>
+            <div class="flex items-start">
+              <span class="bg-amber-600 text-white rounded px-1.5 py-0.5 text-[10px] font-bold mr-1.5 shrink-0 mt-0.5">推薦 3</span>
+              <span><strong>元祖串炸達摩 (新世界總本店/動物園前店)：</strong> 體驗大阪最具代表性的「禁止沾兩次醬汁」傳統酥脆串炸與牛肉土手燒。</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 回程交通說明 -->
+        <div class="mt-2.5 bg-blue-50 p-2.5 rounded-xl border border-blue-200 text-xs">
+          <div class="font-bold text-blue-900 flex items-center mb-1">
+            <i class="fa-solid fa-arrow-rotate-left text-blue-600 mr-1.5"></i>天王寺 ➔ 返回飯店超簡單交通：
+          </div>
+          <p class="text-[11px] text-slate-700 leading-relaxed">
+            晚餐與夜景結束後，走進<strong>「天王寺站」</strong>搭乘地下鐵【御堂筋線】（往梅田/千里中央方向），<strong>3 站直達「心齋橋站」</strong>（僅需 6 分鐘，車資 240 日圓，完全免轉車！），出站步行 5 分鐘即抵達舒適酒店。
+          </p>
+        </div>
       </div>
     </div>
 
     <!-- ==================== Day 5 ==================== -->
     <div id="day-5" class="day-content space-y-3 fade-content hidden">
-      <!-- 每日視覺大圖（升級為海遊館鯨鯊 + 阿倍野摩天大樓夜景） -->
       <div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200">
         <svg class="w-full h-44" viewBox="0 0 800 350" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <linearGradient id="g5" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#082f49"/><stop offset="50%" stop-color="#1e1b4b"/><stop offset="100%" stop-color="#4c1d95"/></linearGradient>
+            <linearGradient id="g5" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#082f49"/><stop offset="50%" stop-color="#1e1b4b"/><stop offset="100%" stop-color="#0284c7"/></linearGradient>
             <linearGradient id="whale" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#0284c7"/></linearGradient>
           </defs>
           <rect width="800" height="350" fill="url(#g5)"/>
-          <!-- 海遊館大水槽與巨型鯨鯊 -->
           <ellipse cx="260" cy="200" rx="140" ry="40" fill="url(#whale)" opacity="0.85"/>
           <polygon points="120,200 80,170 80,230" fill="#0284c7"/>
           <polygon points="260,160 290,120 310,160" fill="#0284c7"/>
           <circle cx="340" cy="195" r="5" fill="#ffffff"/>
           <circle cx="220" cy="190" r="3" fill="#ffffff" opacity="0.7"/>
           <circle cx="240" cy="210" r="3" fill="#ffffff" opacity="0.7"/>
-          <circle cx="270" cy="195" r="3" fill="#ffffff" opacity="0.7"/>
-          <!-- 阿倍野 HARUKAS 300 摩天大樓 -->
-          <rect x="580" y="60" width="90" height="290" fill="#0f172a"/>
-          <line x1="600" y1="60" x2="600" y2="350" stroke="#38bdf8" stroke-width="2" opacity="0.6"/>
-          <line x1="625" y1="60" x2="625" y2="350" stroke="#38bdf8" stroke-width="2" opacity="0.6"/>
-          <line x1="650" y1="60" x2="650" y2="350" stroke="#38bdf8" stroke-width="2" opacity="0.6"/>
-          <text x="30" y="50" fill="#ffffff" font-size="24" font-weight="bold">DAY 5 海港世界與百萬高空夜景</text>
-          <text x="30" y="80" fill="#bae6fd" font-size="14">大阪海遊館巨大鯨鯊 · 天保山摩天輪 · 阿倍野 HARUKAS 300 展望台</text>
+          <!-- 天保山摩天輪輪廓 -->
+          <circle cx="620" cy="180" r="70" fill="none" stroke="#38bdf8" stroke-width="4" opacity="0.8"/>
+          <circle cx="620" cy="180" r="10" fill="#38bdf8"/>
+          <text x="30" y="50" fill="#ffffff" font-size="24" font-weight="bold">DAY 5 港灣世界與文青老屋慢活</text>
+          <text x="30" y="80" fill="#bae6fd" font-size="14">大阪海遊館巨大鯨鯊 · 天保山大摩天輪 · 中崎町昭和木造老屋散策</text>
         </svg>
       </div>
 
-      <!-- 今日移動路線 -->
       <div class="bg-gradient-to-r from-cyan-50 to-indigo-50 border border-cyan-100 p-3 rounded-xl text-xs">
         <div class="font-bold text-cyan-900 mb-2 flex items-center"><i class="fa-solid fa-route mr-1.5 text-cyan-600"></i>今日移動路線</div>
         <div class="flex flex-wrap items-center gap-1.5 text-slate-700">
@@ -473,7 +526,9 @@
           <i class="fa-solid fa-arrow-right text-[10px] text-cyan-400"></i>
           <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">天保山摩天輪</span>
           <i class="fa-solid fa-arrow-right text-[10px] text-cyan-400"></i>
-          <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded font-medium">地鐵御堂筋 ➔ 天王寺(阿倍野)</span>
+          <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded font-medium">地鐵谷町線 ➔ 中崎町</span>
+          <i class="fa-solid fa-arrow-right text-[10px] text-cyan-400"></i>
+          <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">回心齋橋晚餐</span>
         </div>
       </div>
 
@@ -489,7 +544,7 @@
           大阪海遊館（巨大鯨鯊與環太平洋水槽）
           <i class="fa-solid fa-circle-info text-xs text-blue-500 ml-1.5 group-hover:scale-110 transition"></i>
         </h3>
-        <p class="text-xs text-slate-600 mt-1">走進世界最大級的室內水族館！沿著螺旋步道緩步向下，近距離觀賞 9 米巨型水槽裡的鯨鯊、魔鬼氈魟魚與可愛跳岩企鵝。</p>
+        <p class="text-xs text-slate-600 mt-1">走進世界最大級室內水族館！沿著螺旋步道緩步向下，近距離觀賞 9 米巨型水槽裡的鯨鯊、魟魚與跳岩企鵝。</p>
       </div>
 
       <!-- 行程卡 2：天保山摩天輪 -->
@@ -504,22 +559,22 @@
           天保山大摩天輪 & 美食街午餐
           <i class="fa-solid fa-circle-info text-xs text-blue-500 ml-1.5 group-hover:scale-110 transition"></i>
         </h3>
-        <p class="text-xs text-slate-600 mt-1">憑樂享券免費搭乘高達 112.5 公尺的天保山摩天輪，360 度俯瞰大阪灣海景與明石海峽大橋；隨後在天保山市場享用道地午餐。</p>
+        <p class="text-xs text-slate-600 mt-1">憑樂享券免費搭乘 112.5 公尺高摩天輪，360 度俯瞰大阪灣海景與明石海峽大橋；隨後在市場享用道地午餐。</p>
       </div>
 
-      <!-- 行程卡 3：阿倍野夜景 -->
+      <!-- 行程卡 3：中崎町老屋 -->
       <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
         <div class="flex justify-between items-start mb-1">
-          <span class="text-xs font-semibold text-blue-600"><i class="fa-regular fa-clock mr-1"></i>16:30 - 18:30</span>
-          <a href="https://maps.google.com/?q=Abeno+Harukas" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+          <span class="text-xs font-semibold text-blue-600"><i class="fa-regular fa-clock mr-1"></i>15:30 - 18:00</span>
+          <a href="https://maps.google.com/?q=Nakazakicho+Station" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
             <i class="fa-solid fa-location-dot mr-1 text-red-500"></i>導航
           </a>
         </div>
-        <h3 onclick="showModal('abeno_harukas')" class="text-base font-bold text-slate-800 hover:text-blue-600 cursor-pointer flex items-center group transition">
-          阿倍野 HARUKAS 300 展望台
+        <h3 onclick="showModal('nakazakicho')" class="text-base font-bold text-slate-800 hover:text-blue-600 cursor-pointer flex items-center group transition">
+          中崎町昭和木造老屋文青聚落
           <i class="fa-solid fa-circle-info text-xs text-blue-500 ml-1.5 group-hover:scale-110 transition"></i>
         </h3>
-        <p class="text-xs text-slate-600 mt-1">憑樂享券兌換登頂 60 樓 300 公尺高空！夕陽西下時分進場，一覽大阪平原從金色黃昏轉換成繁星點點的百萬夜景。</p>
+        <p class="text-xs text-slate-600 mt-1">走訪未受戰火轟炸的昭和時代木造長屋巷弄，在幽靜的庭院咖啡館品嚐手沖咖啡與手作甜點，享受悠閒漫活時光。</p>
       </div>
     </div>
 
@@ -531,7 +586,6 @@
             <linearGradient id="g6" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4c0519"/><stop offset="50%" stop-color="#9f1239"/><stop offset="100%" stop-color="#ea580c"/></linearGradient>
           </defs>
           <rect width="800" height="350" fill="url(#g6)"/>
-          <!-- 黑門市場海鮮與大丸心齋橋 -->
           <circle cx="200" cy="200" r="50" fill="#fef08a"/>
           <text x="200" y="208" fill="#854d0e" font-size="22" font-weight="bold" text-anchor="middle">黑門市場</text>
           <rect x="480" y="100" width="220" height="210" fill="#1e293b"/>
@@ -558,7 +612,6 @@
         </div>
       </div>
 
-      <!-- 行程卡 1：黑門市場早午餐 -->
       <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
         <div class="flex justify-between items-start mb-1">
           <span class="text-xs font-semibold text-blue-600"><i class="fa-regular fa-clock mr-1"></i>10:00 - 12:00</span>
@@ -570,10 +623,9 @@
           黑門市場海鮮生魚片早午餐
           <i class="fa-solid fa-circle-info text-xs text-blue-500 ml-1.5 group-hover:scale-110 transition"></i>
         </h3>
-        <p class="text-xs text-slate-600 mt-1">退房後將大行李寄放飯店櫃台。散步至大阪傳統廚房黑門市場，品嚐現剖大生蠔、炙燒神戶牛串、現切黑鮪魚大腹與鮮甜海膽。</p>
+        <p class="text-xs text-slate-600 mt-1">退房後將大行李寄放飯店櫃台。散步至黑門市場，品嚐現剖大生蠔、炙燒神戶牛串、現切黑鮪魚大腹與鮮甜海膽。</p>
       </div>
 
-      <!-- 行程卡 2：大丸百貨免稅採買 -->
       <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
         <div class="flex justify-between items-start mb-1">
           <span class="text-xs font-semibold text-blue-600"><i class="fa-regular fa-clock mr-1"></i>12:30 - 15:30</span>
@@ -588,7 +640,6 @@
         <p class="text-xs text-slate-600 mt-1">走訪大丸心齋橋店 9 樓 Pokémon Center 與 JUMP SHOP，並於唐吉訶德免稅採買藥妝與伴手禮，買完直接回飯店大廳整裝打包。</p>
       </div>
 
-      <!-- 行程卡 3：機場返台 -->
       <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
         <div class="flex justify-between items-start mb-1">
           <span class="text-xs font-semibold text-blue-600"><i class="fa-regular fa-clock mr-1"></i>16:00 - 20:10</span>
@@ -643,7 +694,6 @@
 
   <!-- 腳本邏輯 -->
   <script>
-    // 倒數計時計算邏輯 (精確計算至 2027/01/06 00:00:00)
     function updateCountdown() {
       const targetDate = new Date('2027-01-06T00:00:00+08:00').getTime();
       const now = new Date().getTime();
@@ -666,7 +716,6 @@
     updateCountdown();
     setInterval(updateCountdown, 60000);
 
-    // 景點詳細介紹資料庫
     const spotData = {
       kansai_airport: {
         title: "關西國際機場 & 南海電鐵 Rapi:t",
@@ -710,17 +759,17 @@
         desc: "全日本三萬間稻荷神社的總本社，以綿延數公里的朱紅色『千本鳥居』聞名全球。清晨前來能避開大批旅行團，在晨光下拍出空靈絕美的神聖氛圍。",
         highlights: "• 穿梭千本鳥居捕捉光影穿透感<br>• 購買並繪製獨特的狐狸造型祈福繪馬<br>• 奧社奉拜所輕重石許願體驗"
       },
-      nishiki_market: {
-        title: "京都 錦市場",
-        tag: "美食街區",
-        desc: "擁有 400 年歷史、被譽為『京都的廚房』。400 公尺長的狹長商街匯集了超過百家在地漬物店、海鮮攤、熟食串燒店與日式甜品屋。",
-        highlights: "• 三木雞卵現烤高湯玉子燒<br>• 現烤頂級和牛串與章魚鵪鶉蛋串<br>• 熱騰騰的豆乳甜甜圈與抹茶霜淇淋"
-      },
       kiyomizu_dera: {
         title: "京都 音羽山 清水寺",
         tag: "世界文化遺產",
         desc: "京都最古老的寺院之一。棟樑未用一釘、全由 139 根巨大櫸木架構而成的『清水舞台』氣勢磅礡。冬季午後三至四點的斜射金黃夕陽照耀木造大殿，景致最為動人。",
         highlights: "• 清水舞台俯瞰京都市區與山谷風光<br>• 於音羽瀑布飲用學業、健康、姻緣之泉<br>• 沿著三年坂與二年坂品嚐抹茶甜點"
+      },
+      abeno_harukas: {
+        title: "天王寺 · 阿倍野 HARUKAS 300 展望台",
+        tag: "百萬夜景",
+        desc: "高達 300 公尺的日本超高層摩天大樓。搭乘星空流星光影高速電梯直達 60 樓空中走廊，擁有 360 度全落地玻璃窗，視野能一路延伸至淡路島與六甲山。",
+        highlights: "• 傍晚前來同時捕捉夕陽暮色與璀璨夜景<br>• 憑樂享券免費兌換價值 2,000 日圓門票<br>• 周邊直結近鐵百貨、MIO 與 Q's Mall 美食街"
       },
       kaiyukan: {
         title: "大阪海遊館 (Osaka Aquarium)",
@@ -734,11 +783,11 @@
         desc: "座落於大阪港邊、高達 112.5 公尺的大型摩天輪。旋轉一圈約 15 分鐘，天氣晴朗時可遠眺明石海峽大橋、神戶六甲山以及整個大阪灣水天一色。",
         highlights: "• 憑樂享券免費搭乘（價值 900 日圓）<br>• 水晶透明車廂（需排隊，視野全開）<br>• 鄰近天保山港灣村可順道享用午餐"
       },
-      abeno_harukas: {
-        title: "阿倍野 HARUKAS 300 展望台",
-        tag: "百萬夜景",
-        desc: "高達 300 公尺的日本超高層摩天大樓。搭乘星空流星光影高速電梯直達 60 樓空中走廊，擁有 360 度全落地玻璃窗，視野能一路延伸至淡路島與六甲山。",
-        highlights: "• 傍晚前來同時捕捉夕陽暮色與璀璨夜景<br>• 憑樂享券免費兌換價值 2,000 日圓門票<br>• 58 樓空中中庭廣場可坐著喝咖啡看星空"
+      nakazakicho: {
+        title: "大阪 中崎町老屋文青聚落",
+        tag: "文青慢活",
+        desc: "距離梅田僅一站之隔，卻完整保留了二戰未被轟炸的昭和時代木造長屋。幽靜狹窄的巷弄內進駐了各式手沖咖啡館、古著雜貨店與手作工坊。",
+        highlights: "• 昭和木造長屋散策與街拍<br>• 隱密庭院手沖咖啡館下午茶<br>• 遠離鬧區喧囂，悠閒漫活時光"
       },
       kuromon_market: {
         title: "大阪 黑門市場",
