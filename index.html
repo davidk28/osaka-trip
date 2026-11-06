@@ -48,9 +48,9 @@
   <!-- ==================== 1. 上方完全固定區塊 ==================== -->
   <div class="shrink-0 z-40 shadow-md">
     
-    <!-- 頂部資訊區：直接穿透快取載入 banner.png -->
+    <!-- 頂部資訊區：優化 banner.png 尺寸與透明度，完整呈現富士山櫻花意象 -->
     <header class="relative px-4 py-3 overflow-hidden bg-slate-900 border-b border-slate-200">
-      <img src="banner.png?v=2027" alt="Banner" class="absolute inset-0 w-full h-full object-cover opacity-35 object-right pointer-events-none">
+      <img src="banner.png" alt="Banner" class="absolute inset-0 w-full h-full object-contain object-right-top opacity-20 pointer-events-none">
       
       <div class="max-w-md mx-auto relative z-10 text-white">
         <div class="flex items-center justify-between">
@@ -129,9 +129,9 @@
 
       <!-- ==================== Day 1 ==================== -->
       <div id="day-1" class="day-content space-y-3 fade-content">
-        <!-- 確保櫻花大阪城天守閣實景 -->
+        <!-- 嚴格讀取本地 osaka.png，移除備用干擾網址 -->
         <div class="hero-img-card">
-          <img src="https://images.unsplash.com/photo-1590559899731-a382839e5549?auto=format&fit=crop&w=1200&q=80" alt="大阪城天守閣">
+          <img src="osaka.png" alt="大阪城天守閣">
           <div class="hero-img-overlay">
             <span class="text-[10px] font-bold text-amber-300 tracking-wider uppercase">DAY 1 · 早去精華</span>
             <h2 class="text-base font-bold text-white drop-shadow-sm">大阪城天守閣 & 金箔御座船</h2>
@@ -222,7 +222,7 @@
       <!-- ==================== Day 2 ==================== -->
       <div id="day-2" class="day-content space-y-3 fade-content hidden">
         <div class="hero-img-card">
-          <img src="universal.jpg?v=2027" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1624601612090-104775c3117a?auto=format&fit=crop&w=1200&q=80';" alt="日本環球影城">
+          <img src="universal.jpg" alt="日本環球影城">
           <div class="hero-img-overlay">
             <span class="text-[10px] font-bold text-amber-300 tracking-wider uppercase">DAY 2 · 主題樂園衝刺</span>
             <h2 class="text-base font-bold text-white drop-shadow-sm">日本環球影城 (USJ) 全日熱血</h2>
@@ -273,7 +273,7 @@
       <!-- ==================== Day 3 ==================== -->
       <div id="day-3" class="day-content space-y-3 fade-content hidden">
         <div class="hero-img-card">
-          <img src="biwako.png?v=2027" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1542640244-7e672d6cef4e?auto=format&fit=crop&w=1200&q=80';" alt="琵琶湖山谷滑雪場">
+          <img src="biwako.png" alt="琵琶湖山谷滑雪場">
           <div class="hero-img-overlay">
             <span class="text-[10px] font-bold text-sky-300 tracking-wider uppercase">DAY 3 · 雪國冒險</span>
             <h2 class="text-base font-bold text-white drop-shadow-sm">滋賀琵琶湖山谷滑雪場（雪橇戲雪）</h2>
@@ -299,7 +299,7 @@
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-2">
             <span class="text-xs font-semibold text-sky-600 font-mono">⏱️ 07:45 - 08:00 集合</span>
-            <a href="https://maps.google.com/?q=Tsuruhashi+Udon+Honpo+Soemoncho" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+            <a href="https://maps.google.com/?q=Tsurutontan+Soemoncho" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
               📍 步行導航
             </a>
           </div>
@@ -396,7 +396,7 @@
       <!-- ==================== Day 5 ==================== -->
       <div id="day-5" class="day-content space-y-3 fade-content hidden">
         <div class="hero-img-card">
-          <img src="Kaiyukan.png?v=2027" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80';" alt="大阪海遊館">
+          <img src="Kaiyukan.png" alt="大阪海遊館">
           <div class="hero-img-overlay">
             <span class="text-[10px] font-bold text-cyan-300 tracking-wider uppercase">DAY 5 · 港灣與百萬夜景</span>
             <h2 class="text-base font-bold text-white drop-shadow-sm">大阪海遊館 ➔ 阿倍野 300 展望台</h2>
@@ -467,7 +467,7 @@
       <!-- ==================== Day 6 ==================== -->
       <div id="day-6" class="day-content space-y-3 fade-content hidden">
         <div class="hero-img-card">
-          <img src="Dotonbori.png?v=2027" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80';" alt="大阪道頓堀商圈">
+          <img src="Dotonbori.png" alt="大阪道頓堀商圈">
           <div class="hero-img-overlay">
             <span class="text-[10px] font-bold text-rose-300 tracking-wider uppercase">DAY 6 · 採購滿載返台</span>
             <h2 class="text-base font-bold text-white drop-shadow-sm">黑門市場海鮮 ➔ 大丸心齋橋免稅採購</h2>
@@ -521,7 +521,7 @@
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-1">
             <span class="text-xs font-semibold text-blue-600">⏱️ 16:00 - 20:10</span>
-            <a href="url?id=0" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+            <a href="https://maps.google.com/?q=Kansai+International+Airport" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
               📍 導航
             </a>
           </div>
