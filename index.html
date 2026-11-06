@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
@@ -49,10 +50,8 @@
 </head>
 <body class="bg-slate-100 text-slate-800 h-screen overflow-hidden flex flex-col">
 
-  <!-- ==================== 1. 上方完全固定區塊 ==================== -->
+  <!-- 1. 上方完全固定區塊 -->
   <div class="shrink-0 z-40 shadow-md">
-    
-    <!-- 頂部資訊區 -->
     <header class="keihan-realistic-header text-white px-4 py-3">
       <div class="max-w-md mx-auto">
         <div class="flex items-center justify-between">
@@ -66,7 +65,6 @@
           </div>
         </div>
 
-        <!-- 倒數計時與即時天氣 -->
         <div class="mt-2 grid grid-cols-5 gap-1.5 text-xs">
           <div class="col-span-3 bg-black/35 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/20 flex items-center justify-between">
             <span class="text-[11px] font-semibold text-sky-100 flex items-center">
@@ -88,7 +86,6 @@
           </div>
         </div>
 
-        <!-- 航班與住宿極簡條列 -->
         <div class="mt-1.5 bg-black/25 backdrop-blur-md px-2.5 py-1.5 rounded-lg border border-white/15 text-[11px] flex justify-between items-center">
           <div class="space-x-1">
             <span>✈️ CI166早班</span>
@@ -102,7 +99,6 @@
       </div>
     </header>
 
-    <!-- 天數切換 Tab (固定於頂端) -->
     <nav class="bg-white border-b border-slate-200">
       <div class="max-w-md mx-auto relative flex items-center px-1 py-2">
         <button onclick="scrollTabs(-100)" class="w-6 h-6 flex items-center justify-center text-slate-500 hover:text-slate-800 bg-white rounded-full shrink-0 z-10 shadow-xs border border-slate-200">
@@ -125,15 +121,14 @@
     </nav>
   </div>
 
-  <!-- ==================== 2. 獨立上下滾動內容容器 (只有此處滑動) ==================== -->
+  <!-- 2. 獨立上下滾動內容容器 -->
   <div id="scrollableContent" class="flex-1 overflow-y-auto overflow-x-hidden p-4 space-y-4">
     <div class="max-w-md mx-auto pb-20 space-y-4">
 
-      <!-- ==================== Day 1 ==================== -->
+      <!-- Day 1：大阪城天守閣實景 -->
       <div id="day-1" class="day-content space-y-3 fade-content">
-        <!-- 採用英文檔名：osaka.jpg -->
         <div class="hero-img-card">
-          <img src="osaka.jpg" onerror="this.src='大阪城.jpg';" alt="大阪城天守閣">
+          <img src="osaka.jpg" onerror="this.src='https://images.unsplash.com/photo-1590559899731-a382839e5549?auto=format&fit=crop&w=1200&q=80';" alt="大阪城天守閣">
           <div class="hero-img-overlay">
             <span class="text-[10px] font-bold text-amber-300 tracking-wider uppercase">DAY 1 · 早去精華</span>
             <h2 class="text-base font-bold text-white drop-shadow-sm">大阪城天守閣 & 金箔御座船</h2>
@@ -221,11 +216,10 @@
         </div>
       </div>
 
-      <!-- ==================== Day 2 ==================== -->
+      <!-- Day 2：環球影城 USJ 實景 -->
       <div id="day-2" class="day-content space-y-3 fade-content hidden">
-        <!-- 採用英文檔名：universal.jpg -->
         <div class="hero-img-card">
-          <img src="universal.jpg" onerror="this.src='26_0039_Inbound_Attraction_Scope_Visual_CMYK_FIX_BASE.jpg';" alt="日本環球影城">
+          <img src="universal.jpg" onerror="this.src='https://images.unsplash.com/photo-1624601612090-104775c3117a?auto=format&fit=crop&w=1200&q=80';" alt="日本環球影城">
           <div class="hero-img-overlay">
             <span class="text-[10px] font-bold text-amber-300 tracking-wider uppercase">DAY 2 · 主題樂園衝刺</span>
             <h2 class="text-base font-bold text-white drop-shadow-sm">日本環球影城 (USJ) 全日熱血</h2>
@@ -273,11 +267,10 @@
         </div>
       </div>
 
-      <!-- ==================== Day 3 ==================== -->
+      <!-- Day 3：琵琶湖大纜車實景 -->
       <div id="day-3" class="day-content space-y-3 fade-content hidden">
-        <!-- 採用英文檔名：biwako.jpg -->
         <div class="hero-img-card">
-          <img src="biwako.jpg" onerror="this.src='琵琶湖.jpg';" alt="琵琶湖山谷滑雪場">
+          <img src="biwako.jpg" onerror="this.src='https://images.unsplash.com/photo-1542640244-7e672d6cef4e?auto=format&fit=crop&w=1200&q=80';" alt="琵琶湖山谷滑雪場">
           <div class="hero-img-overlay">
             <span class="text-[10px] font-bold text-sky-300 tracking-wider uppercase">DAY 3 · 雪國冒險</span>
             <h2 class="text-base font-bold text-white drop-shadow-sm">滋賀琵琶湖山谷滑雪場（雪橇戲雪）</h2>
@@ -326,10 +319,10 @@
         </div>
       </div>
 
-      <!-- ==================== Day 4 ==================== -->
+      <!-- Day 4：京都清水寺實景 -->
       <div id="day-4" class="day-content space-y-3 fade-content hidden">
         <div class="hero-img-card">
-          <img src="kiyomizu.jpg" onerror="this.src='https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80'" alt="京都清水寺">
+          <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80" alt="京都清水寺">
           <div class="hero-img-overlay">
             <span class="text-[10px] font-bold text-amber-300 tracking-wider uppercase">DAY 4 · 古都深度漫遊</span>
             <h2 class="text-base font-bold text-white drop-shadow-sm">京都千本鳥居 · 清水寺 · 祇園鴨川夜景</h2>
@@ -397,11 +390,10 @@
         </div>
       </div>
 
-      <!-- ==================== Day 5 ==================== -->
+      <!-- Day 5：海遊館實景 -->
       <div id="day-5" class="day-content space-y-3 fade-content hidden">
-        <!-- 採用英文檔名：Kaiyukan.jpg -->
         <div class="hero-img-card">
-          <img src="Kaiyukan.jpg" onerror="this.src='大阪海遊館.jpg';" alt="大阪海遊館">
+          <img src="Kaiyukan.jpg" onerror="this.src='https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80';" alt="大阪海遊館">
           <div class="hero-img-overlay">
             <span class="text-[10px] font-bold text-cyan-300 tracking-wider uppercase">DAY 5 · 港灣與百萬夜景</span>
             <h2 class="text-base font-bold text-white drop-shadow-sm">大阪海遊館 ➔ 阿倍野 300 展望台</h2>
@@ -469,11 +461,10 @@
         </div>
       </div>
 
-      <!-- ==================== Day 6 ==================== -->
+      <!-- Day 6：道頓堀實景 -->
       <div id="day-6" class="day-content space-y-3 fade-content hidden">
-        <!-- 採用英文檔名：Dotonbori.jpg -->
         <div class="hero-img-card">
-          <img src="Dotonbori.jpg" onerror="this.src='道頓堀.jpg';" alt="大阪道頓堀商圈">
+          <img src="Dotonbori.jpg" onerror="this.src='https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80';" alt="大阪道頓堀商圈">
           <div class="hero-img-overlay">
             <span class="text-[10px] font-bold text-rose-300 tracking-wider uppercase">DAY 6 · 採購滿載返台</span>
             <h2 class="text-base font-bold text-white drop-shadow-sm">黑門市場海鮮 ➔ 大丸心齋橋免稅採購</h2>
@@ -539,7 +530,7 @@
     </div>
   </div>
 
-  <!-- ==================== 3. 底部固定預算列 ==================== -->
+  <!-- 3. 底部固定預算列 -->
   <footer class="bg-white/95 backdrop-blur-md border-t border-slate-200 px-4 py-2.5 shadow-lg z-30 shrink-0">
     <div class="max-w-md mx-auto flex justify-between items-center text-xs">
       <div>
@@ -554,7 +545,7 @@
     </div>
   </footer>
 
-  <!-- ==================== 4. 景點介紹彈出視窗 (Modal) ==================== -->
+  <!-- 4. 景點介紹彈出視窗 -->
   <div id="infoModal" class="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 flex items-center justify-center p-4 hidden">
     <div class="bg-white rounded-2xl max-w-sm w-full overflow-hidden shadow-2xl relative max-h-[85vh] flex flex-col">
       <div class="p-4 border-b border-slate-100 flex justify-between items-start shrink-0">
@@ -584,7 +575,6 @@
     </div>
   </div>
 
-  <!-- 腳本邏輯 -->
   <script>
     function updateCountdown() {
       const targetDate = new Date('2027-01-06T00:00:00+08:00').getTime();
