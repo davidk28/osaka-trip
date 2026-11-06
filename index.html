@@ -16,8 +16,15 @@
       to { opacity: 1; transform: translateY(0); }
     }
     
+    /* 頂部橫幅：套用自訂 banner.png 實景底圖，並加上多層抗眩光遮罩 */
     .keihan-realistic-header {
-      background: linear-gradient(135deg, #1e3a8a 0%, #0369a1 50%, #0d9488 100%);
+      background-color: #1e3a8a;
+      background-image: 
+        linear-gradient(180deg, rgba(15, 23, 42, 0.75) 0%, rgba(30, 58, 138, 0.85) 100%),
+        url("banner.png");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
     }
 
     .hero-img-card {
@@ -52,22 +59,22 @@
   <!-- ==================== 1. 上方完全固定區塊 ==================== -->
   <div class="shrink-0 z-40 shadow-md">
     
-    <header class="keihan-realistic-header text-white px-4 py-3">
+    <header class="keihan-realistic-header text-white px-4 py-3 border-b border-white/10">
       <div class="max-w-md mx-auto">
         <div class="flex items-center justify-between">
           <div>
-            <span class="text-[10px] uppercase tracking-wider bg-white/25 backdrop-blur-sm px-2 py-0.5 rounded-full font-bold text-white">4人同行 · 早去晚回 6D5N</span>
+            <span class="text-[10px] uppercase tracking-wider bg-red-600/80 backdrop-blur-sm px-2 py-0.5 rounded-full font-bold text-white shadow-xs">4人同行 · 早去晚回 6D5N</span>
             <h1 class="text-lg font-extrabold mt-0.5 drop-shadow-md tracking-tight">2027 關西大阪 · 雪國之旅 ❄️</h1>
           </div>
           <div class="text-right">
-            <span class="text-[10px] text-sky-100">出發日期</span>
-            <div class="text-xs font-bold text-white">2027/01/06 - 01/11</div>
+            <span class="text-[10px] text-slate-200">出發日期</span>
+            <div class="text-xs font-bold text-white drop-shadow-xs">2027/01/06 - 01/11</div>
           </div>
         </div>
 
         <div class="mt-2 grid grid-cols-5 gap-1.5 text-xs">
-          <div class="col-span-3 bg-black/35 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/20 flex items-center justify-between">
-            <span class="text-[11px] font-semibold text-sky-100 flex items-center">
+          <div class="col-span-3 bg-black/45 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/20 flex items-center justify-between shadow-xs">
+            <span class="text-[11px] font-semibold text-amber-200 flex items-center">
               ⏳ 剩餘
             </span>
             <div class="font-mono font-bold text-amber-300 text-xs">
@@ -76,17 +83,17 @@
               <span id="countdownMins">--</span>分
             </div>
           </div>
-          <div class="col-span-1 bg-black/25 backdrop-blur-md px-1.5 py-1 rounded-lg border border-white/15 flex flex-col items-center justify-center text-center">
+          <div class="col-span-1 bg-black/35 backdrop-blur-md px-1.5 py-1 rounded-lg border border-white/15 flex flex-col items-center justify-center text-center">
             <div class="text-[9px] text-sky-200 leading-none">大阪天氣</div>
             <div class="font-mono font-bold text-amber-200 text-xs mt-0.5">☀️ 12°C</div>
           </div>
-          <div class="col-span-1 bg-black/25 backdrop-blur-md px-1.5 py-1 rounded-lg border border-white/15 flex flex-col items-center justify-center text-center">
+          <div class="col-span-1 bg-black/35 backdrop-blur-md px-1.5 py-1 rounded-lg border border-white/15 flex flex-col items-center justify-center text-center">
             <div class="text-[9px] text-sky-200 leading-none">京都天氣</div>
             <div class="font-mono font-bold text-sky-200 text-xs mt-0.5">⛅ 9°C</div>
           </div>
         </div>
 
-        <div class="mt-1.5 bg-black/25 backdrop-blur-md px-2.5 py-1.5 rounded-lg border border-white/15 text-[11px] flex justify-between items-center">
+        <div class="mt-1.5 bg-black/35 backdrop-blur-md px-2.5 py-1.5 rounded-lg border border-white/15 text-[11px] flex justify-between items-center shadow-xs">
           <div class="space-x-1">
             <span>✈️ CI166早班</span>
             <span class="text-white/40">|</span>
@@ -127,7 +134,6 @@
 
       <!-- ==================== Day 1 ==================== -->
       <div id="day-1" class="day-content space-y-3 fade-content">
-        <!-- 確保顯示櫻花天守閣實景 -->
         <div class="hero-img-card">
           <img src="https://images.unsplash.com/photo-1590559899731-a382839e5549?auto=format&fit=crop&w=1200&q=80" alt="大阪城天守閣">
           <div class="hero-img-overlay">
@@ -297,7 +303,7 @@
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-2">
             <span class="text-xs font-semibold text-sky-600 font-mono">⏱️ 07:45 - 08:00 集合</span>
-            <a href="https://maps.google.com/?q=Tsurutontan+Soemoncho" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+            <a href="https://maps.google.com/?q=Tsuruhashi+Udon+Honpo+Soemoncho" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
               📍 步行導航
             </a>
           </div>
@@ -546,7 +552,7 @@
     </div>
   </footer>
 
-  <!-- ==================== 4. 景點介紹彈出視窗 (Modal) ==================== -->
+  <!-- ==================== 4. 景點介紹彈出視窗 ==================== -->
   <div id="infoModal" class="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 flex items-center justify-center p-4 hidden">
     <div class="bg-white rounded-2xl max-w-sm w-full overflow-hidden shadow-2xl relative max-h-[85vh] flex flex-col">
       <div class="p-4 border-b border-slate-100 flex justify-between items-start shrink-0">
