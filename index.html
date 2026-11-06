@@ -118,7 +118,7 @@
         <div id="tabContainer" class="flex overflow-x-auto hide-scrollbar space-x-1.5 px-1.5 scroll-smooth w-full">
           <button onclick="switchDay(1)" id="tab-1" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-blue-600 text-white shadow-xs transition shrink-0">Day 1 抵達大阪城</button>
           <button onclick="switchDay(2)" id="tab-2" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 2 環球影城</button>
-          <button onclick="switchDay(3)" id="tab-3" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 3 琵琶湖滑雪</button>
+          <button onclick="switchDay(3)" id="tab-3" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 3 琵琶湖➔梅田</button>
           <button onclick="switchDay(4)" id="tab-4" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 4 京都深度漫遊</button>
           <button onclick="switchDay(5)" id="tab-5" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 5 海遊館➔阿倍野</button>
           <button onclick="switchDay(6)" id="tab-6" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 6 採購返台</button>
@@ -137,9 +137,8 @@
 
       <!-- ==================== Day 1 ==================== -->
       <div id="day-1" class="day-content space-y-3 fade-content">
-        <!-- 鎖死真實大阪城櫻花天守閣實景圖 -->
         <div class="hero-img-card">
-          <img src="osaka.png?v=2" alt="大阪城天守閣">
+          <img src="https://images.unsplash.com/photo-1590559899731-a382839e5549?auto=format&fit=crop&w=1200&q=80" alt="大阪城天守閣">
           <div class="hero-img-overlay">
             <span class="text-[10px] font-bold text-amber-300 tracking-wider uppercase">DAY 1 · 早去精華</span>
             <h2 class="text-base font-bold text-white drop-shadow-sm">大阪城天守閣 & 金箔御座船</h2>
@@ -278,43 +277,47 @@
         </div>
       </div>
 
-      <!-- ==================== Day 3 ==================== -->
+      <!-- ==================== Day 3 (已更新：琵琶湖滑雪 + 晚上梅田商圈) ==================== -->
       <div id="day-3" class="day-content space-y-3 fade-content hidden">
         <div class="hero-img-card">
           <img src="biwako.png?v=2027" alt="琵琶湖山谷滑雪場">
           <div class="hero-img-overlay">
-            <span class="text-[10px] font-bold text-sky-300 tracking-wider uppercase">DAY 3 · 雪國冒險</span>
-            <h2 class="text-base font-bold text-white drop-shadow-sm">滋賀琵琶湖山谷滑雪場（雪橇戲雪）</h2>
-            <p class="text-[11px] text-slate-200 mt-0.5">標高 1,100m 景觀台眺望湖景雪山 · 全景大纜車 · Snow Land 飆速</p>
+            <span class="text-[10px] font-bold text-sky-300 tracking-wider uppercase">DAY 3 · 雪國冒險 ➔ 梅田夜遊</span>
+            <h2 class="text-base font-bold text-white drop-shadow-sm">滋賀琵琶湖滑雪 ➔ 傍晚梅田商圈晚餐散策</h2>
+            <p class="text-[11px] text-slate-200 mt-0.5">標高 1,100m 景觀台賞雪 · 雪盆飆速 · 18:00 返心齋橋放裝備 ➔ 梅田百貨美食</p>
           </div>
         </div>
 
         <div class="bg-gradient-to-r from-sky-50 to-blue-50 border border-sky-100 p-3 rounded-xl text-xs">
           <div class="font-bold text-sky-900 mb-2 flex items-center">🗺️ 今日移動路線</div>
           <div class="flex flex-wrap items-center gap-1.5 text-slate-700">
-            <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">心齋橋飯店</span>
+            <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">心齋橋出發</span>
             <span>➔</span>
-            <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded font-medium">步行8分鐘(550m)</span>
+            <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded font-medium">專車直達琵琶湖</span>
             <span>➔</span>
-            <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">宗右衛門町集合點</span>
+            <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">18:00 返心齋橋放裝備</span>
             <span>➔</span>
-            <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded font-medium">專車直達 (1.5小時)</span>
+            <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded font-medium">御堂筋線(6分)直達梅田</span>
             <span>➔</span>
-            <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">琵琶湖雪場</span>
+            <span class="bg-rose-100 text-rose-800 px-2 py-1 rounded font-medium">LUCUA晚餐/逛街</span>
+            <span>➔</span>
+            <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">御堂筋線回飯店</span>
           </div>
         </div>
 
+        <!-- 上午集合 -->
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-2">
             <span class="text-xs font-semibold text-sky-600 font-mono">⏱️ 07:45 - 08:00 集合</span>
-            <a href="https://maps.google.com/?q=Tsurutontan+Soemoncho" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+            <a href="https://maps.google.com/?q=Tsuruhashi+Udon+Honpo+Soemoncho" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
               📍 步行導航
             </a>
           </div>
           <h3 class="text-base font-bold text-slate-800">集合地點：鶴橋烏龍麵本鋪宗右衛町店</h3>
-          <p class="text-xs text-slate-600 mt-1">飯店出門向右沿周防町筋直行過日本橋即達，門口認明「TOURSTORY」旗幟導遊報到搭乘專車。</p>
+          <p class="text-xs text-slate-600 mt-1">飯店出門向右沿周防町筋直行過日本橋即達（約 550 公尺），門口認明「TOURSTORY」旗幟導遊報到搭乘專車。</p>
         </div>
 
+        <!-- 白天雪場 -->
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-1">
             <span class="text-xs font-semibold text-blue-600">⏱️ 10:00 - 15:30</span>
@@ -326,7 +329,22 @@
             琵琶湖山谷滑雪場（方案 E 雪橇）
             <span class="text-xs text-blue-500 ml-1.5 font-normal">ℹ️</span>
           </h3>
-          <p class="text-xs text-slate-600 mt-1">搭全景大纜車直上 1,100m 景觀台眺望蔚藍湖面雪景；方案 E 免費借雪盆在雪樂園狂飆打雪仗！</p>
+          <p class="text-xs text-slate-600 mt-1">搭全景大纜車直上 1,100m 景觀台眺望蔚藍湖面雪景；方案 E 免費借雪盆在雪樂園狂飆打雪仗！約 15:30 集合搭專車返程。</p>
+        </div>
+
+        <!-- 傍晚至夜間：梅田晚餐與逛街 -->
+        <div class="bg-white rounded-xl shadow-sm border border-indigo-100 p-4">
+          <div class="flex justify-between items-start mb-1">
+            <span class="text-xs font-semibold text-indigo-600 font-mono">⏱️ 18:00 - 21:30</span>
+            <a href="https://maps.google.com/?q=LUCUA+osaka" target="_blank" class="text-xs bg-indigo-100 hover:bg-indigo-200 text-indigo-700 px-2.5 py-1 rounded-md transition flex items-center">
+              📍 導航
+            </a>
+          </div>
+          <h3 onclick="showModal('umeda_dinner')" class="text-base font-bold text-slate-800 hover:text-indigo-600 cursor-pointer flex items-center group transition">
+            18:00 返心齋橋放裝備 ➔ 梅田商圈晚餐散策
+            <span class="text-xs text-indigo-500 ml-1.5 font-normal">ℹ️</span>
+          </h3>
+          <p class="text-xs text-slate-600 mt-1">專車約 18:00 回到心齋橋。先回飯店放好雪地裝備、換輕便鞋子，再從心齋橋站搭【御堂筋線】直達「梅田站」（僅需 6 分鐘！），在 LUCUA 美食街享用暖胃晚餐與逛街。（<span class="text-indigo-600 font-medium cursor-pointer" onclick="showModal('umeda_dinner')">點標題查看晚餐推薦與交通</span>）</p>
         </div>
       </div>
 
@@ -659,6 +677,29 @@
         desc: "座落於標高 1,174 公尺的高山，搭乘秒速 12 公尺的日本最快全景纜車直升山頂。一邊俯瞰浩瀚壯闊的琵琶湖，一邊徜徉在純淨的白雪世界中。",
         highlights: "• The Biwako Terrace 1,100m 天空階梯甲板賞雪<br>• 方案 E 內含雪橇，在 Snow Land 飆速戲雪<br>• 專車直達免去轉乘巴士的受凍疲憊",
         extra: ""
+      },
+      umeda_dinner: {
+        title: "梅田商圈 · LUCUA 百貨美食與夜遊",
+        tag: "美食與逛街精華",
+        desc: "從滑雪場專車回到心齋橋後，先回飯店放好雪地裝備、換輕便鞋子，再從「心齋橋站」搭乘御堂筋線僅 6 分鐘直達「梅田站」。LUCUA 百貨餐廳營業至 23:00，滑雪後大啖美食最為舒適！",
+        highlights: "• 心齋橋搭御堂筋線 3 站直達，免轉車車程僅 6 分鐘<br>• LUCUA 10F 美食街營業至 23:00，動線集中不迷路<br>• 吃完晚餐可悠閒逛百貨或散步看夜景",
+        extra: `
+          <div class="bg-indigo-50 p-2.5 rounded-xl border border-indigo-200 space-y-1 text-slate-700">
+            <div class="font-bold text-indigo-900 flex items-center">🍲 梅田精選晚餐推薦：</div>
+            <div class="text-[11px] leading-relaxed">
+              • <strong>Katsukura 名代豬排 (LUCUA 10F)：</strong> 酥脆厚切炸豬排，白飯、高麗菜絲與味噌湯免費續加，大補滑雪消耗的熱量。<br>
+              • <strong>牛舌 炭燒 利久 (LUCUA 10F)：</strong> 經典仙台厚切炭烤牛舌定食，附牛尾清湯，出餐快香氣十足。<br>
+              • <strong>鶴橋風月 御好燒 (LUCUA 10F)：</strong> 熱騰騰的現煎大阪燒與炒麵，滿滿焦香高麗菜與日式醬汁。
+            </div>
+          </div>
+          <div class="bg-emerald-50 p-2.5 rounded-xl border border-emerald-200 text-slate-700">
+            <div class="font-bold text-emerald-900 flex items-center">🚆 往返交通方式：</div>
+            <div class="text-[11px] leading-relaxed">
+              • <strong>去程：</strong> 「心齋橋站」搭【御堂筋線】3 站直達「梅田站」（6 分鐘，240 日圓）。<br>
+              • <strong>回程：</strong> 「梅田站」搭【御堂筋線】3 站回「心齋橋站」，出站步行 5 分鐘回舒適酒店休息。
+            </div>
+          </div>
+        `
       },
       fushimi_inari: {
         title: "京都 伏見稻荷大社",
