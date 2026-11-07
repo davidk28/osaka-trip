@@ -115,11 +115,11 @@
         </button>
 
         <div id="tabContainer" class="flex overflow-x-auto hide-scrollbar space-x-1.5 px-1.5 scroll-smooth w-full">
-          <button onclick="switchDay(1)" id="tab-1" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-blue-600 text-white shadow-xs transition shrink-0">Day 1 抵達大阪城</button>
+          <button onclick="switchDay(1)" id="tab-1" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-blue-600 text-white shadow-xs transition shrink-0">Day 1 美國村➔道頓堀</button>
           <button onclick="switchDay(2)" id="tab-2" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 2 環球影城</button>
           <button onclick="switchDay(3)" id="tab-3" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 3 琵琶湖➔梅田</button>
-          <button onclick="switchDay(4)" id="tab-4" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 4 日本橋➔通天閣</button>
-          <button onclick="switchDay(5)" id="tab-5" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 5 京都雅洛號</button>
+          <button onclick="switchDay(4)" id="tab-4" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 4 大阪城➔阿倍野</button>
+          <button onclick="switchDay(5)" id="tab-5" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 5 京都一日遊</button>
           <button onclick="switchDay(6)" id="tab-6" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 6 採購返台</button>
         </div>
 
@@ -134,39 +134,37 @@
   <div id="scrollableContent" class="flex-1 overflow-y-auto overflow-x-hidden p-4 space-y-4">
     <div class="max-w-md mx-auto pb-20 space-y-4">
 
-      <!-- ==================== Day 1 ==================== -->
+      <!-- ==================== Day 1 (全新 Chill 版：美國村 + 道頓堀) ==================== -->
       <div id="day-1" class="day-content space-y-3 fade-content">
         <div class="hero-img-card">
-          <img src="osaka.png?v=2" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1590559899731-a382839e5549?auto=format&fit=crop&w=1200&q=80';" alt="大阪城天守閣">
+          <img src="Dotonbori.png?v=2027" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1590559899731-a382839e5549?auto=format&fit=crop&w=1200&q=80';" alt="心齋橋美國村">
           <div class="hero-img-overlay">
-            <span class="text-[10px] font-bold text-amber-300 tracking-wider uppercase">DAY 1 · 早去精華</span>
-            <h2 class="text-base font-bold text-white drop-shadow-sm">大阪城天守閣 & 金箔御座船</h2>
-            <p class="text-[11px] text-slate-200 mt-0.5">10:45 落地 · 下午遊船賞古城牆 · 傍晚道頓堀大啖宵夜美食</p>
+            <span class="text-[10px] font-bold text-amber-300 tracking-wider uppercase">DAY 1 · 悠閒漫步潮流街區</span>
+            <h2 class="text-base font-bold text-white drop-shadow-sm">心齋橋寄放行李 ➔ 美國村古著 ➔ 道頓堀美食</h2>
+            <p class="text-[11px] text-slate-200 mt-0.5">10:45 落地 · 全區步行免轉車 · 潮流古著選品 · 固力果合影早早休息備戰 USJ</p>
           </div>
         </div>
 
         <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 p-3 rounded-xl text-xs">
-          <div class="font-bold text-blue-900 mb-2 flex items-center">🗺️ 今日移動路線</div>
+          <div class="font-bold text-blue-900 mb-2 flex items-center">🗺️ 今日悠閒漫步路線（零交通轉乘壓力）</div>
           <div class="flex flex-wrap items-center gap-1.5 text-slate-700">
             <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">10:45 關西機場</span>
             <span>➔</span>
             <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded font-medium">南海特急 ➔ 難波</span>
             <span>➔</span>
-            <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">飯店放行李</span>
+            <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">舒適酒店放行李</span>
             <span>➔</span>
-            <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded font-medium">長堀鶴見綠地線 (6分)</span>
+            <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded font-medium">步行漫步美國村</span>
             <span>➔</span>
-            <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">大阪城御座船</span>
+            <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">17:00 飯店Check-in小憩</span>
             <span>➔</span>
-            <span class="bg-amber-100 text-amber-800 px-2 py-1 rounded font-medium">地鐵中央線轉御堂筋</span>
-            <span>➔</span>
-            <span class="bg-rose-100 text-rose-800 px-2 py-1 rounded font-medium">道頓堀晚餐</span>
+            <span class="bg-rose-100 text-rose-800 px-2 py-1 rounded font-medium">道頓堀晚餐宵夜</span>
           </div>
         </div>
 
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-1">
-            <span class="text-xs font-semibold text-blue-600">⏱️ 10:45 - 12:30</span>
+            <span class="text-xs font-semibold text-blue-600">⏱️ 10:45 - 12:45</span>
             <a href="https://maps.google.com/?q=Kansai+International+Airport" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
               📍 導航
             </a>
@@ -180,16 +178,16 @@
 
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-1">
-            <span class="text-xs font-semibold text-blue-600">⏱️ 13:30 - 16:30</span>
-            <a href="https://maps.google.com/?q=Osaka+Castle" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+            <span class="text-xs font-semibold text-blue-600">⏱️ 13:00 - 16:30 (Chill 首選)</span>
+            <a href="https://maps.google.com/?q=America-mura" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
               📍 導航
             </a>
           </div>
-          <h3 onclick="showModal('osaka_castle')" class="text-base font-bold text-slate-800 hover:text-blue-600 cursor-pointer flex items-center group transition">
-            大阪城公園 & 金箔御座船（早去精華）
+          <h3 onclick="showModal('america_mura')" class="text-base font-bold text-slate-800 hover:text-blue-600 cursor-pointer flex items-center group transition">
+            美國村潮流散策 & 甲賀流章魚燒午茶
             <span class="text-xs text-blue-500 ml-1.5 font-normal">ℹ️</span>
           </h3>
-          <p class="text-xs text-slate-600 mt-1">憑樂享券免費兌換搭乘「金箔御座船」（價值 1,500 日圓/人），坐船環繞護城河仰望壯麗天守閣。（<span class="text-blue-600 font-medium cursor-pointer" onclick="showModal('osaka_castle')">點標題看地鐵往返指引</span>）</p>
+          <p class="text-xs text-slate-600 mt-1">從飯店步行 6 分鐘跨過御堂筋即達！逛美式復古古著店、潮流選品店與唱片行，在三角公園品嚐米其林推薦「甲賀流」蔥花美乃滋章魚燒。（<span class="text-blue-600 font-medium cursor-pointer" onclick="showModal('america_mura')">點標題查看散策特色</span>）</p>
         </div>
 
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
@@ -344,38 +342,53 @@
         </div>
       </div>
 
-      <!-- ==================== Day 4 (全新：日本橋電器街 + 通天閣巨型溜滑梯 + 阿倍野夜景) ==================== -->
+      <!-- ==================== Day 4 (大阪城 + 日本橋 + 通天閣 + 阿倍野) ==================== -->
       <div id="day-4" class="day-content space-y-3 fade-content hidden">
         <div class="hero-img-card">
-          <img src="Shinsekai.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1590559899731-a382839e5549?auto=format&fit=crop&w=1200&q=80';" alt="新世界通天閣">
+          <img src="osaka.png?v=2" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1590559899731-a382839e5549?auto=format&fit=crop&w=1200&q=80';" alt="大阪城與通天閣">
           <div class="hero-img-overlay">
-            <span class="text-[10px] font-bold text-amber-300 tracking-wider uppercase">DAY 4 (週五) · 潮流次文化與刺激體驗</span>
-            <h2 class="text-base font-bold text-white drop-shadow-sm">日本橋動漫街 ➔ 通天閣溜滑梯 ➔ 阿倍野 300 夜景</h2>
-            <p class="text-[11px] text-slate-200 mt-0.5">關西秋葉原挖寶 · 60m 巨型溜滑梯 · 元祖串炸 · 60F 展望台落日夕陽百萬夜景</p>
+            <span class="text-[10px] font-bold text-amber-300 tracking-wider uppercase">DAY 4 (週五) · 名勝古蹟 ➔ 次文化冒險 ➔ 百萬夜景</span>
+            <h2 class="text-base font-bold text-white drop-shadow-sm">大阪城御座船 ➔ 日本橋動漫 ➔ 通天閣溜滑梯 ➔ 阿倍野 300</h2>
+            <p class="text-[11px] text-slate-200 mt-0.5">上午金箔御座船 · 午後關西秋葉原 · 60m 巨型溜滑梯 · 60F 展望台落日夕陽夜景</p>
           </div>
         </div>
 
         <div class="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-100 p-3 rounded-xl text-xs">
-          <div class="font-bold text-amber-900 mb-2 flex items-center">🗺️ 今日一路向南直達路線（超順暢免折返）</div>
+          <div class="font-bold text-amber-900 mb-2 flex items-center">🗺️ 今日豐富充實路線（順暢一路向南）</div>
           <div class="flex flex-wrap items-center gap-1.5 text-slate-700">
             <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">心齋橋出發</span>
+            <span>➔</span>
+            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded font-medium">大阪城公園 & 御座船</span>
             <span>➔</span>
             <span class="bg-amber-100 text-amber-800 px-2 py-1 rounded font-medium">日本橋電器街 (動漫手辦)</span>
             <span>➔</span>
             <span class="bg-rose-100 text-rose-800 px-2 py-1 rounded font-medium">通天閣溜滑梯/元祖串炸</span>
             <span>➔</span>
-            <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">天芝公園(草坪咖啡)</span>
-            <span>➔</span>
             <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded font-medium">阿倍野300夕陽夜景</span>
             <span>➔</span>
-            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded font-medium">御堂筋直達心齋橋(6分)</span>
+            <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">御堂筋直達心齋橋(6分)</span>
           </div>
         </div>
 
-        <!-- 日本橋電器街 -->
+        <!-- 上午：大阪城公園 & 御座船 -->
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-1">
-            <span class="text-xs font-semibold text-blue-600">⏱️ 10:30 - 12:30</span>
+            <span class="text-xs font-semibold text-blue-600">⏱️ 09:30 - 12:30</span>
+            <a href="https://maps.google.com/?q=Osaka+Castle" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+              📍 導航
+            </a>
+          </div>
+          <h3 onclick="showModal('osaka_castle')" class="text-base font-bold text-slate-800 hover:text-blue-600 cursor-pointer flex items-center group transition">
+            大阪城公園 & 金箔御座船漫遊
+            <span class="text-xs text-blue-500 ml-1.5 font-normal">ℹ️</span>
+          </h3>
+          <p class="text-xs text-slate-600 mt-1">飯店步行 3 分鐘至長堀橋搭【長堀鶴見綠地線】4 站直達森之宮（6 分鐘）。憑樂享券免費搭乘純金金箔御座船，水面仰望天守閣與雄偉古城牆。</p>
+        </div>
+
+        <!-- 中午：日本橋電器街 -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
+          <div class="flex justify-between items-start mb-1">
+            <span class="text-xs font-semibold text-blue-600">⏱️ 13:00 - 15:00</span>
             <a href="https://maps.google.com/?q=Nippombashi+Denden+Town" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
               📍 導航
             </a>
@@ -384,13 +397,13 @@
             日本橋電器街 & オタロード（關西秋葉原）
             <span class="text-xs text-blue-500 ml-1.5 font-normal">ℹ️</span>
           </h3>
-          <p class="text-xs text-slate-600 mt-1">從心齋橋散步 10 分鐘即達！集合了 Animate、駿河屋、大黑屋等巨型動漫手辦店、一番賞與整排扭蛋機，大學生挖寶聖地。</p>
+          <p class="text-xs text-slate-600 mt-1">從谷町四丁目搭地鐵至日本橋站。逛 Animate、駿河屋、大黑屋等巨型動漫手辦店、一番賞與整排扭蛋機，順道享用午餐。</p>
         </div>
 
-        <!-- 通天閣與溜滑梯 -->
+        <!-- 下午：通天閣與溜滑梯 -->
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-1">
-            <span class="text-xs font-semibold text-rose-600 font-mono">⏱️ 12:45 - 15:30 (刺激推薦)</span>
+            <span class="text-xs font-semibold text-rose-600 font-mono">⏱️ 15:15 - 16:45 (刺激體驗)</span>
             <a href="https://maps.google.com/?q=Tsutenkaku" target="_blank" class="text-xs bg-rose-100 hover:bg-rose-200 text-rose-700 px-2.5 py-1 rounded-md transition flex items-center">
               📍 導航
             </a>
@@ -399,13 +412,13 @@
             通天閣 TOWER SLIDER 巨型溜滑梯 & 新世界炸串
             <span class="text-xs text-rose-500 ml-1.5 font-normal">ℹ️</span>
           </h3>
-          <p class="text-xs text-slate-600 mt-1">從 22m 高空坐上滑行袋，在 60 公尺長透明螺旋管道極速俯衝 10 秒！下樓大嗑元祖串炸達摩，逛昭和懷舊射靶遊戲。</p>
+          <p class="text-xs text-slate-600 mt-1">日本橋直接散步至新世界。從 22m 高空坐上滑行袋，在 60 公尺長透明螺旋管道極速俯衝 10 秒！下樓品嚐元祖串炸達摩點心。</p>
         </div>
 
-        <!-- 天王寺公園散策與阿倍野百萬夜景 -->
+        <!-- 傍晚至夜間：阿倍野百萬夜景 -->
         <div class="bg-white rounded-xl shadow-sm border border-purple-150 p-4">
           <div class="flex justify-between items-start mb-1">
-            <span class="text-xs font-semibold text-purple-600 font-mono">⏱️ 16:30 - 20:30</span>
+            <span class="text-xs font-semibold text-purple-600 font-mono">⏱️ 17:00 - 20:30</span>
             <a href="https://maps.google.com/?q=Abeno+Harukas+300" target="_blank" class="text-xs bg-purple-100 hover:bg-purple-200 text-purple-700 px-2.5 py-1 rounded-md transition flex items-center">
               📍 導航
             </a>
@@ -418,12 +431,12 @@
         </div>
       </div>
 
-      <!-- ==================== Day 5 (週六：搭乘 09:32 雅洛號 + 清水寺夕陽 + 暮色伏見稻荷) ==================== -->
+      <!-- ==================== Day 5 (週六：京都一日遊) ==================== -->
       <div id="day-5" class="day-content space-y-3 fade-content hidden">
         <div class="hero-img-card">
           <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80" alt="京都清水寺">
           <div class="hero-img-overlay">
-            <span class="text-[10px] font-bold text-amber-300 tracking-wider uppercase">DAY 5 (週六) · 觀光特急雅洛號</span>
+            <span class="text-[10px] font-bold text-amber-300 tracking-wider uppercase">DAY 5 (週六) · 京都經典一日遊</span>
             <h2 class="text-base font-bold text-white drop-shadow-sm">阪急雅洛號 ➔ 錦市場 ➔ 清水寺夕陽 ➔ 暮色伏見稻荷</h2>
             <p class="text-[11px] text-slate-200 mt-0.5">09:32 雅洛號直達京都 · 錦市場美食 · 清水舞台夕陽 · 暮色鳥居 · 四條特色晚餐</p>
           </div>
@@ -664,20 +677,19 @@
         highlights: "• 對號座寬敞無擠車壓力<br>• 設有專屬大行李固定架<br>• 機場 2 樓即可直通入閘機口",
         extra: ""
       },
+      america_mura: {
+        title: "美國村 (America-mura) 潮流散策",
+        tag: "街頭次文化",
+        desc: "大阪年輕人與次文化潮流聚集地。街區中心為三角公園，周邊林立著美式復古古著店、潮流選品店、黑膠唱片行與獨立咖啡館。第一天下午在此漫步，免去轉車奔波，節奏最為舒適愜意。",
+        highlights: "• 三角公園前品嚐米其林推薦『甲賀流』章魚燒<br>• 挖寶美式復古古著（Vintage）、潮流服飾與球鞋<br>• 距離飯店步行僅約 6 分鐘，逛累隨時可回房休息",
+        extra: ""
+      },
       osaka_castle: {
         title: "大阪城公園 & 金箔御座船",
         tag: "名勝古蹟",
         desc: "豐臣秀吉一統天下之象徵。搭乘全船覆蓋純金金箔的『大阪城御座船』，悠然漫遊於內護城河上，從水面仰望日本第一高、極為壯觀的巨石城牆與天守閣。",
         highlights: "• 憑樂享券免費兌換價值 1,500 日圓船票<br>• 船上近距離尋找城牆刻印印記巨石<br>• 園區開闊平坦，散步輕鬆不費體力",
-        extra: `
-          <div class="bg-blue-50 p-2.5 rounded-xl border border-blue-150 space-y-1.5 text-slate-700">
-            <div class="font-bold text-blue-900 flex items-center">🚇 地鐵往返詳細交通指引：</div>
-            <div class="text-[11px] leading-relaxed">
-              <strong>去程：</strong> 飯店步行 3 分鐘至「長堀橋站」搭【長堀鶴見綠地線】4 站直達「森之宮站」（約 6 分鐘，180 日圓）。3-B 出口即是公園噴水池，散步 8 分鐘達御座船售票處。<br>
-              <strong>回程：</strong> 遊園完由西側「谷町四丁目站」搭【中央線】1 站至本町站，轉【御堂筋線】1 站回「心齋橋站」辦理入住（約 12 分鐘）。
-            </div>
-          </div>
-        `
+        extra: ""
       },
       hotel_comfort: {
         title: "大阪心齋橋舒適酒店 (Comfort Hotel)",
@@ -734,7 +746,7 @@
         title: "日本橋電器街 & オタロード (Ota Road)",
         tag: "次文化與動漫天堂",
         desc: "關西最具代表性的動漫與電玩聖地，被譽為『大阪秋葉原』。整條街匯聚了 Animate、駿河屋、大黑屋等二手模型專賣店、卡牌專門店與巨型扭蛋牆，是動漫與電玩迷的挖寶天堂。",
-        highlights: "• 駿河屋/大黑屋挖絕版正版模型手辦<br>• 體驗日式一番賞與大型扭蛋專門店<br>• 距離心齋橋僅步行約 10 分鐘，動線超順",
+        highlights: "• 駿河屋/大黑屋挖絕版正版模型手辦<br>• 體驗日式一番賞與大型扭蛋專門店<br>• 距離通天閣步行僅約 10 分鐘，動線超順",
         extra: ""
       },
       tsutenkaku_slider: {
