@@ -118,7 +118,7 @@
           <button onclick="switchDay(1)" id="tab-1" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-blue-600 text-white shadow-xs transition shrink-0">Day 1 抵達大阪城</button>
           <button onclick="switchDay(2)" id="tab-2" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 2 環球影城</button>
           <button onclick="switchDay(3)" id="tab-3" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 3 琵琶湖➔梅田</button>
-          <button onclick="switchDay(4)" id="tab-4" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 4 海遊館➔阿倍野</button>
+          <button onclick="switchDay(4)" id="tab-4" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 4 日本橋➔通天閣</button>
           <button onclick="switchDay(5)" id="tab-5" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 5 京都雅洛號</button>
           <button onclick="switchDay(6)" id="tab-6" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 6 採購返台</button>
         </div>
@@ -344,74 +344,77 @@
         </div>
       </div>
 
-      <!-- ==================== Day 4 (週五：海遊館 + 阿倍野夜景) ==================== -->
+      <!-- ==================== Day 4 (全新：日本橋電器街 + 通天閣巨型溜滑梯 + 阿倍野夜景) ==================== -->
       <div id="day-4" class="day-content space-y-3 fade-content hidden">
         <div class="hero-img-card">
-          <img src="Kaiyukan.png?v=2027" alt="大阪海遊館">
+          <img src="Shinsekai.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1590559899731-a382839e5549?auto=format&fit=crop&w=1200&q=80';" alt="新世界通天閣">
           <div class="hero-img-overlay">
-            <span class="text-[10px] font-bold text-cyan-300 tracking-wider uppercase">DAY 4 · 港灣與百萬夜景</span>
-            <h2 class="text-base font-bold text-white drop-shadow-sm">大阪海遊館 ➔ 阿倍野 300 展望台</h2>
-            <p class="text-[11px] text-slate-200 mt-0.5">9m 水槽巨大鯨鯊 · 天保山摩天輪 · 60F 展望台百萬落日夕陽夜景</p>
+            <span class="text-[10px] font-bold text-amber-300 tracking-wider uppercase">DAY 4 (週五) · 潮流次文化與刺激體驗</span>
+            <h2 class="text-base font-bold text-white drop-shadow-sm">日本橋動漫街 ➔ 通天閣溜滑梯 ➔ 阿倍野 300 夜景</h2>
+            <p class="text-[11px] text-slate-200 mt-0.5">關西秋葉原挖寶 · 60m 巨型溜滑梯 · 元祖串炸 · 60F 展望台落日夕陽百萬夜景</p>
           </div>
         </div>
 
-        <div class="bg-gradient-to-r from-cyan-50 to-indigo-50 border border-cyan-100 p-3 rounded-xl text-xs">
-          <div class="font-bold text-cyan-900 mb-2 flex items-center">🗺️ 今日移動路線</div>
+        <div class="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-100 p-3 rounded-xl text-xs">
+          <div class="font-bold text-amber-900 mb-2 flex items-center">🗺️ 今日一路向南直達路線（超順暢免折返）</div>
           <div class="flex flex-wrap items-center gap-1.5 text-slate-700">
-            <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">心齋橋</span>
+            <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">心齋橋出發</span>
             <span>➔</span>
-            <span class="bg-cyan-100 text-cyan-800 px-2 py-1 rounded font-medium">地鐵中央線 ➔ 大阪港(海遊館)</span>
+            <span class="bg-amber-100 text-amber-800 px-2 py-1 rounded font-medium">日本橋電器街 (動漫手辦)</span>
             <span>➔</span>
-            <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">天保山摩天輪</span>
+            <span class="bg-rose-100 text-rose-800 px-2 py-1 rounded font-medium">通天閣溜滑梯/元祖串炸</span>
             <span>➔</span>
-            <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded font-medium">中央線轉御堂筋 ➔ 天王寺</span>
+            <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">天芝公園(草坪咖啡)</span>
             <span>➔</span>
-            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded font-medium">阿倍野夜景/晚餐</span>
+            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded font-medium">阿倍野300夕陽夜景</span>
             <span>➔</span>
-            <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">御堂筋直達心齋橋(6分)</span>
+            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded font-medium">御堂筋直達心齋橋(6分)</span>
           </div>
         </div>
 
+        <!-- 日本橋電器街 -->
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-1">
-            <span class="text-xs font-semibold text-blue-600">⏱️ 10:00 - 13:00</span>
-            <a href="https://maps.google.com/?q=Osaka+Aquarium+Kaiyukan" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+            <span class="text-xs font-semibold text-blue-600">⏱️ 10:30 - 12:30</span>
+            <a href="https://maps.google.com/?q=Nippombashi+Denden+Town" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
               📍 導航
             </a>
           </div>
-          <h3 onclick="showModal('kaiyukan')" class="text-base font-bold text-slate-800 hover:text-blue-600 cursor-pointer flex items-center group transition">
-            大阪海遊館（巨大鯨鯊與環太平洋水槽）
+          <h3 onclick="showModal('nippombashi_denden')" class="text-base font-bold text-slate-800 hover:text-blue-600 cursor-pointer flex items-center group transition">
+            日本橋電器街 & オタロード（關西秋葉原）
             <span class="text-xs text-blue-500 ml-1.5 font-normal">ℹ️</span>
           </h3>
-          <p class="text-xs text-slate-600 mt-1">走進世界最大級室內水族館！沿著螺旋步道緩步向下，近距離觀賞 9 米巨型水槽裡的鯨鯊、魟魚與跳岩企鵝。</p>
+          <p class="text-xs text-slate-600 mt-1">從心齋橋散步 10 分鐘即達！集合了 Animate、駿河屋、大黑屋等巨型動漫手辦店、一番賞與整排扭蛋機，大學生挖寶聖地。</p>
         </div>
 
+        <!-- 通天閣與溜滑梯 -->
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-1">
-            <span class="text-xs font-semibold text-blue-600">⏱️ 13:15 - 14:30</span>
-            <a href="https://maps.google.com/?q=Tempozan+Ferris+Wheel" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+            <span class="text-xs font-semibold text-rose-600 font-mono">⏱️ 12:45 - 15:30 (刺激推薦)</span>
+            <a href="https://maps.google.com/?q=Tsutenkaku" target="_blank" class="text-xs bg-rose-100 hover:bg-rose-200 text-rose-700 px-2.5 py-1 rounded-md transition flex items-center">
               📍 導航
             </a>
           </div>
-          <h3 onclick="showModal('tempozan')" class="text-base font-bold text-slate-800 hover:text-blue-600 cursor-pointer flex items-center group transition">
-            天保山大摩天輪 & 港灣美食午餐
-            <span class="text-xs text-blue-500 ml-1.5 font-normal">ℹ️</span>
+          <h3 onclick="showModal('tsutenkaku_slider')" class="text-base font-bold text-slate-800 hover:text-rose-600 cursor-pointer flex items-center group transition">
+            通天閣 TOWER SLIDER 巨型溜滑梯 & 新世界炸串
+            <span class="text-xs text-rose-500 ml-1.5 font-normal">ℹ️</span>
           </h3>
-          <p class="text-xs text-slate-600 mt-1">憑樂享券免費搭乘 112.5 公尺高摩天輪，360 度俯瞰大阪灣海景與明石海峽大橋；隨後在市場享用道地午餐。</p>
+          <p class="text-xs text-slate-600 mt-1">從 22m 高空坐上滑行袋，在 60 公尺長透明螺旋管道極速俯衝 10 秒！下樓大嗑元祖串炸達摩，逛昭和懷舊射靶遊戲。</p>
         </div>
 
-        <div class="bg-white rounded-xl shadow-sm border border-purple-100 p-4">
+        <!-- 天王寺公園散策與阿倍野百萬夜景 -->
+        <div class="bg-white rounded-xl shadow-sm border border-purple-150 p-4">
           <div class="flex justify-between items-start mb-1">
             <span class="text-xs font-semibold text-purple-600 font-mono">⏱️ 16:30 - 20:30</span>
-            <a href="https://maps.google.com/?q=Abeno+Harukas" target="_blank" class="text-xs bg-purple-100 hover:bg-purple-200 text-purple-700 px-2.5 py-1 rounded-md transition flex items-center">
+            <a href="https://maps.google.com/?q=Abeno+Harukas+300" target="_blank" class="text-xs bg-purple-100 hover:bg-purple-200 text-purple-700 px-2.5 py-1 rounded-md transition flex items-center">
               📍 導航
             </a>
           </div>
           <h3 onclick="showModal('abeno_harukas')" class="text-base font-bold text-slate-800 hover:text-purple-600 cursor-pointer flex items-center group transition">
-            天王寺商圈散策 · 阿倍野 HARUKAS 300 百萬夜景
+            天芝公園散策 · 阿倍野 HARUKAS 300 百萬夕陽夜景
             <span class="text-xs text-purple-500 ml-1.5 font-normal">ℹ️</span>
           </h3>
-          <p class="text-xs text-slate-600 mt-1">下午從大阪港直達天王寺。憑樂享券免費登上 60 樓 300m 展望台看夕陽夜景，於商圈享用精選晚餐。（<span class="text-purple-600 font-medium cursor-pointer" onclick="showModal('abeno_harukas')">點標題查看周邊景點、晚餐推薦與回程交通</span>）</p>
+          <p class="text-xs text-slate-600 mt-1">漫步穿過天芝公園綠茵草坪。憑樂享券免費登上 60 樓 300m 展望台看夕陽夜景，於商圈享用精選晚餐。（<span class="text-purple-600 font-medium cursor-pointer" onclick="showModal('abeno_harukas')">點標題查看周邊餐廳與直達交通</span>）</p>
         </div>
       </div>
 
@@ -445,7 +448,6 @@
           </div>
         </div>
 
-        <!-- 09:32 雅洛號 -->
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-1">
             <span class="text-xs font-semibold text-amber-600 font-mono">⏱️ 09:00 - 10:15 (週六限定)</span>
@@ -460,7 +462,6 @@
           <p class="text-xs text-slate-600 mt-1">從心齋橋搭御堂筋線至梅田，搭乘 09:32 週末限定觀光列車直達「京都河原町站」（10:15 抵達），全車日式和風庭園座席，普通車票即可搭乘！</p>
         </div>
 
-        <!-- 錦市場早午餐 -->
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-1">
             <span class="text-xs font-semibold text-blue-600">⏱️ 10:30 - 12:30</span>
@@ -475,7 +476,6 @@
           <p class="text-xs text-slate-600 mt-1">京都河原町出站步行 3 分鐘即達，剛好遇上店家全開！大啖現烤 A5 和牛串、熱騰騰高湯厚蛋燒、現剖海膽與烤魷魚。</p>
         </div>
 
-        <!-- 清水寺散策與舞台夕陽 -->
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-1">
             <span class="text-xs font-semibold text-blue-600">⏱️ 13:00 - 16:30</span>
@@ -490,7 +490,6 @@
           <p class="text-xs text-slate-600 mt-1">漫步石板路，於下午三點半登上國寶清水舞台，捕捉冬季落日斜射大殿的金黃絕美景致，順道飲用音羽名泉。</p>
         </div>
 
-        <!-- 暮色伏見稻荷 -->
         <div class="bg-white rounded-xl shadow-sm border border-rose-100 p-4">
           <div class="flex justify-between items-start mb-1">
             <span class="text-xs font-semibold text-rose-600 font-mono">⏱️ 17:00 - 18:30</span>
@@ -505,7 +504,6 @@
           <p class="text-xs text-slate-600 mt-1">從清水五條搭京阪電車 7 分鐘直達！傍晚遊客散去、朱紅鳥居兩側石燈籠點亮，享受空靈莊嚴的獨特暮色氛圍。</p>
         </div>
 
-        <!-- 19:00 返四條晚餐 -->
         <div class="bg-white rounded-xl shadow-sm border border-amber-100 p-4">
           <div class="flex justify-between items-start mb-1">
             <span class="text-xs font-semibold text-amber-600 font-mono">⏱️ 18:45 - 20:30 (7點前抵達)</span>
@@ -732,6 +730,20 @@
           </div>
         `
       },
+      nippombashi_denden: {
+        title: "日本橋電器街 & オタロード (Ota Road)",
+        tag: "次文化與動漫天堂",
+        desc: "關西最具代表性的動漫與電玩聖地，被譽為『大阪秋葉原』。整條街匯聚了 Animate、駿河屋、大黑屋等二手模型專賣店、卡牌專門店與巨型扭蛋牆，是動漫與電玩迷的挖寶天堂。",
+        highlights: "• 駿河屋/大黑屋挖絕版正版模型手辦<br>• 體驗日式一番賞與大型扭蛋專門店<br>• 距離心齋橋僅步行約 10 分鐘，動線超順",
+        extra: ""
+      },
+      tsutenkaku_slider: {
+        title: "通天閣 TOWER SLIDER 巨型溜滑梯 & 新世界炸串",
+        tag: "刺激體驗與下町美食",
+        desc: "通天閣最新超人氣設施！從 22 公尺高（3 樓展望台）套上專用滑行袋，在 60 公尺長半透明金屬管道內急速盤旋俯衝至 B1，短短 10 秒內感受速度與尖叫。下樓後漫步在新世界昭和懷舊街區，大嗑大阪道地元祖炸串。",
+        highlights: "• 10 秒急速俯衝，刺激好玩又超適合拍短影音<br>• 元祖串炸達摩 / 八重勝品嚐現炸酥脆串炸<br>• 與巨大的比利肯福神像合影（摸腳底祈福）",
+        extra: ""
+      },
       garaku_train: {
         title: "阪急電鐵觀光特急「京とれいん 雅洛」",
         tag: "特色觀光列車",
@@ -781,20 +793,6 @@
             </div>
           </div>
         `
-      },
-      kaiyukan: {
-        title: "大阪海遊館 (Osaka Aquarium)",
-        tag: "海洋奇觀",
-        desc: "全球最大規模水族館之一。館內以深達 9 公尺、水量達 5,400 噸的『太平洋』巨型水槽為核心，環繞著螺旋坡道，能多角度觀察悠游水中的龐大鯨鯊與群游魚群。",
-        highlights: "• 近距離觀賞鎮館之寶巨大鯨鯊<br>• 觸摸池體驗觸摸魟魚與小鯊魚<br>• 活潑可愛的跳岩企鵝與環斑海豹餵食秀",
-        extra: ""
-      },
-      tempozan: {
-        title: "天保山大摩天輪",
-        tag: "港灣美景",
-        desc: "座落於大阪港邊、高達 112.5 公尺的大型摩天輪。旋轉一圈約 15 分鐘，天氣晴朗時可遠眺明石海峽大橋、神戶六甲山以及整個大阪灣水天一色。",
-        highlights: "• 憑樂享券免費搭乘（價值 900 日圓）<br>• 水晶透明車廂（需排隊，視野全開）<br>• 鄰近天保山港灣村可順道享用午餐",
-        extra: ""
       },
       abeno_harukas: {
         title: "天王寺商圈散策 · 阿倍野 HARUKAS 300",
