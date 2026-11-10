@@ -71,7 +71,7 @@
           </div>
         </div>
 
-        <!-- 倒數計時與即時天氣 -->
+        <!-- 倒數計時與即時自動聯網天氣 -->
         <div class="mt-2 grid grid-cols-5 gap-1.5 text-xs">
           <div class="col-span-3 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/20 flex items-center justify-between shadow-xs">
             <span class="text-[11px] font-semibold text-amber-200 flex items-center">
@@ -84,12 +84,12 @@
             </div>
           </div>
           <div class="col-span-1 bg-black/50 backdrop-blur-md px-1.5 py-1 rounded-lg border border-white/15 flex flex-col items-center justify-center text-center">
-            <div class="text-[9px] text-sky-200 leading-none">大阪天氣</div>
-            <div class="font-mono font-bold text-amber-200 text-xs mt-0.5">☀️ 12°C</div>
+            <div class="text-[9px] text-sky-200 leading-none">大阪即時</div>
+            <div id="weatherOsaka" class="font-mono font-bold text-amber-200 text-xs mt-0.5">☀️ 12°C</div>
           </div>
           <div class="col-span-1 bg-black/50 backdrop-blur-md px-1.5 py-1 rounded-lg border border-white/15 flex flex-col items-center justify-center text-center">
-            <div class="text-[9px] text-sky-200 leading-none">京都天氣</div>
-            <div class="font-mono font-bold text-sky-200 text-xs mt-0.5">⛅ 9°C</div>
+            <div class="text-[9px] text-sky-200 leading-none">京都即時</div>
+            <div id="weatherKyoto" class="font-mono font-bold text-sky-200 text-xs mt-0.5">⛅ 9°C</div>
           </div>
         </div>
 
@@ -134,7 +134,7 @@
   <div id="scrollableContent" class="flex-1 overflow-y-auto overflow-x-hidden p-4 space-y-4">
     <div class="max-w-md mx-auto pb-20 space-y-4">
 
-      <!-- ==================== Day 1 (全新 Chill 版：美國村 + 道頓堀) ==================== -->
+      <!-- ==================== Day 1 ==================== -->
       <div id="day-1" class="day-content space-y-3 fade-content">
         <div class="hero-img-card">
           <img src="Dotonbori.png?v=2027" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1590559899731-a382839e5549?auto=format&fit=crop&w=1200&q=80';" alt="心齋橋美國村">
@@ -223,7 +223,7 @@
         </div>
       </div>
 
-      <!-- ==================== Day 2 ==================== -->
+      <!-- ==================== Day 2 (豪華版樂享周遊券全解析) ==================== -->
       <div id="day-2" class="day-content space-y-3 fade-content hidden">
         <div class="hero-img-card">
           <img src="universal.jpg?v=2027" alt="日本環球影城">
@@ -259,6 +259,20 @@
             <span class="text-xs text-blue-500 ml-1.5 font-normal">ℹ️</span>
           </h3>
           
+          <!-- 樂享周遊券豪華版卡片與官方說明連結 -->
+          <div class="mt-2 bg-emerald-50 p-3 rounded-xl border border-emerald-200 text-xs space-y-1.5 text-slate-700">
+            <div class="flex justify-between items-center">
+              <span class="font-bold text-emerald-900">🎟️ 豪華版關西樂享周遊券 7日 PASS</span>
+              <a href="https://travelcontentsapp.com/have-fun-pass/kansai-premium/?_ticket=premium-a#Attraction" target="_blank" class="text-[11px] bg-emerald-600 hover:bg-emerald-700 text-white px-2 py-0.5 rounded-full font-medium transition">
+                官方設施一覽 ↗
+              </a>
+            </div>
+            <div class="text-[11px] text-slate-600 leading-relaxed">
+              <strong>已付款：</strong> TWD 15,032 (4份 · 每人約 NT$ 3,758)<br>
+              <strong>包含項目：</strong> ① 日本環球影城 1日券門票 + ② 樂享周遊券任選 3 項人氣體驗 (含大阪城御座船、HARUKAS 300 展望台等)。
+            </div>
+          </div>
+
           <div class="mt-3 bg-amber-50/70 p-3 rounded-xl border border-amber-200/80">
             <div class="text-xs font-bold text-amber-900 mb-1.5 flex items-center">
               🧭 USJ 最佳遊玩建議順序：
@@ -342,7 +356,7 @@
         </div>
       </div>
 
-      <!-- ==================== Day 4 (大阪城 + 日本橋 + 通天閣 + 阿倍野) ==================== -->
+      <!-- ==================== Day 4 ==================== -->
       <div id="day-4" class="day-content space-y-3 fade-content hidden">
         <div class="hero-img-card">
           <img src="osaka.png?v=2" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1590559899731-a382839e5549?auto=format&fit=crop&w=1200&q=80';" alt="大阪城與通天閣">
@@ -382,7 +396,7 @@
             大阪城公園 & 金箔御座船漫遊
             <span class="text-xs text-blue-500 ml-1.5 font-normal">ℹ️</span>
           </h3>
-          <p class="text-xs text-slate-600 mt-1">飯店步行 3 分鐘至長堀橋搭【長堀鶴見綠地線】4 站直達森之宮（6 分鐘）。憑樂享券免費搭乘純金金箔御座船，水面仰望天守閣與雄偉古城牆。</p>
+          <p class="text-xs text-slate-600 mt-1">飯店步行 3 分鐘至長堀橋搭【長堀鶴見綠地線】4 站直達森之宮（6 分鐘）。憑已購之樂享周遊券免費兌換搭乘純金金箔御座船（價值 1,500 日圓/人），水面仰望天守閣。</p>
         </div>
 
         <!-- 中午：日本橋電器街 -->
@@ -427,11 +441,11 @@
             天芝公園散策 · 阿倍野 HARUKAS 300 百萬夕陽夜景
             <span class="text-xs text-purple-500 ml-1.5 font-normal">ℹ️</span>
           </h3>
-          <p class="text-xs text-slate-600 mt-1">漫步穿過天芝公園綠茵草坪。憑樂享券免費登上 60 樓 300m 展望台看夕陽夜景，於商圈享用精選晚餐。（<span class="text-purple-600 font-medium cursor-pointer" onclick="showModal('abeno_harukas')">點標題查看周邊餐廳與直達交通</span>）</p>
+          <p class="text-xs text-slate-600 mt-1">漫步穿過天芝公園綠茵草坪。憑已購之樂享周遊券免費登上 60 樓 300m 展望台看夕陽夜景，於商圈享用精選晚餐。（<span class="text-purple-600 font-medium cursor-pointer" onclick="showModal('abeno_harukas')">點標題查看周邊餐廳與直達交通</span>）</p>
         </div>
       </div>
 
-      <!-- ==================== Day 5 (週六：京都一日遊) ==================== -->
+      <!-- ==================== Day 5 ==================== -->
       <div id="day-5" class="day-content space-y-3 fade-content hidden">
         <div class="hero-img-card">
           <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80" alt="京都清水寺">
@@ -601,12 +615,12 @@
     </div>
   </div>
 
-  <!-- ==================== 3. 底部固定預算列 ==================== -->
+  <!-- ==================== 3. 底部固定預算列 (最新實付更新) ==================== -->
   <footer class="bg-white/95 backdrop-blur-md border-t border-slate-200 px-4 py-2.5 shadow-lg z-30 shrink-0">
     <div class="max-w-md mx-auto flex justify-between items-center text-xs">
       <div>
         <div class="text-[10px] text-slate-400">總預算預估（4人早去晚回·含機酒樂園滑雪）</div>
-        <div class="text-sm font-bold text-blue-600">約 NT$ 36,209 <span class="text-xs font-normal text-slate-500">/ 人</span></div>
+        <div class="text-sm font-bold text-emerald-600">約 NT$ 36,167 <span class="text-xs font-normal text-slate-500">/ 人 (USJ已付訖)</span></div>
       </div>
       <div>
         <button onclick="scrollToTopContent()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-lg font-medium transition">
@@ -647,6 +661,7 @@
   </div>
 
   <script>
+    // 1. 倒數計時功能
     function updateCountdown() {
       const targetDate = new Date('2027-01-06T00:00:00+08:00').getTime();
       const now = new Date().getTime();
@@ -669,6 +684,48 @@
     updateCountdown();
     setInterval(updateCountdown, 60000);
 
+    // 2. 免費即時天氣 API (Open-Meteo 自動聯網取得大阪與京都即時氣溫與天氣圖示)
+    function getWeatherIcon(code) {
+      if (code === 0) return "☀️";
+      if ([1, 2].includes(code)) return "🌤️";
+      if (code === 3) return "☁️";
+      if ([45, 48].includes(code)) return "🌫️";
+      if ([51, 53, 55, 61, 63, 65, 80, 81, 82].includes(code)) return "🌧️";
+      if ([71, 73, 75, 77, 85, 86].includes(code)) return "❄️";
+      if ([95, 96, 99].includes(code)) return "⛈️";
+      return "⛅";
+    }
+
+    async function fetchLiveWeather() {
+      try {
+        // 大阪 (34.6937, 135.5023)
+        const resOsaka = await fetch('https://api.open-meteo.com/v1/forecast?latitude=34.6937&longitude=135.5023&current=temperature_2m,weather_code&timezone=Asia%2FTokyo');
+        if (resOsaka.ok) {
+          const dataOsaka = await resOsaka.json();
+          const temp = Math.round(dataOsaka.current.temperature_2m);
+          const icon = getWeatherIcon(dataOsaka.current.weather_code);
+          document.getElementById('weatherOsaka').innerText = `${icon} ${temp}°C`;
+        }
+      } catch (e) {
+        console.log("大阪天氣載入失敗，維持預設");
+      }
+
+      try {
+        // 京都 (35.0116, 135.7681)
+        const resKyoto = await fetch('https://api.open-meteo.com/v1/forecast?latitude=35.0116&longitude=135.7681&current=temperature_2m,weather_code&timezone=Asia%2FTokyo');
+        if (resKyoto.ok) {
+          const dataKyoto = await resKyoto.json();
+          const temp = Math.round(dataKyoto.current.temperature_2m);
+          const icon = getWeatherIcon(dataKyoto.current.weather_code);
+          document.getElementById('weatherKyoto').innerText = `${icon} ${temp}°C`;
+        }
+      } catch (e) {
+        console.log("京都天氣載入失敗，維持預設");
+      }
+    }
+    fetchLiveWeather();
+    setInterval(fetchLiveWeather, 1800000); // 每 30 分鐘自動刷新一次即時天氣
+
     const spotData = {
       kansai_airport: {
         title: "關西國際機場 & 南海電鐵 Rapi:t",
@@ -688,7 +745,7 @@
         title: "大阪城公園 & 金箔御座船",
         tag: "名勝古蹟",
         desc: "豐臣秀吉一統天下之象徵。搭乘全船覆蓋純金金箔的『大阪城御座船』，悠然漫遊於內護城河上，從水面仰望日本第一高、極為壯觀的巨石城牆與天守閣。",
-        highlights: "• 憑樂享券免費兌換價值 1,500 日圓船票<br>• 船上近距離尋找城牆刻印印記巨石<br>• 園區開闊平坦，散步輕鬆不費體力",
+        highlights: "• 憑已購之豪華版樂享周遊券免費兌換價值 1,500 日圓船票<br>• 船上近距離尋找城牆刻印印記巨石<br>• 園區開闊平坦，散步輕鬆不費體力",
         extra: ""
       },
       hotel_comfort: {
@@ -706,11 +763,25 @@
         extra: ""
       },
       usj: {
-        title: "日本環球影城 (USJ)",
-        tag: "主題樂園",
-        desc: "全球最受歡迎的主題樂園之一！其中以高度還原遊戲場景的『超級任天堂世界』與『哈利波特魔法世界』最為震撼，平日造訪能大幅縮短排隊時間。",
-        highlights: "• 瑪利歐賽車～庫巴的挑戰書～（敲磚塊互動）<br>• 哈利波特禁忌之旅沉浸感十足<br>• 園區限定奇諾比奧咖啡廳與無酒精奶油啤酒",
-        extra: ""
+        title: "日本環球影城 (USJ) · 豪華版周遊券憑證",
+        tag: "已付訖套票",
+        desc: "已成功訂購【豪華版關西樂享周遊券 7日 PASS（含 USJ 門票 4 份）】，已付款 TWD 15,032。出發當天直接出示手機憑證 QR Code 即可掃描入園！",
+        highlights: "• 包含 USJ 1 日入園門票（免現場排隊買票）<br>• 包含『樂享周遊券任選 3 項體驗』(7日內啟用有效)<br>• 入園第一時間直奔任天堂敲磚塊",
+        extra: `
+          <div class="bg-emerald-50 p-2.5 rounded-xl border border-emerald-200 space-y-1 text-slate-700">
+            <div class="font-bold text-emerald-900 flex items-center">🎟️ 豪華版套票使用指南：</div>
+            <div class="text-[11px] leading-relaxed">
+              • <strong>USJ 入園方式：</strong> 出發當天於 USJ 閘門直接出示電子憑證 QR Code 掃描入園。<br>
+              • <strong>入園第一步：</strong> 刷進大門後，全員立刻打開 Universal Studios Japan 官方 APP 綁定門票，抽任天堂園區下午場整理券！<br>
+              • <strong>周遊券任選 3 項設施：</strong> 本手冊已精準安排至 <strong>Day 4 大阪城金箔御座船</strong> 與 <strong>Day 4 阿倍野 HARUKAS 300 展望台</strong>，直接出示同一套票 QR Code 免費兌換！
+            </div>
+          </div>
+          <div class="text-right">
+            <a href="https://travelcontentsapp.com/have-fun-pass/kansai-premium/?_ticket=premium-a#Attraction" target="_blank" class="text-[11px] text-blue-600 font-bold hover:underline">
+              🔗 查看樂享周遊券所有可用設施官網 ↗
+            </a>
+          </div>
+        `
       },
       biwako_valley: {
         title: "滋賀 琵琶湖山谷滑雪場",
@@ -789,51 +860,14 @@
         tag: "京都美食與散策",
         desc: "從伏見稻荷搭電車僅需 9 分鐘直達「祇園四條站」，剛好於 19:00 前抵達！在先斗町或四條享用熱騰騰的特色晚餐，散步看鴨川夜景後搭特急直達回大阪。",
         highlights: "• 19:00 前抵達先斗町或四條商圈大啖美食<br>• 冬夜四條大橋漫步欣賞鴨川兩岸燈火<br>• 晚餐後從祇園四條搭京阪特急直達淀屋橋/心齋橋",
-        extra: `
-          <div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200 space-y-1 text-slate-700">
-            <div class="font-bold text-amber-900 flex items-center">🍲 京都精選晚餐推薦：</div>
-            <div class="text-[11px] leading-relaxed">
-              • <strong>先斗町 蔥屋平吉 (蔥料理/和牛鍋)：</strong> 鴨川旁極具人氣的居酒屋，招牌黑毛和牛蔥火鍋，冬夜超暖胃。<br>
-              • <strong>名代豬排 かつくら (四條寺町店)：</strong> 酥脆厚切炸豬排，白飯、高麗菜絲與味噌湯無限續加。<br>
-              • <strong>祇園 順正 (湯豆腐料理)：</strong> 溫暖細緻的手作湯豆腐與京都懷石料理。
-            </div>
-          </div>
-          <div class="bg-emerald-50 p-2.5 rounded-xl border border-emerald-200 text-slate-700">
-            <div class="font-bold text-emerald-900 flex items-center">🚆 直達回飯店交通：</div>
-            <div class="text-[11px] leading-relaxed">
-              晚餐後由<strong>「祇園四條站」</strong>搭乘【京阪本線特急】直達「淀屋橋站」，同站轉乘地下鐵【御堂筋線】1 站至「心齋橋站」（車程約 50 分鐘），出站步行 5 分鐘回舒適酒店休息。
-            </div>
-          </div>
-        `
+        extra: ""
       },
       abeno_harukas: {
         title: "天王寺商圈散策 · 阿倍野 HARUKAS 300",
         tag: "百萬夜景 & 美食",
         desc: "高達 300 公尺的日本超高層摩天大樓。搭乘星空流星光影高速電梯直達 60 樓空中走廊，擁有 360 度全落地玻璃窗，視野能一路延伸至淡路島與六甲山。",
-        highlights: "• 傍晚前來同時捕捉夕陽暮色與璀璨夜景<br>• 憑樂享券免費兌換價值 2,000 日圓門票<br>• 直結近鐵百貨、MIO 與 Q's Mall 百貨商圈",
-        extra: `
-          <div class="bg-purple-50 p-2.5 rounded-xl border border-purple-150 space-y-1 text-slate-700">
-            <div class="font-bold text-purple-900 flex items-center">📍 天王寺周邊必逛景點：</div>
-            <div class="text-[11px] leading-relaxed">
-              • <strong>天王寺公園「天芝 (Tenshiba)」：</strong> 站前大片綠茵草坪與歐風露天咖啡座。<br>
-              • <strong>新世界通天閣：</strong> 散步約 10 分鐘即達，滿滿昭和下町氛圍、巨型河豚與比利肯福神。
-            </div>
-          </div>
-          <div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200 space-y-1 text-slate-700">
-            <div class="font-bold text-amber-900 flex items-center">🍴 天王寺精選晚餐推薦：</div>
-            <div class="text-[11px] leading-relaxed">
-              • <strong>串之坊 (天王寺 MIO 店 11F)：</strong> 老牌高級炸串名店，酥脆不油膩，用餐環境極佳。<br>
-              • <strong>鳥貴族 あべの橋店：</strong> 人氣炭火串燒居酒屋，均一價高 CP 值大口吃肉。<br>
-              • <strong>元祖串炸達摩 (新世界總本店)：</strong> 經典大阪平民串炸，沾獨門醬汁風味絕佳。
-            </div>
-          </div>
-          <div class="bg-blue-50 p-2.5 rounded-xl border border-blue-200 text-slate-700">
-            <div class="font-bold text-blue-900 flex items-center">↩️ 回程交通：</div>
-            <div class="text-[11px] leading-relaxed">
-              晚餐後走進「天王寺站」搭乘地下鐵【御堂筋線】3 站直達「心齋橋站」（車程僅 6 分鐘，240 日圓，完全免轉車！），出站步行 5 分鐘回飯店。
-            </div>
-          </div>
-        `
+        highlights: "• 傍晚前來同時捕捉夕陽暮色與璀璨夜景<br>• 憑已購之樂享周遊券免費兌換價值 2,000 日圓門票<br>• 直結近鐵百貨、MIO 與 Q's Mall 百貨商圈",
+        extra: ""
       },
       kuromon_market: {
         title: "大阪 黑門市場",
