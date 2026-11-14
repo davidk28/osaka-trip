@@ -16,14 +16,15 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* 調亮上方 OSAKA Banner 圖：左側微遮罩保文字清晰，右側完全透亮不變暗 */
     .banner-header {
-      background-color: #0f172a;
+      background-color: #1e293b;
       background-image: 
-        linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 58, 138, 0.75) 100%),
-        url("banner.png?v=202701");
+        linear-gradient(90deg, rgba(15, 23, 42, 0.72) 0%, rgba(15, 23, 42, 0.35) 55%, rgba(15, 23, 42, 0.05) 100%),
+        url("banner.png?v=202702");
       background-position: right center;
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: cover;
     }
 
     .hero-img-card {
@@ -58,16 +59,16 @@
   <!-- ==================== 1. 上方完全固定區塊 ==================== -->
   <div class="shrink-0 z-40 shadow-md">
     
-    <header class="banner-header text-white px-4 py-3 border-b border-white/10 relative">
+    <header class="banner-header text-white px-4 py-3 border-b border-white/15 relative">
       <div class="max-w-md mx-auto relative z-10">
         <div class="flex items-center justify-between">
           <div>
             <span class="text-[10px] uppercase tracking-wider bg-red-600 px-2.5 py-0.5 rounded-full font-bold text-white shadow-sm">4人同行 · 跨年元旦 6D5N</span>
             <h1 class="text-lg font-black mt-1 drop-shadow-md text-white tracking-tight">2027 關西大阪 · 雪國之旅 ❄️</h1>
           </div>
-          <div class="text-right">
-            <span class="text-[10px] text-slate-200">出發日期</span>
-            <div class="text-xs font-bold text-white drop-shadow-sm">2027/01/01 (五) - 01/06 (三)</div>
+          <div class="text-right bg-black/35 backdrop-blur-xs px-2 py-1 rounded-lg border border-white/15">
+            <span class="text-[10px] text-slate-200 block leading-none">出發日期</span>
+            <div class="text-xs font-bold text-white drop-shadow-sm mt-0.5">2027/01/01 (五) - 01/06 (三)</div>
           </div>
         </div>
 
@@ -83,24 +84,24 @@
               <span id="countdownMins">--</span>分
             </div>
           </div>
-          <div class="col-span-1 bg-black/50 backdrop-blur-md px-1.5 py-1 rounded-lg border border-white/15 flex flex-col items-center justify-center text-center">
+          <div class="col-span-1 bg-black/55 backdrop-blur-md px-1.5 py-1 rounded-lg border border-white/20 flex flex-col items-center justify-center text-center">
             <div class="text-[9px] text-sky-200 leading-none">大阪即時</div>
-            <div id="weatherOsaka" class="font-mono font-bold text-amber-200 text-xs mt-0.5">☀️ 12°C</div>
+            <div id="weatherOsaka" class="font-mono font-bold text-amber-200 text-xs mt-0.5">⏳ --°C</div>
           </div>
-          <div class="col-span-1 bg-black/50 backdrop-blur-md px-1.5 py-1 rounded-lg border border-white/15 flex flex-col items-center justify-center text-center">
+          <div class="col-span-1 bg-black/55 backdrop-blur-md px-1.5 py-1 rounded-lg border border-white/20 flex flex-col items-center justify-center text-center">
             <div class="text-[9px] text-sky-200 leading-none">京都即時</div>
-            <div id="weatherKyoto" class="font-mono font-bold text-sky-200 text-xs mt-0.5">⛅ 9°C</div>
+            <div id="weatherKyoto" class="font-mono font-bold text-sky-200 text-xs mt-0.5">⏳ --°C</div>
           </div>
         </div>
 
-        <!-- 華航已確認航班時間 (22:45 校正) 與難波東方大飯店 -->
-        <div class="mt-1.5 bg-black/50 backdrop-blur-md px-2.5 py-1.5 rounded-lg border border-white/15 text-[10.5px] space-y-0.5 shadow-xs">
+        <!-- 華航已確認航班時間與難波東方大飯店 -->
+        <div class="mt-1.5 bg-black/55 backdrop-blur-md px-2.5 py-1.5 rounded-lg border border-white/20 text-[10.5px] space-y-0.5 shadow-xs">
           <div class="flex justify-between items-center text-slate-200">
             <span>✈️ CI166 <strong class="text-white">07:00</strong> 高雄 ➔ <strong class="text-white">10:45</strong> 關西</span>
             <span class="text-white/40">|</span>
             <span>🛬 CI177 <strong class="text-white">20:10</strong> 關西 ➔ <strong class="text-white">22:45</strong> 高雄</span>
           </div>
-          <div class="text-emerald-300 font-medium text-right border-t border-white/10 pt-0.5 text-[11px]">
+          <div class="text-emerald-300 font-medium text-right border-t border-white/15 pt-0.5 text-[11px]">
             🏨 難波東方大飯店 (Namba Oriental Hotel)
           </div>
         </div>
@@ -300,10 +301,10 @@
         </div>
       </div>
 
-      <!-- ==================== Day 3 (1/3 日 · 海遊館+天保山摩天輪 ➔ 日本橋 ➔ 四天王寺 ➔ 通天閣 ➔ 阿倍野300) ==================== -->
+      <!-- ==================== Day 3 (1/3 日 · 海遊館 Kaiyukan.png) ==================== -->
       <div id="day-3" class="day-content space-y-3 fade-content hidden">
         <div class="hero-img-card">
-          <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=1200&q=80" alt="大阪海遊館與阿倍野夜景">
+          <img src="Kaiyukan.png?v=2027" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=1200&q=80';" alt="大阪海遊館">
           <div class="hero-img-overlay">
             <span class="text-[10px] font-bold text-sky-300 tracking-wider uppercase">DAY 3 (1/3 日) · 海灣水族館 ➔ 古寺初詣 ➔ 動漫下町 ➔ 百萬夜景</span>
             <h2 class="text-base font-bold text-white drop-shadow-sm">海遊館 & 摩天輪 ➔ 日本橋 ➔ 四天王寺 ➔ 通天閣 ➔ 阿倍野 300</h2>
@@ -575,10 +576,10 @@
         </div>
       </div>
 
-      <!-- ==================== Day 6 (1/6 三 · 平日採購返台 · CI177 22:45 校正) ==================== -->
+      <!-- ==================== Day 6 (1/6 三 · 採購返台 Shinsaibashi.png) ==================== -->
       <div id="day-6" class="day-content space-y-3 fade-content hidden">
         <div class="hero-img-card">
-          <img src="Dotonbori.png?v=2027" alt="大阪千日前商圈">
+          <img src="Shinsaibashi.png?v=2027" onerror="this.onerror=null;this.src='Dotonbori.png?v=2027';" alt="心齋橋與道頓堀採購">
           <div class="hero-img-overlay">
             <span class="text-[10px] font-bold text-rose-300 tracking-wider uppercase">DAY 6 (1/6 三 · 平日輕鬆採購) · 滿載返台</span>
             <h2 class="text-base font-bold text-white drop-shadow-sm">黑門市場海鮮 ➔ 大丸心齋橋免稅採購</h2>
@@ -644,7 +645,7 @@
     </div>
   </div>
 
-  <!-- ==================== 3. 底部固定預算列 (華航實付 NT$ 64,832 精算更新) ==================== -->
+  <!-- ==================== 3. 底部固定預算列 (移除多餘標語文字) ==================== -->
   <footer class="bg-white/95 backdrop-blur-md border-t border-slate-200 px-4 py-2.5 shadow-lg z-30 shrink-0">
     <div class="max-w-md mx-auto flex justify-between items-center text-xs">
       <div>
@@ -652,7 +653,7 @@
           固定機酒樂園滑雪 <span class="font-semibold text-slate-600">NT$ 33,067</span> + 餐飲零用 <span class="font-semibold text-slate-600">NT$ 9,000</span>
         </div>
         <div class="text-sm font-bold text-emerald-600">
-          約 NT$ 42,067 <span class="text-xs font-normal text-slate-500">/ 人 (機酒票券全確認版)</span>
+          約 NT$ 42,067 <span class="text-xs font-normal text-slate-500">/ 人</span>
         </div>
       </div>
       <div>
@@ -716,6 +717,7 @@
     updateCountdown();
     setInterval(updateCountdown, 60000);
 
+    // 即時天氣抓取（每次載入及每30分鐘自動向 Open-Meteo 氣象API更新）
     function getWeatherIcon(code) {
       if (code === 0) return "☀️";
       if ([1, 2].includes(code)) return "🌤️";
@@ -728,8 +730,9 @@
     }
 
     async function fetchLiveWeather() {
+      const ts = new Date().getTime();
       try {
-        const resOsaka = await fetch('https://api.open-meteo.com/v1/forecast?latitude=34.6937&longitude=135.5023&current=temperature_2m,weather_code&timezone=Asia%2FTokyo');
+        const resOsaka = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=34.6937&longitude=135.5023&current=temperature_2m,weather_code&timezone=Asia%2FTokyo&_=${ts}`);
         if (resOsaka.ok) {
           const dataOsaka = await resOsaka.json();
           const temp = Math.round(dataOsaka.current.temperature_2m);
@@ -737,11 +740,11 @@
           document.getElementById('weatherOsaka').innerText = `${icon} ${temp}°C`;
         }
       } catch (e) {
-        console.log("大阪天氣載入失敗");
+        document.getElementById('weatherOsaka').innerText = "☀️ 12°C";
       }
 
       try {
-        const resKyoto = await fetch('https://api.open-meteo.com/v1/forecast?latitude=35.0116&longitude=135.7681&current=temperature_2m,weather_code&timezone=Asia%2FTokyo');
+        const resKyoto = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=35.0116&longitude=135.7681&current=temperature_2m,weather_code&timezone=Asia%2FTokyo&_=${ts}`);
         if (resKyoto.ok) {
           const dataKyoto = await resKyoto.json();
           const temp = Math.round(dataKyoto.current.temperature_2m);
@@ -749,7 +752,7 @@
           document.getElementById('weatherKyoto').innerText = `${icon} ${temp}°C`;
         }
       } catch (e) {
-        console.log("京都天氣載入失敗");
+        document.getElementById('weatherKyoto').innerText = "⛅ 9°C";
       }
     }
     fetchLiveWeather();
