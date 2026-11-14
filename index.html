@@ -93,7 +93,7 @@
           </div>
         </div>
 
-        <!-- 航班時間與難波東方大飯店 -->
+        <!-- 航班時間與難波東方大飯店 (無訂單編號) -->
         <div class="mt-1.5 bg-black/50 backdrop-blur-md px-2.5 py-1.5 rounded-lg border border-white/15 text-[10.5px] space-y-0.5 shadow-xs">
           <div class="flex justify-between items-center text-slate-200">
             <span>✈️ CI166 <strong class="text-white">07:00</strong> 高雄 ➔ <strong class="text-white">10:45</strong> 關西</span>
@@ -101,13 +101,13 @@
             <span>🛬 CI177 <strong class="text-white">20:10</strong> 關西 ➔ <strong class="text-white">22:55</strong> 高雄</span>
           </div>
           <div class="text-emerald-300 font-medium text-right border-t border-white/10 pt-0.5 text-[11px]">
-            🏨 難波東方大飯店 (Klook訂單: ZJM480824)
+            🏨 難波東方大飯店 (Namba Oriental Hotel)
           </div>
         </div>
       </div>
     </header>
 
-    <!-- 天數切換 Tab (錯峰調整後日期) -->
+    <!-- 天數切換 Tab (Day 2 滑雪與 Day 5 京都已對調) -->
     <nav class="bg-white border-b border-slate-200">
       <div class="max-w-md mx-auto relative flex items-center px-1 py-2">
         <button onclick="scrollTabs(-100)" class="w-6 h-6 flex items-center justify-center text-slate-500 hover:text-slate-800 bg-white rounded-full shrink-0 z-10 shadow-xs border border-slate-200">
@@ -116,10 +116,10 @@
 
         <div id="tabContainer" class="flex overflow-x-auto hide-scrollbar space-x-1.5 px-1.5 scroll-smooth w-full">
           <button onclick="switchDay(1)" id="tab-1" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-blue-600 text-white shadow-xs transition shrink-0">Day 1 (1/1 五) 高雄到大阪</button>
-          <button onclick="switchDay(2)" id="tab-2" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 2 (1/2 六) 京都一日遊</button>
+          <button onclick="switchDay(2)" id="tab-2" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 2 (1/2 六) 琵琶湖➔梅田</button>
           <button onclick="switchDay(3)" id="tab-3" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 3 (1/3 日) 大阪城➔阿倍野</button>
           <button onclick="switchDay(4)" id="tab-4" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 4 (1/4 一) 環球影城</button>
-          <button onclick="switchDay(5)" id="tab-5" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 5 (1/5 二) 琵琶湖➔梅田</button>
+          <button onclick="switchDay(5)" id="tab-5" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 5 (1/5 二) 京都一日遊</button>
           <button onclick="switchDay(6)" id="tab-6" class="day-tab px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap bg-slate-100 text-slate-600 transition shrink-0">Day 6 (1/6 三) 採購返台</button>
         </div>
 
@@ -196,9 +196,10 @@
           <p class="text-xs text-slate-600 mt-1">從飯店散步至西心齋橋美國村。逛美式復古古著店、潮流選品店與唱片行，在三角公園品嚐米其林推薦「甲賀流」蔥花美乃滋章魚燒。（<span class="text-blue-600 font-medium cursor-pointer" onclick="showModal('america_mura')">點標題查看散策特色</span>）</p>
         </div>
 
+        <!-- 難波東方大飯店卡片 (無訂單編號 · 含最新施設詳情) -->
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-1">
-            <span class="text-xs font-semibold text-emerald-600 font-mono">⏱️ 15:00 正式入住 Check-in</span>
+            <span class="text-xs font-semibold text-emerald-600 font-mono">⏱️ 15:00 正式入住 · 11:00 退房</span>
             <a href="https://maps.google.com/?q=Namba+Oriental+Hotel" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
               📍 導航
             </a>
@@ -209,8 +210,9 @@
           </h3>
           <div class="mt-2 bg-slate-50 p-2.5 rounded-lg border border-slate-100 text-xs space-y-1 text-slate-600">
             <div class="flex justify-between"><span>預訂房型：</span><span class="font-semibold text-slate-800">東方雙床房－禁菸 × 2 間（每間 23 m² · 4張單床）</span></div>
-            <div class="flex justify-between"><span>方案禮遇：</span><span class="text-emerald-700 font-semibold">免費迎賓Lounge(清酒吧/小食) + 免費洗衣休息室</span></div>
-            <div class="flex justify-between border-t border-slate-200 pt-1 text-[11px]"><span>Klook 訂單：</span><span class="font-mono text-blue-600 font-bold">ZJM480824 (JPY 198,597 · 12/28自動扣款)</span></div>
+            <div class="flex justify-between"><span>迎賓 Lounge：</span><span class="text-emerald-700 font-semibold">14:00-22:00 免費大阪清酒/生啤/氣泡酒/起司煎餅</span></div>
+            <div class="flex justify-between"><span>洗衣休息室：</span><span class="text-blue-700 font-semibold">24H 免費 wash+ 洗衣機 + Smart Pack 衣物壓縮機</span></div>
+            <div class="flex justify-between border-t border-slate-200 pt-1 text-[11px]"><span>房費狀態：</span><span class="font-mono text-slate-700 font-bold">已確認 · 5晚2間共 ¥196,984（現場另付住宿稅）</span></div>
           </div>
         </div>
 
@@ -225,116 +227,85 @@
             道頓堀散策 & 固力果跑跑人合影
             <span class="text-xs text-blue-500 ml-1.5 font-normal">ℹ️</span>
           </h3>
-          <p class="text-xs text-slate-600 mt-1">出飯店巷口就是千日前美食街與道頓堀，元旦夜燈火通明，品嚐名代拉麵或現烤章魚燒，在戎橋拍照後回飯店享受免費清酒吧與迎賓飲品。</p>
+          <p class="text-xs text-slate-600 mt-1">出飯店巷口就是千日前美食街與道頓堀，元旦夜燈火通明，品嚐名代拉麵或現烤章魚燒，在戎橋拍照後回飯店享受免費清酒吧與起司小食。</p>
         </div>
       </div>
 
-      <!-- ==================== Day 2 (1/2 六 · 錯峰調為京都一日遊) ==================== -->
+      <!-- ==================== Day 2 (1/2 六 · 對調為琵琶湖滑雪+梅田夜遊) ==================== -->
       <div id="day-2" class="day-content space-y-3 fade-content hidden">
         <div class="hero-img-card">
-          <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80" alt="京都清水寺">
+          <img src="biwako.png?v=2027" alt="琵琶湖山谷滑雪場">
           <div class="hero-img-overlay">
-            <span class="text-[10px] font-bold text-amber-300 tracking-wider uppercase">DAY 2 (1/2 六 · 週末限定雅洛號)</span>
-            <h2 class="text-base font-bold text-white drop-shadow-sm">阪急雅洛號 ➔ 錦市場 ➔ 清水寺夕陽 ➔ 暮色伏見稻荷</h2>
-            <p class="text-[11px] text-slate-200 mt-0.5">避開連假USJ爆滿人潮 · 09:32雅洛號直達京都 · 午後錯峰清水舞台 · 暮色點燈千本鳥居</p>
+            <span class="text-[10px] font-bold text-sky-300 tracking-wider uppercase">DAY 2 (1/2 六 · 專車直達雪場) · 雪國冒險 ➔ 梅田夜遊</span>
+            <h2 class="text-base font-bold text-white drop-shadow-sm">滋賀琵琶湖滑雪 ➔ 傍晚梅田商圈晚餐散策</h2>
+            <p class="text-[11px] text-slate-200 mt-0.5">避開京都新年初詣爆滿人潮 · 專車補眠直達雪場 · 免費 wash+ 洗烘 & Smart Pack 壓縮雪衣</p>
           </div>
         </div>
 
-        <div class="bg-emerald-50 border border-emerald-200 p-2.5 rounded-xl text-[11px] text-emerald-900">
-          <strong>✨ 錯峰亮點：</strong> 週六正好搭乘週末限定<strong>「京とれいん 雅洛」</strong>觀光特急！清水寺與伏見稻荷採用「午後＋傍晚點燈」動線，完美避開日本新年早上參拜高峰。
+        <div class="bg-sky-50 border border-sky-200 p-2.5 rounded-xl text-[11px] text-sky-900">
+          <strong>❄️ 錯峰與體力配置：</strong> 1/2 週六專車直達雪場免轉車，晚上回飯店直接丟進免費 <strong>Signature 洗衣休息室</strong>洗烘雪衣；若玩雪後覺得疲勞，晚餐也可直接改在難波飯店樓下享用！
         </div>
 
-        <div class="bg-gradient-to-r from-amber-50 to-emerald-50 border border-emerald-100 p-3 rounded-xl text-xs">
-          <div class="font-bold text-emerald-900 mb-2 flex items-center">🗺️ 今日移動路線 (順暢不繞路)</div>
+        <div class="bg-gradient-to-r from-sky-50 to-blue-50 border border-sky-100 p-3 rounded-xl text-xs">
+          <div class="font-bold text-sky-900 mb-2 flex items-center">🗺️ 今日移動路線（集合點僅需散步 4 分鐘）</div>
           <div class="flex flex-wrap items-center gap-1.5 text-slate-700">
-            <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">難波 ➔ 梅田</span>
+            <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">難波東方步行4分</span>
             <span>➔</span>
-            <span class="bg-amber-100 text-amber-900 px-2 py-1 rounded font-bold">09:32 雅洛號 ➔ 京都河原町</span>
+            <span class="bg-amber-100 text-amber-800 px-2 py-1 rounded font-medium">07:45 宗右衛門町集合</span>
             <span>➔</span>
-            <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">錦市場早午餐</span>
+            <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded font-medium">專車直達琵琶湖</span>
             <span>➔</span>
-            <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">二三年坂 ➔ 清水寺夕陽</span>
+            <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">18:00 返飯店丟洗烘</span>
             <span>➔</span>
-            <span class="bg-rose-100 text-rose-800 px-2 py-1 rounded font-medium">京阪電車 ➔ 暮色伏見稻荷</span>
+            <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded font-medium">御堂筋線直達梅田</span>
             <span>➔</span>
-            <span class="bg-amber-100 text-amber-800 px-2 py-1 rounded font-medium">19:00前返四條晚餐</span>
+            <span class="bg-rose-100 text-rose-800 px-2 py-1 rounded font-medium">LUCUA晚餐/逛街</span>
             <span>➔</span>
-            <span class="bg-teal-100 text-teal-800 px-2 py-1 rounded font-medium">京阪特急直達難波</span>
+            <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">御堂筋線回飯店</span>
           </div>
         </div>
 
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
-          <div class="flex justify-between items-start mb-1">
-            <span class="text-xs font-semibold text-amber-600 font-mono">⏱️ 09:00 - 10:15 (週末假日限定)</span>
-            <a href="https://maps.google.com/?q=Hankyu+Osaka-Umeda+Station" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
-              📍 導航
+          <div class="flex justify-between items-start mb-2">
+            <span class="text-xs font-semibold text-sky-600 font-mono">⏱️ 07:45 - 08:00 集合</span>
+            <a href="https://maps.google.com/?q=Tsuruhashi+Udon+Honpo+Soemoncho" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+              📍 步行導航
             </a>
           </div>
-          <h3 onclick="showModal('garaku_train')" class="text-base font-bold text-slate-800 hover:text-blue-600 cursor-pointer flex items-center group transition">
-            大阪梅田搭乘「京とれいん 雅洛」觀光特急
-            <span class="text-xs text-blue-500 ml-1.5 font-normal">ℹ️</span>
-          </h3>
-          <p class="text-xs text-slate-600 mt-1">從難波搭御堂筋線至梅田，搭乘 09:32 週末限定觀光列車直達「京都河原町站」（10:15 抵達），全車日式和風庭園座席，普通車票即可搭乘！</p>
+          <h3 class="text-base font-bold text-slate-800">集合地點：鶴橋烏龍麵本鋪宗右衛町店</h3>
+          <p class="text-xs text-slate-600 mt-1">從難波東方大飯店出門穿過千日前商店街與道頓堀運河即達（僅約 350 公尺，步行 4～5 分鐘），門口認明「TOURSTORY」旗幟導遊報到搭乘專車。</p>
         </div>
 
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-1">
-            <span class="text-xs font-semibold text-blue-600">⏱️ 10:30 - 12:30</span>
-            <a href="https://maps.google.com/?q=Nishiki+Market" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
-              📍 導航
+            <span class="text-xs font-semibold text-blue-600">⏱️ 10:00 - 15:30</span>
+            <a href="https://www.klook.com/zh-TW/activity/134423-biwako-valley-ski-resort-snow-park-day-trip-osaka/" target="_blank" class="text-xs bg-sky-100 hover:bg-sky-200 text-sky-800 px-2.5 py-1 rounded-md transition flex items-center font-medium">
+              🛒 Klook 方案 E (NT$ 12,364) ↗
             </a>
           </div>
-          <h3 onclick="showModal('nishiki_market')" class="text-base font-bold text-slate-800 hover:text-blue-600 cursor-pointer flex items-center group transition">
-            京都廚房：錦市場道地美食巡禮
+          <h3 onclick="showModal('biwako_valley')" class="text-base font-bold text-slate-800 hover:text-blue-600 cursor-pointer flex items-center group transition">
+            琵琶湖山谷滑雪場（方案 E 雪橇）
             <span class="text-xs text-blue-500 ml-1.5 font-normal">ℹ️</span>
           </h3>
-          <p class="text-xs text-slate-600 mt-1">京都河原町出站步行 3 分鐘即達，剛好遇上店家開市！大啖現烤 A5 和牛串、熱騰騰高湯厚蛋燒、現剖海膽與烤魷魚。</p>
+          <p class="text-xs text-slate-600 mt-1">搭全景大纜車直上 1,100m 景觀台眺望蔚藍湖面雪景；方案 E 免費借雪盆在雪樂園狂飆打雪仗！約 15:30 集合搭專車返程。</p>
         </div>
 
-        <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
+        <div class="bg-white rounded-xl shadow-sm border border-indigo-100 p-4">
           <div class="flex justify-between items-start mb-1">
-            <span class="text-xs font-semibold text-blue-600">⏱️ 13:00 - 16:30</span>
-            <a href="https://maps.google.com/?q=Kiyomizu-dera" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+            <span class="text-xs font-semibold text-indigo-600 font-mono">⏱️ 18:00 - 21:30</span>
+            <a href="https://maps.google.com/?q=LUCUA+osaka" target="_blank" class="text-xs bg-indigo-100 hover:bg-indigo-200 text-indigo-700 px-2.5 py-1 rounded-md transition flex items-center">
               📍 導航
             </a>
           </div>
-          <h3 onclick="showModal('kiyomizu_dera')" class="text-base font-bold text-slate-800 hover:text-blue-600 cursor-pointer flex items-center group transition">
-            八坂神社 ➔ 二三年坂 ➔ 清水寺夕陽斜射
-            <span class="text-xs text-blue-500 ml-1.5 font-normal">ℹ️</span>
+          <h3 onclick="showModal('umeda_dinner')" class="text-base font-bold text-slate-800 hover:text-indigo-600 cursor-pointer flex items-center group transition">
+            18:00 返飯店丟洗烘 ➔ 梅田商圈晚餐散策
+            <span class="text-xs text-indigo-500 ml-1.5 font-normal">ℹ️</span>
           </h3>
-          <p class="text-xs text-slate-600 mt-1">漫步石板路，於下午三點半登上國寶清水舞台，捕捉冬季落日斜射大殿的金黃絕美景致，順道飲用音羽名泉。</p>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-sm border border-rose-100 p-4">
-          <div class="flex justify-between items-start mb-1">
-            <span class="text-xs font-semibold text-rose-600 font-mono">⏱️ 17:00 - 18:30</span>
-            <a href="https://maps.google.com/?q=Fushimi+Inari+Taisha" target="_blank" class="text-xs bg-rose-100 hover:bg-rose-200 text-rose-700 px-2.5 py-1 rounded-md transition flex items-center">
-              📍 導航
-            </a>
-          </div>
-          <h3 onclick="showModal('fushimi_twilight')" class="text-base font-bold text-slate-800 hover:text-rose-600 cursor-pointer flex items-center group transition">
-            暮色中的伏見稻荷大社（千本鳥居點燈）
-            <span class="text-xs text-rose-500 ml-1.5 font-normal">ℹ️</span>
-          </h3>
-          <p class="text-xs text-slate-600 mt-1">從清水五條搭京阪電車 7 分鐘直達！傍晚參拜人潮散去、朱紅鳥居兩側石燈籠點亮，享受空靈莊嚴的獨特暮色氛圍。</p>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-sm border border-amber-100 p-4">
-          <div class="flex justify-between items-start mb-1">
-            <span class="text-xs font-semibold text-amber-600 font-mono">⏱️ 18:45 - 20:30 (7點前抵達)</span>
-            <a href="https://maps.google.com/?q=Gion+Shijo+Station" target="_blank" class="text-xs bg-amber-100 hover:bg-amber-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
-              📍 導航
-            </a>
-          </div>
-          <h3 onclick="showModal('kyoto_dinner')" class="text-base font-bold text-slate-800 hover:text-amber-600 cursor-pointer flex items-center group transition">
-            返回祇園四條 · 鴨川夜景 · 先斗町特色晚餐
-            <span class="text-xs text-amber-500 ml-1.5 font-normal">ℹ️</span>
-          </h3>
-          <p class="text-xs text-slate-600 mt-1">伏見稻荷搭電車 9 分鐘直達祇園四條（18:50 抵達）。在先斗町享用溫暖和牛火鍋或名代豬排，欣賞鴨川夜景後搭特急直達難波。（<span class="text-amber-600 font-medium cursor-pointer" onclick="showModal('kyoto_dinner')">點標題查看精選餐廳</span>）</p>
+          <p class="text-xs text-slate-600 mt-1">專車約 18:00 回到難波。先回飯店放好雪地裝備、利用免費 Signature 洗衣房 wash+ 洗烘衣物，再搭【御堂筋線】直達「梅田站」（8 分鐘），在 LUCUA 美食街享用暖胃晚餐與逛街。（<span class="text-indigo-600 font-medium cursor-pointer" onclick="showModal('umeda_dinner')">點標題查看晚餐推薦與交通</span>）</p>
         </div>
       </div>
 
-      <!-- ==================== Day 3 (1/3 日 · 錯峰調為大阪城+日本橋+阿倍野) ==================== -->
+      <!-- ==================== Day 3 (1/3 日 · 大阪城+日本橋+通天閣+阿倍野) ==================== -->
       <div id="day-3" class="day-content space-y-3 fade-content hidden">
         <div class="hero-img-card">
           <img src="osaka.png?v=2" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1590559899731-a382839e5549?auto=format&fit=crop&w=1200&q=80';" alt="大阪城與通天閣">
@@ -461,17 +432,17 @@
             <span class="text-xs text-blue-500 ml-1.5 font-normal">ℹ️</span>
           </h3>
           
-          <!-- 最新 Klook 訂單 RCY194777 完整更新 -->
+          <!-- 豪華版關西樂享周遊券卡片 (移除訂單編號) -->
           <div class="mt-2 bg-emerald-50 p-3 rounded-xl border border-emerald-200 text-xs space-y-1.5 text-slate-700">
             <div class="flex justify-between items-center">
-              <span class="font-bold text-emerald-900">🎟️ 豪華版關西樂享周遊券 (Klook: RCY194777)</span>
+              <span class="font-bold text-emerald-900">🎟️ 豪華版關西樂享周遊券 (含USJ及快通1項)</span>
               <a href="https://travelcontentsapp.com/have-fun-pass/kansai-premium/?_ticket=premium-a#Attraction" target="_blank" class="text-[11px] bg-emerald-600 hover:bg-emerald-700 text-white px-2 py-0.5 rounded-full font-medium transition">
                 官方設施一覽 ↗
               </a>
             </div>
             <div class="text-[11px] text-slate-600 leading-relaxed">
               <strong>已付款：</strong> NT$ 14,071 (4份 · 每人約 NT$ 3,518)<br>
-              <strong>超值內容：</strong> ① <strong>USJ 1日券 + 1項指定設施快速通關券</strong> + ② 關西機場 HARUKA 特快車票 + ③ 樂享周遊券任選 3 項體驗（大阪城御座船、HARUKAS 300 等）。<br>
+              <strong>超值內容：</strong> ① <strong>USJ 1日券 + 1項指定設施快速通關券</strong> + ② 關西機場利木津巴士/HARUKA 車票 + ③ 樂享周遊券任選 3 項體驗（大阪城御座船、HARUKAS 300 等）。<br>
               <span class="text-rose-700 font-semibold">⚠️ 提醒：行前請下載「Travel Contents 旅遊控 App」綁定並指定 2027/01/04 完成開票！</span>
             </div>
           </div>
@@ -491,73 +462,108 @@
         </div>
       </div>
 
-      <!-- ==================== Day 5 (1/5 二 · 平日琵琶湖滑雪+梅田夜遊) ==================== -->
+      <!-- ==================== Day 5 (1/5 二 · 對調為平日京都一日遊) ==================== -->
       <div id="day-5" class="day-content space-y-3 fade-content hidden">
         <div class="hero-img-card">
-          <img src="biwako.png?v=2027" alt="琵琶湖山谷滑雪場">
+          <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80" alt="京都清水寺">
           <div class="hero-img-overlay">
-            <span class="text-[10px] font-bold text-sky-300 tracking-wider uppercase">DAY 5 (1/5 二 · 平日暢玩雪場) · 雪國冒險 ➔ 梅田夜遊</span>
-            <h2 class="text-base font-bold text-white drop-shadow-sm">滋賀琵琶湖滑雪 ➔ 傍晚梅田商圈晚餐散策</h2>
-            <p class="text-[11px] text-slate-200 mt-0.5">平日纜車免排長隊 · 標高 1,100m 賞雪 · 難波東方免費洗烘雪衣 · 梅田百貨美食</p>
+            <span class="text-[10px] font-bold text-amber-300 tracking-wider uppercase">DAY 5 (1/5 二 · 平日悠閒漫遊) · 京都經典一日遊</span>
+            <h2 class="text-base font-bold text-white drop-shadow-sm">阪急特急 ➔ 錦市場 ➔ 清水寺夕陽 ➔ 暮色伏見稻荷</h2>
+            <p class="text-[11px] text-slate-200 mt-0.5">避開新年初詣爆滿人潮 · 睡飽09:30出發 · 4人計程車短程接駁省腳力 · 暮色鳥居點燈</p>
           </div>
         </div>
 
-        <div class="bg-gradient-to-r from-sky-50 to-blue-50 border border-sky-100 p-3 rounded-xl text-xs">
-          <div class="font-bold text-sky-900 mb-2 flex items-center">🗺️ 今日移動路線（集合點僅需散步 4 分鐘）</div>
+        <div class="bg-emerald-50 border border-emerald-200 p-2.5 rounded-xl text-[11px] text-emerald-900">
+          <strong>💡 體力調節秘訣：</strong> 前一天剛走完 USJ，今日不用趕早！早上睡飽 09:30 出發；下午「清水寺 ➔ 伏見稻荷」建議<strong>4 人直接搭計程車（約 15 分鐘）</strong>，省去步行轉乘更輕鬆！
+        </div>
+
+        <div class="bg-gradient-to-r from-amber-50 to-emerald-50 border border-emerald-100 p-3 rounded-xl text-xs">
+          <div class="font-bold text-emerald-900 mb-2 flex items-center">🗺️ 今日移動路線 (平日錯峰順暢路線)</div>
           <div class="flex flex-wrap items-center gap-1.5 text-slate-700">
-            <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">難波東方步行4分</span>
+            <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">難波 ➔ 梅田</span>
             <span>➔</span>
-            <span class="bg-amber-100 text-amber-800 px-2 py-1 rounded font-medium">07:45 宗右衛門町集合</span>
+            <span class="bg-amber-100 text-amber-900 px-2 py-1 rounded font-bold">阪急特急(43分) ➔ 京都河原町</span>
             <span>➔</span>
-            <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded font-medium">專車直達琵琶湖</span>
+            <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">錦市場早午餐</span>
             <span>➔</span>
-            <span class="bg-white border border-slate-200 px-2 py-1 rounded shadow-xs font-medium">18:00 返飯店丟洗烘</span>
+            <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">二三年坂 ➔ 清水寺夕陽</span>
             <span>➔</span>
-            <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded font-medium">御堂筋線直達梅田</span>
+            <span class="bg-rose-100 text-rose-800 px-2 py-1 rounded font-medium">計程車/京阪 ➔ 暮色伏見稻荷</span>
             <span>➔</span>
-            <span class="bg-rose-100 text-rose-800 px-2 py-1 rounded font-medium">LUCUA晚餐/逛街</span>
+            <span class="bg-amber-100 text-amber-800 px-2 py-1 rounded font-medium">19:00前返四條晚餐</span>
             <span>➔</span>
-            <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">御堂筋線回飯店</span>
+            <span class="bg-teal-100 text-teal-800 px-2 py-1 rounded font-medium">京阪特急直達難波</span>
           </div>
         </div>
 
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
-          <div class="flex justify-between items-start mb-2">
-            <span class="text-xs font-semibold text-sky-600 font-mono">⏱️ 07:45 - 08:00 集合</span>
-            <a href="https://maps.google.com/?q=Tsuruhashi+Udon+Honpo+Soemoncho" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
-              📍 步行導航
-            </a>
-          </div>
-          <h3 class="text-base font-bold text-slate-800">集合地點：鶴橋烏龍麵本鋪宗右衛町店</h3>
-          <p class="text-xs text-slate-600 mt-1">從難波東方大飯店出門穿過千日前商店街與道頓堀運河即達（僅約 350 公尺，步行 4～5 分鐘），門口認明「TOURSTORY」旗幟導遊報到搭乘專車。</p>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-1">
-            <span class="text-xs font-semibold text-blue-600">⏱️ 10:00 - 15:30</span>
-            <a href="https://www.klook.com/zh-TW/activity/134423-biwako-valley-ski-resort-snow-park-day-trip-osaka/?spm=Tetris_Promo.ShoppingCartBox_Activity_LIST&clickId=6cfb20738a" target="_blank" class="text-xs bg-sky-100 hover:bg-sky-200 text-sky-800 px-2.5 py-1 rounded-md transition flex items-center font-medium">
-              🛒 Klook 預訂 (NT$ 12,484) ↗
-            </a>
-          </div>
-          <h3 onclick="showModal('biwako_valley')" class="text-base font-bold text-slate-800 hover:text-blue-600 cursor-pointer flex items-center group transition">
-            琵琶湖山谷滑雪場（方案 E 雪橇）
-            <span class="text-xs text-blue-500 ml-1.5 font-normal">ℹ️</span>
-          </h3>
-          <p class="text-xs text-slate-600 mt-1">平日造訪免排長龍！搭全景大纜車直上 1,100m 景觀台眺望蔚藍湖面雪景；方案 E 免費借雪盆在雪樂園狂飆打雪仗！約 15:30 集合搭專車返程。</p>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-sm border border-indigo-100 p-4">
-          <div class="flex justify-between items-start mb-1">
-            <span class="text-xs font-semibold text-indigo-600 font-mono">⏱️ 18:00 - 21:30</span>
-            <a href="https://maps.google.com/?q=LUCUA+osaka" target="_blank" class="text-xs bg-indigo-100 hover:bg-indigo-200 text-indigo-700 px-2.5 py-1 rounded-md transition flex items-center">
+            <span class="text-xs font-semibold text-amber-600 font-mono">⏱️ 09:30 - 10:45 (免趕早班車)</span>
+            <a href="https://maps.google.com/?q=Hankyu+Osaka-Umeda+Station" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
               📍 導航
             </a>
           </div>
-          <h3 onclick="showModal('umeda_dinner')" class="text-base font-bold text-slate-800 hover:text-indigo-600 cursor-pointer flex items-center group transition">
-            18:00 返飯店丟洗烘 ➔ 梅田商圈晚餐散策
-            <span class="text-xs text-indigo-500 ml-1.5 font-normal">ℹ️</span>
+          <h3 onclick="showModal('hankyu_express')" class="text-base font-bold text-slate-800 hover:text-blue-600 cursor-pointer flex items-center group transition">
+            大阪梅田搭乘「阪急京都線特急」直達河原町
+            <span class="text-xs text-blue-500 ml-1.5 font-normal">ℹ️</span>
           </h3>
-          <p class="text-xs text-slate-600 mt-1">專車約 18:00 回到難波。先回飯店放好雪地裝備、利用免費 Signature 洗衣房洗烘保暖衣物，再搭【御堂筋線】直達「梅田站」（8 分鐘），在 LUCUA 美食街享用暖胃晚餐與逛街。（<span class="text-indigo-600 font-medium cursor-pointer" onclick="showModal('umeda_dinner')">點標題查看晚餐推薦與交通</span>）</p>
+          <p class="text-xs text-slate-600 mt-1">從難波搭御堂筋線至梅田，搭乘每 10 分鐘一班的「阪急特急」直達「京都河原町站」（車程僅 43 分鐘），免加特急費，舒適抵達京都市中心！</p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
+          <div class="flex justify-between items-start mb-1">
+            <span class="text-xs font-semibold text-blue-600">⏱️ 10:45 - 12:45</span>
+            <a href="https://maps.google.com/?q=Nishiki+Market" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+              📍 導航
+            </a>
+          </div>
+          <h3 onclick="showModal('nishiki_market')" class="text-base font-bold text-slate-800 hover:text-blue-600 cursor-pointer flex items-center group transition">
+            京都廚房：錦市場道地美食巡禮
+            <span class="text-xs text-blue-500 ml-1.5 font-normal">ℹ️</span>
+          </h3>
+          <p class="text-xs text-slate-600 mt-1">京都河原町出站步行 3 分鐘即達，平日店家全開且人潮舒適！大啖現烤 A5 和牛串、熱騰騰高湯厚蛋燒、現剖海膽與烤魷魚。</p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
+          <div class="flex justify-between items-start mb-1">
+            <span class="text-xs font-semibold text-blue-600">⏱️ 13:15 - 16:30</span>
+            <a href="https://maps.google.com/?q=Kiyomizu-dera" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+              📍 導航
+            </a>
+          </div>
+          <h3 onclick="showModal('kiyomizu_dera')" class="text-base font-bold text-slate-800 hover:text-blue-600 cursor-pointer flex items-center group transition">
+            八坂神社 ➔ 二三年坂 ➔ 清水寺夕陽斜射
+            <span class="text-xs text-blue-500 ml-1.5 font-normal">ℹ️</span>
+          </h3>
+          <p class="text-xs text-slate-600 mt-1">平日參拜人潮減半！漫步石板路，於下午三點半登上國寶清水舞台，捕捉冬季落日斜射大殿的金黃絕美景致，順道飲用音羽名泉。</p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm border border-rose-100 p-4">
+          <div class="flex justify-between items-start mb-1">
+            <span class="text-xs font-semibold text-rose-600 font-mono">⏱️ 17:00 - 18:30</span>
+            <a href="https://maps.google.com/?q=Fushimi+Inari+Taisha" target="_blank" class="text-xs bg-rose-100 hover:bg-rose-200 text-rose-700 px-2.5 py-1 rounded-md transition flex items-center">
+              📍 導航
+            </a>
+          </div>
+          <h3 onclick="showModal('fushimi_twilight')" class="text-base font-bold text-slate-800 hover:text-rose-600 cursor-pointer flex items-center group transition">
+            暮色中的伏見稻荷大社（千本鳥居點燈）
+            <span class="text-xs text-rose-500 ml-1.5 font-normal">ℹ️</span>
+          </h3>
+          <p class="text-xs text-slate-600 mt-1">建議 4 人直接搭計程車從清水寺周邊前往（約 15 分鐘，每人分攤約百元台幣）或搭京阪電車！傍晚朱紅鳥居石燈籠點亮，享受無人空靈氛圍（拍前段千本鳥居即可，免爬山頂省腳力）。</p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm border border-amber-100 p-4">
+          <div class="flex justify-between items-start mb-1">
+            <span class="text-xs font-semibold text-amber-600 font-mono">⏱️ 18:45 - 20:30 (7點前抵達)</span>
+            <a href="https://maps.google.com/?q=Gion+Shijo+Station" target="_blank" class="text-xs bg-amber-100 hover:bg-amber-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+              📍 導航
+            </a>
+          </div>
+          <h3 onclick="showModal('kyoto_dinner')" class="text-base font-bold text-slate-800 hover:text-amber-600 cursor-pointer flex items-center group transition">
+            返回祇園四條 · 鴨川夜景 · 先斗町特色晚餐
+            <span class="text-xs text-amber-500 ml-1.5 font-normal">ℹ️</span>
+          </h3>
+          <p class="text-xs text-slate-600 mt-1">伏見稻荷搭電車 9 分鐘直達祇園四條（18:50 抵達）。在先斗町享用溫暖和牛火鍋或名代豬排，欣賞鴨川夜景後搭特急直達難波。（<span class="text-amber-600 font-medium cursor-pointer" onclick="showModal('kyoto_dinner')">點標題查看精選餐廳</span>）</p>
         </div>
       </div>
 
@@ -630,15 +636,15 @@
     </div>
   </div>
 
-  <!-- ==================== 3. 底部固定預算列 (最新套票NT$14,071更新) ==================== -->
+  <!-- ==================== 3. 底部固定預算列 ==================== -->
   <footer class="bg-white/95 backdrop-blur-md border-t border-slate-200 px-4 py-2.5 shadow-lg z-30 shrink-0">
     <div class="max-w-md mx-auto flex justify-between items-center text-xs">
       <div>
         <div class="text-[10px] text-slate-400">
-          固定機酒樂園滑雪 <span class="font-semibold text-slate-600">NT$ 33,547</span> + 餐飲零用 <span class="font-semibold text-slate-600">NT$ 9,000</span>
+          固定機酒樂園滑雪 <span class="font-semibold text-slate-600">NT$ 33,859</span> + 餐飲零用 <span class="font-semibold text-slate-600">NT$ 9,000</span>
         </div>
         <div class="text-sm font-bold text-emerald-600">
-          約 NT$ 42,547 <span class="text-xs font-normal text-slate-500">/ 人 (USJ豪華套票已付訖)</span>
+          約 NT$ 42,859 <span class="text-xs font-normal text-slate-500">/ 人 (跨年錯峰優化版)</span>
         </div>
       </div>
       <div>
@@ -680,6 +686,7 @@
   </div>
 
   <script>
+    // 1. 倒數計時更新為 2027-01-01
     function updateCountdown() {
       const targetDate = new Date('2027-01-01T00:00:00+08:00').getTime();
       const now = new Date().getTime();
@@ -702,6 +709,7 @@
     updateCountdown();
     setInterval(updateCountdown, 60000);
 
+    // 2. 免費即時天氣 API
     function getWeatherIcon(code) {
       if (code === 0) return "☀️";
       if ([1, 2].includes(code)) return "🌤️";
@@ -758,15 +766,16 @@
       },
       hotel_oriental: {
         title: "難波東方大飯店 (Namba Oriental Hotel)",
-        tag: "已確認 Klook 訂單",
+        tag: "已確認住宿 · 23m²大空間",
         desc: "座落於大阪難波核心千日前商店街內，2024 年底全新整修！客房空間高達 23 平方公尺，走道可完整平攤多個 28 吋大行李箱。步行 3 分鐘至南海難波站與黑門市場、5 分鐘至道頓堀與日本橋電器街。",
-        highlights: "• Klook 訂單編號：ZJM480824（已確認，2026/12/28 自動扣款 JPY 198,597）<br>• 23 m² 寬敞東方雙床房（2間禁菸房共 4 張單人床）<br>• 免費使用迎賓休息室（提供生啤酒、日本清酒吧、自助飲品與小食）<br>• 免費使用 Signature 洗衣休息室（滑雪衣物免費洗烘！帶咖啡機與微波爐）",
+        highlights: "• 23 m² 寬敞東方雙床房（2間禁菸房共 4 張單人床 · 15:00入住 / 11:00退房）<br>• 免費迎賓休息室（14:00-22:00 開放，最後入場 21:30）：提供大阪當地清酒、啤酒、氣泡酒、軟性飲料及自動烹調起司與煎餅小食<br>• 24小時免費 Signature 洗衣休息室：提供免洗劑離子冷水洗衣機『wash+』、香氛洗衣珠、桌遊咖啡空間及免費衣物壓縮機『Smart Pack』",
         extra: `
           <div class="bg-emerald-50 p-2.5 rounded-xl border border-emerald-200 text-slate-700 space-y-1">
-            <div class="font-bold text-emerald-900 flex items-center">⭐ 飯店亮點與聯繫資訊：</div>
+            <div class="font-bold text-emerald-900 flex items-center">⭐ 飯店地址與聯繫資訊：</div>
             <div class="text-[11px] leading-relaxed">
               • <strong>飯店地址：</strong> 2 Chome-8-17 Sennichimae (Chuo-ku), Osaka<br>
-              • <strong>中庭歐風噴泉水池花園：</strong> 採光自然明亮，鬧中取靜的優雅氛圍。
+              • <strong>飯店電話：</strong> +81 0570-051-153<br>
+              • <strong>中庭歐風噴泉花園：</strong> 採光自然明亮，鬧中取靜的優雅氛圍（接受信用卡付款）。
             </div>
           </div>
         `
@@ -786,15 +795,15 @@
         extra: ""
       },
       usj: {
-        title: "日本環球影城 (USJ) · Klook 豪華版套票",
-        tag: "已付訖套票 (RCY194777)",
-        desc: "已成功訂購 Klook【豪華版關西樂享周遊券（含日本環球影城）】，訂單編號 RCY194777，實付 NT$ 14,071（4份）。安排於 1/4（週一）日本開工日入園，完美避開元旦三連假人潮！",
-        highlights: "• 豪華 A 區任選 2 項：USJ 1日券 ＋ 指定遊樂設施快速通關券 1 項（或能量手環/爆米花桶）<br>• 豪華 B 區任選 1 項：USJ 彩道餐廳預約券＆飲料 或 京都水族館門票<br>• 豪華 C 區任選 1 項：關西機場特快 HARUKA 車票 或 利木津巴士單程票<br>• 關西樂享周遊券任選 3 項：大阪城御座船、HARUKAS 300 展望台等",
+        title: "日本環球影城 (USJ) · 豪華版套票",
+        tag: "已付訖套票",
+        desc: "已成功訂購【豪華版關西樂享周遊券（含日本環球影城）】4 人份。安排於 1/4（週一）日本開工日入園，完美避開元旦三連假人潮！",
+        highlights: "• 豪華 A 區任選 2 項：USJ 1日券 ＋ 指定遊樂設施快速通關券 1 項（或能量手環/爆米花桶）<br>• 豪華 B 區任選 1 項：USJ 彩道餐廳預約券＆飲料 或 京都水族館門票<br>• 豪華 C 區任選 1 項：關西機場利木津巴士單程票 或 HARUKA 特快車票<br>• 關西樂享周遊券任選 3 項：大阪城御座船、HARUKAS 300 展望台等",
         extra: `
           <div class="bg-rose-50 p-2.5 rounded-xl border border-rose-200 space-y-1 text-slate-700">
             <div class="font-bold text-rose-900 flex items-center">📲 行前 App 綁定與兌換步驟：</div>
             <div class="text-[11px] leading-relaxed">
-              1. <strong>下載綁定：</strong> 下載「Travel Contents 旅遊控 App」輸入 Klook 憑證序號綁定。<br>
+              1. <strong>下載綁定：</strong> 下載「Travel Contents 旅遊控 App」輸入憑證序號綁定。<br>
               2. <strong>提前指定日期開票：</strong> 豪華 A/B/C 區票券（包含 USJ 門票與快速通關）必須在 App 內提前選定 <strong>2027/01/04</strong> 完成兌換開票，已兌換無法更改。<br>
               3. <strong>入園第一件事：</strong> 刷進大門後立刻打開 USJ 官方 APP 綁定門票，抽任天堂園區整理券！
             </div>
@@ -809,14 +818,14 @@
       biwako_valley: {
         title: "滋賀 琵琶湖山谷滑雪場",
         tag: "雪國冒險",
-        desc: "座落於標高 1,174 公尺的高山，搭乘秒速 12 公尺的日本最快全景纜車直升山頂。安排於 1/5（週二）平日造訪，避開週末家庭人潮，暢玩更盡興。",
+        desc: "座落於標高 1,174 公尺的高山，搭乘秒速 12 公尺的日本最快全景纜車直升山頂。專車由難波出發直達雪場，省去轉車煩惱，晚上回難波東方還可使用免費洗烘與衣物壓縮機。",
         highlights: "• The Biwako Terrace 1,100m 天空階梯甲板賞雪<br>• 方案 E 內含雪橇，在 Snow Land 飆速戲雪<br>• 專車直達免去轉乘巴士的受凍疲憊",
         extra: ""
       },
       umeda_dinner: {
         title: "梅田商圈 · LUCUA 百貨美食與夜遊",
         tag: "美食與逛街精華",
-        desc: "從滑雪場專車回到難波後，先回難波東方大飯店放好雪地裝備、利用免費 Signature 洗衣休息室洗烘衣物，再搭乘御堂筋線僅 8 分鐘直達「梅田站」。LUCUA 百貨餐廳營業至 23:00，滑雪後大啖美食最為舒適！",
+        desc: "從滑雪場專車回到難波後，先回難波東方大飯店放好雪地裝備、利用免費 Signature 洗衣休息室 wash+ 洗烘衣物，再搭乘御堂筋線僅 8 分鐘直達「梅田站」。若玩雪後較累，也可選擇直接在難波飯店樓下吃晚餐！",
         highlights: "• 難波搭御堂筋線直達梅田，免轉車車程僅 8 分鐘<br>• LUCUA 10F 美食街營業至 23:00，動線集中不迷路<br>• 吃完晚餐可悠閒逛百貨或散步看夜景",
         extra: `
           <div class="bg-indigo-50 p-2.5 rounded-xl border border-indigo-200 space-y-1 text-slate-700">
@@ -850,32 +859,32 @@
         highlights: "• 10 秒急速俯衝，刺激好玩又超適合拍短影音<br>• 元祖串炸達摩 / 八重勝品嚐現炸酥脆串炸<br>• 與巨大的比利肯福神像合影（摸腳底祈福）",
         extra: ""
       },
-      garaku_train: {
-        title: "阪急電鐵觀光特急「京とれいん 雅洛」",
-        tag: "特色觀光列車",
-        desc: "阪急電鐵週末假日限定運行的頂級日式觀光特急。6節車廂分別以京都四季（春之櫻、夏之青楓、秋之紅葉、冬之竹）為主題，內裝設有和風坪庭枯山水、榻榻米座席與面向車窗的觀景席。普通車票即可上車！",
-        highlights: "• 週末假日限定運行，梅田 09:32 準點發車直達河原町<br>• 內建日式微型庭園與榻榻米，拍照體驗極佳<br>• 免額外加價，享受傳統特急沒有的日式風雅",
+      hankyu_express: {
+        title: "阪急京都線特急（梅田 ➔ 京都河原町）",
+        tag: "快速直達交通",
+        desc: "連接大阪梅田與京都市中心最便捷的鐵道。每 10 分鐘就有一班『特急』直達終點站「京都河原町」，車程僅需 43 分鐘，免額外購買特急券，刷 IC 卡（Suica/ICOCA）即可直接進站上車。",
+        highlights: "• 班次極密集（每 10 分鐘一班），早上可睡飽再從容出發<br>• 直達京都最熱鬧的四條河原町商圈，出站 3 分鐘即達錦市場<br>• 票價實惠且座位寬敞舒適",
         extra: ""
       },
       nishiki_market: {
         title: "京都的廚房：錦市場美食早午餐",
         tag: "美食天堂",
-        desc: "擁有四百年歷史的狹長型傳統商店街。搭雅洛號在「京都河原町站」出站步行 3 分鐘即達，10:30 逛街最舒適。",
+        desc: "擁有四百年歷史的狹長型傳統商店街。在「京都河原町站」出站步行 3 分鐘即達，平日人潮較少逛街最舒適。",
         highlights: "• 現烤 A5 黑毛和牛串燒與大蔥<br>• 三木雞卵 / 田中雞卵現烤厚煎高湯蛋捲<br>• 現剖鮮甜大生蠔與豆乳甜甜圈",
         extra: ""
       },
       kiyomizu_dera: {
         title: "京都 音羽山 清水寺",
         tag: "世界文化遺產",
-        desc: "棟樑未用一釘、全由 139 根巨大櫸木架構而成的『清水舞台』氣勢磅礡。下午三點半錯開早上初詣高峰登台，捕捉冬季落日斜射大殿的金黃絕美景致。",
+        desc: "棟樑未用一釘、全由 139 根巨大櫸木架構而成的『清水舞台』氣勢磅礡。週二平日造訪人潮大幅減少，下午三點半登台捕捉冬季落日斜射大殿的金黃絕美景致。",
         highlights: "• 下午 15:30 登上清水舞台迎夕陽斜射金黃美景<br>• 音羽瀑布飲用學業、戀愛、長壽之清泉<br>• 沿著二年坂、三年坂品嚐抹茶甜點與買生八橋",
         extra: ""
       },
       fushimi_twilight: {
         title: "暮色與夜間千本鳥居 · 伏見稻荷大社",
         tag: "神聖秘境",
-        desc: "伏見稻荷神社 24 小時開放且免門票。傍晚五點左右日間參拜人潮逐漸散去，朱紅色鳥居兩旁的石燈籠與吊燈逐一亮起，在暮色下漫步千本鳥居，空靈與神秘美感遠勝白天喧囂。",
-        highlights: "• 傍晚石燈籠點燈，拍出空靈朱紅鳥居大片<br>• 奧社奉拜所夜間輕重石許願體驗<br>• 搭京阪電車往返祇園四條僅需 9 分鐘",
+        desc: "伏見稻荷神社 24 小時開放且免門票。平日傍晚日間參拜人潮散去，朱紅色鳥居兩旁的石燈籠與吊燈逐一亮起，在暮色下漫步千本鳥居，空靈與神秘美感遠勝白天喧囂。",
+        highlights: "• 傍晚石燈籠點燈，拍出空靈朱紅鳥居大片<br>• 4 人同行從清水寺周邊搭計程車過來僅約 15 分鐘，省腳力又划算<br>• 拍攝入口與前段千本鳥居即可，不用爬到山頂",
         extra: ""
       },
       kyoto_dinner: {
