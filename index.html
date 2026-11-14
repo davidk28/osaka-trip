@@ -93,12 +93,12 @@
           </div>
         </div>
 
-        <!-- 航班時間與難波東方大飯店 -->
+        <!-- 華航已確認航班時間 (22:45 校正) 與難波東方大飯店 -->
         <div class="mt-1.5 bg-black/50 backdrop-blur-md px-2.5 py-1.5 rounded-lg border border-white/15 text-[10.5px] space-y-0.5 shadow-xs">
           <div class="flex justify-between items-center text-slate-200">
             <span>✈️ CI166 <strong class="text-white">07:00</strong> 高雄 ➔ <strong class="text-white">10:45</strong> 關西</span>
             <span class="text-white/40">|</span>
-            <span>🛬 CI177 <strong class="text-white">20:10</strong> 關西 ➔ <strong class="text-white">22:55</strong> 高雄</span>
+            <span>🛬 CI177 <strong class="text-white">20:10</strong> 關西 ➔ <strong class="text-white">22:45</strong> 高雄</span>
           </div>
           <div class="text-emerald-300 font-medium text-right border-t border-white/10 pt-0.5 text-[11px]">
             🏨 難波東方大飯店 (Namba Oriental Hotel)
@@ -141,7 +141,7 @@
           <div class="hero-img-overlay">
             <span class="text-[10px] font-bold text-amber-300 tracking-wider uppercase">DAY 1 (1/1 五 · 元旦) · 高雄出發 ➔ 大阪城御座船 ➔ 梅田夜遊</span>
             <h2 class="text-base font-bold text-white drop-shadow-sm">高雄到大阪 ➔ 大阪城金箔御座船 ➔ 梅田商圈晚餐</h2>
-            <p class="text-[11px] text-slate-200 mt-0.5">特急直達難波放行李 · 元旦御座船照常開航 · 搭御堂筋線 8 分鐘直達梅田吃晚餐</p>
+            <p class="text-[11px] text-slate-200 mt-0.5">華航 CI166 已確認 · 元旦御座船照常開航 · 搭御堂筋線 8 分鐘直達梅田吃晚餐</p>
           </div>
         </div>
 
@@ -168,19 +168,18 @@
 
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-1">
-            <span class="text-xs font-semibold text-blue-600">⏱️ 07:00 - 12:30</span>
-            <a href="https://maps.google.com/?q=Namba+Oriental+Hotel" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
+            <span class="text-xs font-semibold text-blue-600">⏱️ 07:00 - 12:30 (華航 CI166 已確認)</span>
+            <a href="https://maps.google.com/?q=Kansai+International+Airport" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
               📍 導航
             </a>
           </div>
           <h3 onclick="showModal('kansai_airport')" class="text-base font-bold text-slate-800 hover:text-blue-600 cursor-pointer flex items-center group transition">
-            高雄小港出發 ➔ 抵達關西機場 ➔ 特急直達難波東方
+            高雄小港(航站I) ➔ 關西機場(航站1) ➔ 特急直達難波
             <span class="text-xs text-blue-500 ml-1.5 font-normal">ℹ️</span>
           </h3>
-          <p class="text-xs text-slate-600 mt-1">搭乘華航 CI166 早班機（07:00 起飛 / 10:45 抵達關西）。搭 11:35 南海特急 Rapi:t 直達「南海難波站」（38 分鐘），出站穿過千日前商店街步行僅需 3～4 分鐘直達難波東方大飯店寄放行李。</p>
+          <p class="text-xs text-slate-600 mt-1">搭乘中華航空 CI166（07:00 起飛 / 10:45 抵達關西航站 1，含 4 件隨身＋4 件託運行李）。搭 11:35 南海特急 Rapi:t 直達「南海難波站」（38 分鐘），穿過千日前商店街步行 3 分鐘即達難波東方大飯店寄放行李。</p>
         </div>
 
-        <!-- 第一天下午調整為大阪城與御座船 -->
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-1">
             <span class="text-xs font-semibold text-blue-600">⏱️ 13:00 - 15:30 (元旦照常開航)</span>
@@ -195,7 +194,6 @@
           <p class="text-xs text-slate-600 mt-1">從飯店旁日本橋站搭地鐵堺筋線轉中央線至「森之宮站」（僅約 15 分鐘）。憑已購之豪華版樂享周遊券免費兌換搭乘純金金箔御座船（價值 1,500 日圓/人），從護城河水面仰望壯觀天守閣！（<span class="text-blue-600 font-medium cursor-pointer" onclick="showModal('osaka_castle')">點標題查看詳情</span>）</p>
         </div>
 
-        <!-- 難波東方大飯店卡片 -->
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-1">
             <span class="text-xs font-semibold text-emerald-600 font-mono">⏱️ 15:30 辦理入住 · 11:00 退房</span>
@@ -215,11 +213,10 @@
           </div>
         </div>
 
-        <!-- 第一天晚上梅田商圈晚餐 -->
         <div class="bg-white rounded-xl shadow-sm border border-indigo-100 p-4">
           <div class="flex justify-between items-start mb-1">
             <span class="text-xs font-semibold text-indigo-600 font-mono">⏱️ 18:00 - 21:00</span>
-            <a href="https://maps.google.com/?q=Umeda+Station+Osaka" target="_blank" class="text-xs bg-indigo-100 hover:bg-indigo-200 text-indigo-700 px-2.5 py-1 rounded-md transition flex items-center">
+            <a href="https://maps.google.com/?q=Umeda+Osaka" target="_blank" class="text-xs bg-indigo-100 hover:bg-indigo-200 text-indigo-700 px-2.5 py-1 rounded-md transition flex items-center">
               📍 導航
             </a>
           </div>
@@ -335,7 +332,6 @@
           </div>
         </div>
 
-        <!-- 1. 上午：海遊館 & 天保山摩天輪 -->
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-1">
             <span class="text-xs font-semibold text-sky-600 font-mono">⏱️ 09:30 - 12:30 (室內溫暖超舒適)</span>
@@ -350,7 +346,6 @@
           <p class="text-xs text-slate-600 mt-1">難波搭御堂筋線至本町轉中央線直達「大阪港站」（約 25 分鐘）。參觀世界最大級鯨鯊水槽，並憑已購之<strong>樂享周遊券免費搭乘天保山大摩天輪</strong>飽覽大阪港灣海景！</p>
         </div>
 
-        <!-- 2. 中午：日本橋電器街 -->
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-1">
             <span class="text-xs font-semibold text-blue-600">⏱️ 13:00 - 14:30</span>
@@ -365,7 +360,6 @@
           <p class="text-xs text-slate-600 mt-1">從大阪港搭中央線轉堺筋線 20 分鐘直達「日本橋站」。享用午餐並逛 Animate、駿河屋動漫手辦與新年福袋扭蛋牆。</p>
         </div>
 
-        <!-- 3. 下午前段：四天王寺 -->
         <div class="bg-white rounded-xl shadow-sm border border-emerald-100 p-4">
           <div class="flex justify-between items-start mb-1">
             <span class="text-xs font-semibold text-emerald-600 font-mono">⏱️ 14:45 - 15:45 (新年初詣祈福)</span>
@@ -380,7 +374,6 @@
           <p class="text-xs text-slate-600 mt-1">從日本橋搭地鐵或 4 人搭計程車（僅 8 分鐘）即達！聖德太子創建的千年古寺，正月初三充滿莊嚴熱鬧的日本傳統新年祈福氛圍，園區平緩好走。</p>
         </div>
 
-        <!-- 4. 下午後段：通天閣溜滑梯 -->
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-1">
             <span class="text-xs font-semibold text-rose-600 font-mono">⏱️ 16:00 - 17:15 (刺激體驗)</span>
@@ -395,7 +388,6 @@
           <p class="text-xs text-slate-600 mt-1">從四天王寺往西散步約 10 分鐘即達新世界！坐上滑行袋在 60 公尺長透明管道極速俯衝 10 秒，下樓品嚐元祖串炸達摩點心。</p>
         </div>
 
-        <!-- 5. 傍晚至夜間：阿倍野百萬夜景 -->
         <div class="bg-white rounded-xl shadow-sm border border-purple-150 p-4">
           <div class="flex justify-between items-start mb-1">
             <span class="text-xs font-semibold text-purple-600 font-mono">⏱️ 17:30 - 20:30</span>
@@ -512,7 +504,6 @@
           </div>
         </div>
 
-        <!-- 1. 上午：二條城 -->
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-1">
             <span class="text-xs font-semibold text-blue-600 font-mono">⏱️ 09:30 - 12:15 (睡飽出發)</span>
@@ -527,7 +518,6 @@
           <p class="text-xs text-slate-600 mt-1">難波搭御堂筋線至梅田轉「阪急特急」至<strong>「烏丸站」</strong>下車（約 40 分鐘），4 人直接轉乘計程車 8 分鐘直達二條城門口！上午腳力最佳時參觀德川家康「鶯聲地板」與絕美二之丸庭園。</p>
         </div>
 
-        <!-- 2. 中午：錦市場 -->
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-1">
             <span class="text-xs font-semibold text-blue-600">⏱️ 12:30 - 14:00</span>
@@ -542,7 +532,6 @@
           <p class="text-xs text-slate-600 mt-1">從二條城搭車往回僅約 8 分鐘即達錦市場，剛好接上午餐！大啖現烤 A5 和牛串、熱騰騰高湯厚蛋燒、現剖海膽與烤魷魚，坐下來補充體力。</p>
         </div>
 
-        <!-- 3. 下午：計程車直送清水寺 ➔ 順下坡逛二三年坂 -->
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-1">
             <span class="text-xs font-semibold text-blue-600">⏱️ 14:15 - 16:40 (上坡搭車 · 下坡逛街)</span>
@@ -557,7 +546,6 @@
           <p class="text-xs text-slate-600 mt-1">從錦市場四條通<strong>4 人搭計程車直送清水寺山腳</strong>（約 10 分鐘，每人分攤僅約 NT$ 70，完全跳過最累大爬坡！）。登上清水舞台迎夕陽後，回程順著<strong>三年坂 ➔ 二年坂</strong>一路輕鬆下坡逛伴手禮與榻榻米星巴克。</p>
         </div>
 
-        <!-- 4. 傍晚：二年坂底端直接攔車 ➔ 暮色伏見稻荷 -->
         <div class="bg-white rounded-xl shadow-sm border border-rose-100 p-4">
           <div class="flex justify-between items-start mb-1">
             <span class="text-xs font-semibold text-rose-600 font-mono">⏱️ 17:00 - 18:30</span>
@@ -572,7 +560,6 @@
           <p class="text-xs text-slate-600 mt-1">走到<strong>二年坂底端（東大路通大馬路口，免走回八坂神社）</strong>直接攔計程車，僅 12～15 分鐘直達伏見稻荷！傍晚朱紅鳥居石燈籠點亮，享受無人空靈氛圍（拍前段千本鳥居即可，免爬山頂省腳力）。</p>
         </div>
 
-        <!-- 5. 晚上：祇園四條晚餐 -->
         <div class="bg-white rounded-xl shadow-sm border border-amber-100 p-4">
           <div class="flex justify-between items-start mb-1">
             <span class="text-xs font-semibold text-amber-600 font-mono">⏱️ 18:45 - 20:30 (7點前抵達)</span>
@@ -588,14 +575,14 @@
         </div>
       </div>
 
-      <!-- ==================== Day 6 (1/6 三 · 平日採購返台) ==================== -->
+      <!-- ==================== Day 6 (1/6 三 · 平日採購返台 · CI177 22:45 校正) ==================== -->
       <div id="day-6" class="day-content space-y-3 fade-content hidden">
         <div class="hero-img-card">
           <img src="Dotonbori.png?v=2027" alt="大阪千日前商圈">
           <div class="hero-img-overlay">
             <span class="text-[10px] font-bold text-rose-300 tracking-wider uppercase">DAY 6 (1/6 三 · 平日輕鬆採購) · 滿載返台</span>
             <h2 class="text-base font-bold text-white drop-shadow-sm">黑門市場海鮮 ➔ 大丸心齋橋免稅採購</h2>
-            <p class="text-[11px] text-slate-200 mt-0.5">市場店家全開 · 現剖大生蠔黑鮪魚 · 步行3分直達南海難波特急 CI177 返高雄</p>
+            <p class="text-[11px] text-slate-200 mt-0.5">市場店家全開 · 步行3分直達南海難波特急 · 華航 CI177 (20:10-22:45) 返高雄</p>
           </div>
         </div>
 
@@ -610,7 +597,7 @@
             <span>➔</span>
             <span class="bg-amber-100 text-amber-800 px-2 py-1 rounded font-medium">回飯店領行李 步行3分直達特急</span>
             <span>➔</span>
-            <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">關西機場 ✈️ 小港</span>
+            <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">關西機場 ✈️ 小港(22:45)</span>
           </div>
         </div>
 
@@ -644,28 +631,28 @@
 
         <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
           <div class="flex justify-between items-start mb-1">
-            <span class="text-xs font-semibold text-blue-600">⏱️ 16:00 - 22:55</span>
+            <span class="text-xs font-semibold text-blue-600">⏱️ 16:00 - 22:45 (華航 CI177 已確認)</span>
             <a href="https://maps.google.com/?q=Kansai+International+Airport" target="_blank" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition flex items-center">
               📍 導航
             </a>
           </div>
-          <h3 class="text-base font-bold text-slate-800">難波東方領行李 ➔ 步行3分搭南海特急返台</h3>
-          <p class="text-xs text-slate-600 mt-1">回飯店領行李，走千日前室內商店街 3 分鐘直達「南海難波站」搭 16:30 特急直達機場（17:15 抵達），逛免稅店後搭 20:10 班機（CI177）於 22:55 平穩返抵高雄小港機場。</p>
+          <h3 class="text-base font-bold text-slate-800">難波東方領行李 ➔ 關西(航站1)搭 CI177 返高雄</h3>
+          <p class="text-xs text-slate-600 mt-1">回飯店領行李（4 件隨身＋4 件託運），走千日前室內商店街 3 分鐘直達「南海難波站」搭 16:30 特急直達機場（17:15 抵達），逛免稅店後搭華航 CI177（20:10 起飛）於 <strong>22:45</strong> 返抵高雄小港機場（航站 I）。</p>
         </div>
       </div>
 
     </div>
   </div>
 
-  <!-- ==================== 3. 底部固定預算列 ==================== -->
+  <!-- ==================== 3. 底部固定預算列 (華航實付 NT$ 64,832 精算更新) ==================== -->
   <footer class="bg-white/95 backdrop-blur-md border-t border-slate-200 px-4 py-2.5 shadow-lg z-30 shrink-0">
     <div class="max-w-md mx-auto flex justify-between items-center text-xs">
       <div>
         <div class="text-[10px] text-slate-400">
-          固定機酒樂園滑雪 <span class="font-semibold text-slate-600">NT$ 33,859</span> + 餐飲零用 <span class="font-semibold text-slate-600">NT$ 9,000</span>
+          固定機酒樂園滑雪 <span class="font-semibold text-slate-600">NT$ 33,067</span> + 餐飲零用 <span class="font-semibold text-slate-600">NT$ 9,000</span>
         </div>
         <div class="text-sm font-bold text-emerald-600">
-          約 NT$ 42,859 <span class="text-xs font-normal text-slate-500">/ 人 (海遊館+周遊券用滿版)</span>
+          約 NT$ 42,067 <span class="text-xs font-normal text-slate-500">/ 人 (機酒票券全確認版)</span>
         </div>
       </div>
       <div>
@@ -770,10 +757,10 @@
 
     const spotData = {
       kansai_airport: {
-        title: "關西國際機場 ➔ 南海特急 Rapi:t 直達難波",
-        tag: "交通樞紐",
-        desc: "日本第一座完全建在人工島上的國際機場。機場 2 樓鐵道月台直結南海電鐵，復古鐵面人造型的『特急 Rapi:t』僅需 38 分鐘即可直抵大阪核心南側門戶『南海難波站』。出站由千日前商店街步行約 3～4 分鐘直達難波東方大飯店！",
-        highlights: "• 對號座寬敞無擠車壓力<br>• 設有專屬大行李固定架<br>• 出站步行 3 分鐘進飯店，全程有遮雨棚",
+        title: "中華航空直飛 & 南海特急 Rapi:t 直達難波",
+        tag: "已確認航班 · 4人同行",
+        desc: "中華航空直飛班機（經濟艙基本 N 艙）：去程 CI166 (07:00 高雄航站I ➔ 10:45 關西航站1)，回程 CI177 (20:10 關西航站1 ➔ 22:45 高雄航站I)。每人皆含 1 件隨身＋1 件託運行李。抵達關西後於 2 樓轉乘南海特急 Rapi:t（38 分鐘）直抵難波，步行 3 分鐘進飯店！",
+        highlights: "• 4 人來回實付總價 TWD 64,832（平均每人僅 NT$ 16,208）<br>• 去回程各含 4 件隨身行李 ＋ 4 件託運行李<br>• 南海特急對號座寬敞無擠車壓力，設有專屬大行李固定架",
         extra: ""
       },
       hotel_oriental: {
@@ -824,7 +811,7 @@
         title: "日本環球影城 (USJ) · 豪華版套票",
         tag: "已付訖套票",
         desc: "已成功訂購【豪華版關西樂享周遊券（含日本環球影城）】4 人份。安排於 1/4（週一）日本開工日入園，完美避開元旦三連假人潮！",
-        highlights: "• 豪華 A 區任選 2 項：USJ 1日券 ＋ 指定遊樂設施快速通關券 1 項（或能量手環/爆米花桶）<br>• 豪華 B 區任選 1 項：USJ 彩道餐廳預約券＆飲料 或 京都水族館門票<br>• 豪華 C 區任選 1 項：關西機場利木津巴士單程票 或 HARUKA 特快車票<br>• 關西樂享周遊券任選 3 項：大阪城御座船、天保山大摩天輪、HARUKAS 300 展望台",
+        highlights: "• 豪華 A 區任選 2 項：USJ 1日券 ＋ 指定遊樂設施快速通關券 1 項（或能量手環/爆米花桶）<br>• 豪華 B 區任選 1 項：USJ 彩道餐廳預約券＆飲料 或 京都水族館門票<br>• 豪華 C 區任選 1 項：關西機場利木津巴士單程票 或 HARUKA 特快車票<br>• 關西樂享周遊券任選 3 項：大阪城御座船、天保山摩天輪、HARUKAS 300 展望台",
         extra: `
           <div class="bg-rose-50 p-2.5 rounded-xl border border-rose-200 space-y-1 text-slate-700">
             <div class="font-bold text-rose-900 flex items-center">📲 行前 App 綁定與兌換步驟：</div>
