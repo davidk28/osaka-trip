@@ -16,7 +16,6 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* 恢復 contain 完整顯示右側 OSAKA JAPAN 插畫，同時保持右側明亮不暗沉 */
     .banner-header {
       background-color: #1e293b;
       background-image: 
@@ -72,7 +71,7 @@
           </div>
         </div>
 
-        <!-- 倒數計時與即時自動聯網天氣 -->
+        <!-- 倒數計時與即時自動聯網天氣 (含更新時間戳記) -->
         <div class="mt-2 grid grid-cols-5 gap-1.5 text-xs">
           <div class="col-span-3 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/20 flex items-center justify-between shadow-xs">
             <span class="text-[11px] font-semibold text-amber-200 flex items-center">
@@ -84,13 +83,13 @@
               <span id="countdownMins">--</span>分
             </div>
           </div>
-          <div class="col-span-1 bg-black/55 backdrop-blur-md px-1.5 py-1 rounded-lg border border-white/20 flex flex-col items-center justify-center text-center">
-            <div class="text-[9px] text-sky-200 leading-none">大阪即時</div>
-            <div id="weatherOsaka" class="font-mono font-bold text-amber-200 text-xs mt-0.5">☀️ 12°C</div>
+          <div class="col-span-1 bg-black/55 backdrop-blur-md px-1 py-1 rounded-lg border border-white/20 flex flex-col items-center justify-center text-center">
+            <div id="labelOsaka" class="text-[8.5px] text-sky-200 leading-none">大阪即時</div>
+            <div id="weatherOsaka" class="font-mono font-bold text-amber-200 text-[11px] mt-0.5">--°C</div>
           </div>
-          <div class="col-span-1 bg-black/55 backdrop-blur-md px-1.5 py-1 rounded-lg border border-white/20 flex flex-col items-center justify-center text-center">
-            <div class="text-[9px] text-sky-200 leading-none">京都即時</div>
-            <div id="weatherKyoto" class="font-mono font-bold text-sky-200 text-xs mt-0.5">⛅ 9°C</div>
+          <div class="col-span-1 bg-black/55 backdrop-blur-md px-1 py-1 rounded-lg border border-white/20 flex flex-col items-center justify-center text-center">
+            <div id="labelKyoto" class="text-[8.5px] text-sky-200 leading-none">京都即時</div>
+            <div id="weatherKyoto" class="font-mono font-bold text-sky-200 text-[11px] mt-0.5">--°C</div>
           </div>
         </div>
 
@@ -717,7 +716,7 @@
     updateCountdown();
     setInterval(updateCountdown, 60000);
 
-    // 極速即時天氣（先秒出快取並向 Open-Meteo 標準端點抓日本氣象廳最新溫度）
+    // 即時天氣抓取（每次向氣象局抓回後，上方標籤自動顯示更新時間戳記）
     function getWeatherIcon(code) {
       if (code === 0) return "☀️";
       if ([1, 2].includes(code)) return "🌤️";
@@ -729,11 +728,10 @@
       return "⛅";
     }
 
-    // 初始化先讀取上次記憶的即時溫度，避免等待閃爍
-    const cachedOsaka = localStorage.getItem('w_osaka');
-    const cachedKyoto = localStorage.getItem('w_kyoto');
-    if (cachedOsaka) document.getElementById('weatherOsaka').innerText = cachedOsaka;
-    if (cachedKyoto) document.getElementById('weatherKyoto').innerText = cachedKyoto;
+    function getNowTimeStr() {
+      const d = new Date();
+      return `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
+    }
 
     async function fetchLiveWeather() {
       try {
@@ -742,9 +740,8 @@
           const dataOsaka = await resOsaka.json();
           const temp = Math.round(dataOsaka.current.temperature_2m);
           const icon = getWeatherIcon(dataOsaka.current.weather_code);
-          const str = `${icon} ${temp}°C`;
-          document.getElementById('weatherOsaka').innerText = str;
-          localStorage.setItem('w_osaka', str);
+          document.getElementById('weatherOsaka').innerText = `${icon} ${temp}°C`;
+          document.getElementById('labelOsaka').innerText = `大阪 ${getNowTimeStr()}`;
         }
       } catch (e) {}
 
@@ -754,9 +751,8 @@
           const dataKyoto = await resKyoto.json();
           const temp = Math.round(dataKyoto.current.temperature_2m);
           const icon = getWeatherIcon(dataKyoto.current.weather_code);
-          const str = `${icon} ${temp}°C`;
-          document.getElementById('weatherKyoto').innerText = str;
-          localStorage.setItem('w_kyoto', str);
+          document.getElementById('weatherKyoto').innerText = `${icon} ${temp}°C`;
+          document.getElementById('labelKyoto').innerText = `京都 ${getNowTimeStr()}`;
         }
       } catch (e) {}
     }
