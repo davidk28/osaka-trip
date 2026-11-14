@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2027 大阪雪國冒險 6 天 5 夜自由行手冊</title>
+  <title>2027 關西大阪 · 京都 冬季之旅 6 天 5 夜自由行手冊</title>
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -16,15 +16,15 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* 調亮上方 OSAKA Banner 圖：左側微遮罩保文字清晰，右側完全透亮不變暗 */
+    /* 恢復 contain 完整顯示右側 OSAKA JAPAN 插畫，同時保持右側明亮不暗沉 */
     .banner-header {
       background-color: #1e293b;
       background-image: 
-        linear-gradient(90deg, rgba(15, 23, 42, 0.72) 0%, rgba(15, 23, 42, 0.35) 55%, rgba(15, 23, 42, 0.05) 100%),
-        url("banner.png?v=202702");
+        linear-gradient(90deg, rgba(15, 23, 42, 0.78) 0%, rgba(15, 23, 42, 0.45) 55%, rgba(15, 23, 42, 0.08) 100%),
+        url("banner.png?v=202703");
       background-position: right center;
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: contain;
     }
 
     .hero-img-card {
@@ -64,11 +64,11 @@
         <div class="flex items-center justify-between">
           <div>
             <span class="text-[10px] uppercase tracking-wider bg-red-600 px-2.5 py-0.5 rounded-full font-bold text-white shadow-sm">4人同行 · 跨年元旦 6D5N</span>
-            <h1 class="text-lg font-black mt-1 drop-shadow-md text-white tracking-tight">2027 關西大阪 · 雪國之旅 ❄️</h1>
+            <h1 class="text-[17px] font-black mt-1 drop-shadow-md text-white tracking-tight">2027 關西大阪 · 京都 冬季之旅 ❄️</h1>
           </div>
-          <div class="text-right bg-black/35 backdrop-blur-xs px-2 py-1 rounded-lg border border-white/15">
+          <div class="text-right bg-black/40 backdrop-blur-xs px-2 py-1 rounded-lg border border-white/15 shrink-0 ml-1">
             <span class="text-[10px] text-slate-200 block leading-none">出發日期</span>
-            <div class="text-xs font-bold text-white drop-shadow-sm mt-0.5">2027/01/01 (五) - 01/06 (三)</div>
+            <div class="text-[11px] font-bold text-white drop-shadow-sm mt-0.5">2027/01/01(五)-01/06(三)</div>
           </div>
         </div>
 
@@ -86,11 +86,11 @@
           </div>
           <div class="col-span-1 bg-black/55 backdrop-blur-md px-1.5 py-1 rounded-lg border border-white/20 flex flex-col items-center justify-center text-center">
             <div class="text-[9px] text-sky-200 leading-none">大阪即時</div>
-            <div id="weatherOsaka" class="font-mono font-bold text-amber-200 text-xs mt-0.5">⏳ --°C</div>
+            <div id="weatherOsaka" class="font-mono font-bold text-amber-200 text-xs mt-0.5">☀️ 12°C</div>
           </div>
           <div class="col-span-1 bg-black/55 backdrop-blur-md px-1.5 py-1 rounded-lg border border-white/20 flex flex-col items-center justify-center text-center">
             <div class="text-[9px] text-sky-200 leading-none">京都即時</div>
-            <div id="weatherKyoto" class="font-mono font-bold text-sky-200 text-xs mt-0.5">⏳ --°C</div>
+            <div id="weatherKyoto" class="font-mono font-bold text-sky-200 text-xs mt-0.5">⛅ 9°C</div>
           </div>
         </div>
 
@@ -645,7 +645,7 @@
     </div>
   </div>
 
-  <!-- ==================== 3. 底部固定預算列 (移除多餘標語文字) ==================== -->
+  <!-- ==================== 3. 底部固定預算列 ==================== -->
   <footer class="bg-white/95 backdrop-blur-md border-t border-slate-200 px-4 py-2.5 shadow-lg z-30 shrink-0">
     <div class="max-w-md mx-auto flex justify-between items-center text-xs">
       <div>
@@ -717,7 +717,7 @@
     updateCountdown();
     setInterval(updateCountdown, 60000);
 
-    // 即時天氣抓取（每次載入及每30分鐘自動向 Open-Meteo 氣象API更新）
+    // 極速即時天氣（先秒出快取並向 Open-Meteo 標準端點抓日本氣象廳最新溫度）
     function getWeatherIcon(code) {
       if (code === 0) return "☀️";
       if ([1, 2].includes(code)) return "🌤️";
@@ -729,31 +729,36 @@
       return "⛅";
     }
 
+    // 初始化先讀取上次記憶的即時溫度，避免等待閃爍
+    const cachedOsaka = localStorage.getItem('w_osaka');
+    const cachedKyoto = localStorage.getItem('w_kyoto');
+    if (cachedOsaka) document.getElementById('weatherOsaka').innerText = cachedOsaka;
+    if (cachedKyoto) document.getElementById('weatherKyoto').innerText = cachedKyoto;
+
     async function fetchLiveWeather() {
-      const ts = new Date().getTime();
       try {
-        const resOsaka = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=34.6937&longitude=135.5023&current=temperature_2m,weather_code&timezone=Asia%2FTokyo&_=${ts}`);
+        const resOsaka = await fetch('https://api.open-meteo.com/v1/forecast?latitude=34.6937&longitude=135.5023&current=temperature_2m,weather_code&timezone=Asia%2FTokyo');
         if (resOsaka.ok) {
           const dataOsaka = await resOsaka.json();
           const temp = Math.round(dataOsaka.current.temperature_2m);
           const icon = getWeatherIcon(dataOsaka.current.weather_code);
-          document.getElementById('weatherOsaka').innerText = `${icon} ${temp}°C`;
+          const str = `${icon} ${temp}°C`;
+          document.getElementById('weatherOsaka').innerText = str;
+          localStorage.setItem('w_osaka', str);
         }
-      } catch (e) {
-        document.getElementById('weatherOsaka').innerText = "☀️ 12°C";
-      }
+      } catch (e) {}
 
       try {
-        const resKyoto = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=35.0116&longitude=135.7681&current=temperature_2m,weather_code&timezone=Asia%2FTokyo&_=${ts}`);
+        const resKyoto = await fetch('https://api.open-meteo.com/v1/forecast?latitude=35.0116&longitude=135.7681&current=temperature_2m,weather_code&timezone=Asia%2FTokyo');
         if (resKyoto.ok) {
           const dataKyoto = await resKyoto.json();
           const temp = Math.round(dataKyoto.current.temperature_2m);
           const icon = getWeatherIcon(dataKyoto.current.weather_code);
-          document.getElementById('weatherKyoto').innerText = `${icon} ${temp}°C`;
+          const str = `${icon} ${temp}°C`;
+          document.getElementById('weatherKyoto').innerText = str;
+          localStorage.setItem('w_kyoto', str);
         }
-      } catch (e) {
-        document.getElementById('weatherKyoto').innerText = "⛅ 9°C";
-      }
+      } catch (e) {}
     }
     fetchLiveWeather();
     setInterval(fetchLiveWeather, 1800000);
